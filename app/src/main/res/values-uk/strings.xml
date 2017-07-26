@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">НАУ \"ХАІ\"</string>
+    <string name="main_name">НАУ \"ХАІ\"</string>
+    <string name="widget_name">Розклад на сьогодні</string>
+    <string name="widget_name2">Поточний розклад</string>
+    <string name="app_version">Версія</string>
+
+    <string name="Welcome">Почнемо!</string>
+    <string name="Welcomtext">Натисніть цю кнопку щоб продовжити...</string>
+    <string name="Welcom_skip">Пропустити</string>
+
+    <string name="news_label">Новини</string>
+    <string name="Open_less">ДИВИТИСЯ</string>
+    <string name="ADD_GROUP">Немає твоєї групи?</string>
+    <string name="Language">Обрати мову</string>
+    <string name="GET_DATA">Отримання даних...</string>
+    <string name="SELECT">Група</string>
+    <string name="SELECT_GROUP">Вибрати групу</string>
+    <string name="Search">Пошук</string>
+    <string name="LastSel">Розклад в кеші</string>
+    <string name="widgetGroup">Виберіть групу з кеша</string>
+    <string name="SLIDE_LEFT">Зрушити вправо</string>
+    <string name="present">З Днем студента!</string>
+    <string name="label_vk">Спільнота ВКонтакте</string>
+    <string name="label_profile">Профіль</string>
+    <string name="open_list">Відкрити список</string>
+    <string name="cancel">Скасувати</string>
+    <string name="notiseDel">Зажміть щоб видалити запис...</string>
+    <string name="notiseLast">Останній запис видалити не можна...</string>
+    <string name="notiseDelOK">Запис видалена успішно...</string>
+    <string name="loading">Завантаження...</string>
+    <string name="send">Відправити</string>
+
+    <string name="incorrect_title">Зворотній звязок</string>
+    <string name="incorrect_ok_title">Прийнято до розгляду</string>
+    <string name="incorrect_ok_text">Ваше звернення буде розглянуто протягом 24 год.</string>
+    <string name="incorrect_error_title">Помилка</string>
+    <string name="incorrect_error_text">Необхідно вказати текст звернення, щоб ми могли зрозуміти вашу проблему.</string>
+    <string name="incorrect_hint">Введіть текст звернення</string>
+    <string name="incorrect_send">Надіслати звернення</string>
+    <string name="incoorect_not_found">Історія звернень порожня</string>
+
+    <string name="inc_notific_title">Отримано відповідь на ваше звернення</string>
+    <string name="inc_notific_text">Натисніть щоб прочитати</string>
+
+    <string name="attention">Увага!!!</string>
+    <string name="thank4add">Дякую за додавання!</string>
+    <string name="teacher_attention1">Ви включили редагування профілю викладача. Не завантажуйте великі зображення. Не коректні дані не будуть публікуватися.</string>
+    <string name="teacher_attention2">Ми розглянемо ваші дані для профілю найближчим часом.</string>
+    <string name="send_data">Відправка даних на сервер...</string>
+    <string name="teacher_name">П.І.Б викладача</string>
+    <string name="teacher_rank">Звання викладача</string>
+    <string name="teacher_extra">Додаткова інформація</string>
+
+    <string name="Today">Cьогодні</string>
+    <string name="loadWidget">Завантаження віджета...</string>
+
+    <string name="label_GN">Група не знайдено</string>
+    <string name="GNTRUE">Не турбуйтеся тепер ми знаємо про це і займаємося цією проблеммой, в перебігу декількох годин розклад вашої групи буде в додатку!</string>
+    <string name="GNFALE">Якщо ви впевнені що ваша група існує можете пошукати її в списку груп.</string>
+    <string name="GNCLEAR">Щоб заявити свою групу вкажіть її нижче і повторіть запит</string>
+
+    <string name="GetUpdate">Оновлення розкладу</string>
+    <string name="Update">Отримати оновлення</string>
+    <string name="UpdateText">На сервері є зміни в розкладі вашої групи, рекомендується оновиться.\n\nПроцес займе не більше секунди. </string>
+
+    <string name="ER_LABEL">Помилка 404</string>
+    <string name="ER_CONTENT">Не знайдено записів. Швидше за все ви вказали невірно номер групи.</string>
+
+    <string-array name="TYPE_WEEK">
+        <item>Чисельник</item>
+        <item>Знаменник</item>
+    </string-array>
+
+    <string name="WelcomText">Цей додаток знаходиться на етапі тестування і може не містити розклад всіх груп. З цього питання відвідайте сайт www.e-xai.com</string>
+
+    <string name="sky_stat">Доступність сервера</string>
+
+    <string name="timeout">Не турбуйтеся йде завантаження даних з сервера, але якщо це вікно показується більше 10 секунд, рекомендується перезапустити програму і повідомити адміністрацію.</string>
+
+    <string-array name="DAYS">
+        <item>ПН</item>
+        <item>ВТ</item>
+        <item>СР</item>
+        <item>ЧТ</item>
+        <item>ПТ</item>
+    </string-array>
+
+    <string-array name="GetList">
+        <item>Групи</item>
+        <item>Викладачі</item>
+    </string-array>
+
+    <string-array name="MONTHES">
+        <item>Січень</item>
+        <item>Лютий</item>
+        <item>Березень</item>
+        <item>Квітень</item>
+        <item>Травень</item>
+        <item>Червень</item>
+        <item>Липень</item>
+        <item>Серпень</item>
+        <item>Вересень</item>
+        <item>Жовтень</item>
+        <item>Листопад</item>
+        <item>Грудень</item>
+    </string-array>
+
+    <string name="popmenu0">Змінити розклад</string>
+    <string name="popmenu01">Будильник</string>
+    <string name="popmenu1">Відвідати співтовариство</string>
+    <string name="popmenu2">Написати звернення</string>
+    <string name="popmenu3">Про додаток</string>
+    <string name="popmenu4">Змінити оформлення</string>
+
+    <string name="support">Підтримка</string>
+
+    <string-array name="drawers">
+        <item>Новини додатки</item>
+        <item>Завантажити розклад</item>
+        <item>Будильник до першої парі</item>
+        <item>Відвідати співтовариство</item>
+        <item>Зворотній зв`язок</item>
+        <item>Про програму</item>
+        <item>Перекласти розклад</item>
+    </string-array>
+
+    <string-array name="THEMES">
+        <item>Стандартний</item>
+        <item>Гранатовий</item>
+        <item>Зелене море</item>
+        <item>Гарбуз</item>
+        <item>Азбест</item>
+        <item>Гліцинія</item>
+        <item>Апельсиновий</item>
+        <item>Мокрий асфальт</item>
+    </string-array>
+
+    <string name="LT1">8:00 - 9:35</string>
+    <string name="LT2">9:50 - 11:25</string>
+    <string name="LT3">11:55 - 13:30</string>
+    <string name="LT4">13:45 - 15:20</string>
+    <string name="label_less">Група</string>
+    <string name="no_less">Нема пари</string>
+
+    <string name="alarm_label">Будильник</string>
+    <string name="select_audio">Вибрати файл</string>
+    <string name="alarm_text">Час, за який спрацює будильник (в хвилинах) до першої найближчої пари</string>
+    <string name="alarm_on_off">вкл/выкл  </string>
+    <string name="alarm_off">Будильник вимкнений</string>
+    <string name="realarm">Будильник відкладений на 5 хвилин</string>
+
+    <string name="no_inet1">Data not shown</string>
+    <string name="no_inet2">Вибачте але у вас не завантажено розклад жодної групи, для цього необхідно інтернет з`єднання.
+         Підключіться до інтернету і перезапустіть додаток.</string>
+    <string name="no_widget">Вибачте але в кеші немає розкладу жодної групи.</string>
+    <string name="no_group">Щоб продовжити вкажіть свою групу/викладача вибравши її(його) зі списку.</string>
+    <string name="ni_text">Немає підключення до інтернету.</string>
+
+    <string name="vendor">Rapoo © 2015</string>
+    <string name="DualcoM">DualcoM™ Software developers</string>
+
+    <string name="about_label">Про програму</string>
+    <string name="about">Сервіс для повідомлення студентів ХАІ про новий і поточний розклад.</string>
+
+    <string name="guide_run">Ласкаво просимо!\n\nДізнайтеся про можливості програми перед його використанням.</string>
+    <string name="guide1">Для перегляду розкладу потрібно тільки вписати свою групу в поле для пошуку.</string>
+    <string name="guide2">Індикатор типу тижня покаже вам знаменник зараз або численик.</string>
+    <string name="guide3">Встановіть віджет який покаже вам розклад на поточний день прямо на екрані лаунчера.</string>
+    <string name="guide4">От і все! Тепер можна перейти до додатка.</string>
+    <string name="guide_btn">ПЕРЕЙТИ ДО ДОДАТКУ</string>
+    <string name="guide_text">Далі жест вліво</string>
+
+    <string name="compare_start">Поверніть екран щоб перейти в режим порівняння груп</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-7148094931915684/9163886655</string>
+    <string name="banner_ad_unit_id2">ca-app-pub-7148094931915684/7613101450</string>
+
+    <string name="action_settings">Settings</string>
+
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_color"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp">
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageButton2"
+            android:background="@drawable/circle_group" />
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:minHeight="40dp"
+            android:textSize="10dp"
+            android:text="Группа"
+            android:textColor="@color/white"
+            android:gravity="center">
+        </TextView>
+    </RelativeLayout>
+</LinearLayout>

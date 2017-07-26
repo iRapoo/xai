@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <group android:id="@+id/menugroup1" >
+        <item
+            android:id="@+id/menu0"
+            android:title="@string/popmenu0"/>
+        <item
+            android:id="@+id/menu01"
+            android:title="@string/popmenu01"/>
+        <item
+            android:id="@+id/menu1"
+            android:title="@string/popmenu1"/>
+        <item
+            android:id="@+id/menu2"
+            android:title="@string/popmenu2"/>
+        <item
+            android:id="@+id/menu3"
+            android:title="@string/popmenu3"/>
+        <!-- <item
+            android:id="@+id/menu4"
+            android:title="@string/popmenu4"/> -->
+    </group>
+
+</menu>

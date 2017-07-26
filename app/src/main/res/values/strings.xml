@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NAU \"KhAI\"</string>
+    <string name="main_name">NAU \"KhAI\"</string>
+    <string name="widget_name">Schedule for today</string>
+    <string name="widget_name2">Current schedule</string>
+    <string name="app_version">Version</string>
+
+    <string name="Welcome">Welcome!</string>
+    <string name="Welcomtext">Click this button to continue...</string>
+    <string name="Welcom_skip">Skip</string>
+
+    <string name="news_label">News</string>
+    <string name="Open_less">GO</string>
+    <string name="ADD_GROUP">None of your group?</string>
+    <string name="Language">Select language</string>
+    <string name="GET_DATA">Get data...</string>
+    <string name="SELECT">Group</string>
+    <string name="SELECT_GROUP">Select group</string>
+    <string name="Search">Search</string>
+    <string name="LastSel">Schedule cache</string>
+    <string name="widgetGroup">Select a group from the cache</string>
+    <string name="SLIDE_LEFT">Slide to right</string>
+    <string name="present">Happy student!</string>
+    <string name="label_vk">Community VKontakte</string>
+    <string name="label_profile">Profile</string>
+    <string name="open_list">Open list</string>
+    <string name="cancel">Cancel</string>
+    <string name="notiseDel">Long click to delete the entry...</string>
+    <string name="notiseLast">The last entry can not be deleted...</string>
+    <string name="notiseDelOK">Record deleted successfully...</string>
+    <string name="loading">Loading...</string>
+    <string name="send">Send</string>
+
+    <string name="incorrect_title">Feedback</string>
+    <string name="incorrect_ok_title">Accepted for Review</string>
+    <string name="incorrect_ok_text">Your appeal will be reviewed within 24 hours.</string>
+    <string name="incorrect_error_title">Error</string>
+    <string name="incorrect_error_text">You must specify the text of the address, so that we can understand your problem.</string>
+    <string name="incorrect_hint">Enter the text of the appeal</string>
+    <string name="incorrect_send">Send an appeal</string>
+    <string name="incoorect_not_found">History calls yet</string>
+
+    <string name="inc_notific_title">Get answers to your appeal</string>
+    <string name="inc_notific_text">Click to read</string>
+
+    <string name="attention">Attention!!!</string>
+    <string name="thank4add">Thanks for adding!</string>
+    <string name="teacher_attention1">You have included editing the profile of the teacher. Do not load large images. Not correct data will not be published.</string>
+    <string name="teacher_attention2">We will review your data for the profile in the near future.</string>
+    <string name="send_data">Sending data to the server...</string>
+    <string name="teacher_name">Full name of the teacher</string>
+    <string name="teacher_rank">Rank teacher</string>
+    <string name="teacher_extra">Additional Information</string>
+
+    <string name="Today">Today</string>
+    <string name="loadWidget">Loading widget...</string>
+
+    <string name="label_GN">Group not found</string>
+    <string name="GNTRUE">Do not worry now that we know about it and deal with this problems, for several hours schedule your group will be in the app!</string>
+    <string name="GNFALE">If you believe that your group is there you can search it on the list.</string>
+    <string name="GNCLEAR">To claim your group enter it below and try again</string>
+
+    <string name="GetUpdate">Update schedule</string>
+    <string name="Update">Get update</string>
+    <string name="UpdateText">On the server, there is a change in the schedule of your group are encouraged to update.\n\nThe process will take no more than a second. </string>
+
+    <string name="ER_LABEL">Error 404</string>
+    <string name="ER_CONTENT">No Records Found. Most likely you entered is not true test group number.</string>
+
+    <string-array name="TYPE_WEEK">
+        <item>Top week</item>
+        <item>Lower week</item>
+    </string-array>
+
+    <string name="WelcomText">This application is in the testing phase, and may not contain a schedule of all the groups. On this subject, visit www.e-xai.com</string>
+
+    <string name="sky_stat">Server Availability</string>
+
+    <string name="timeout">Do not worry about loading data from the server, but if the window is displayed more than 10 seconds, it is recommended restart the application and inform the administration.</string>
+
+    <string-array name="DAYS">
+        <item>MO</item>
+        <item>TU</item>
+        <item>WE</item>
+        <item>TH</item>
+        <item>FR</item>
+    </string-array>
+
+    <string-array name="GetList">
+        <item>Groups</item>
+        <item>Teachers</item>
+    </string-array>
+
+    <string-array name="MONTHES">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="popmenu0">Сhange schedule</string>
+    <string name="popmenu01">Alarm clock</string>
+    <string name="popmenu1">Visit community</string>
+    <string name="popmenu2">Write circulation</string>
+    <string name="popmenu3">About App</string>
+    <string name="popmenu4">Change Theme</string>
+
+    <string name="support">Support</string>
+
+    <string-array name="drawers">
+        <item>View News</item>
+        <item>Download schedule</item>
+        <item>Alarm to the first pair</item>
+        <item>Visit community</item>
+        <item>Feedback</item>
+        <item>About</item>
+        <item>Translate schedule</item>
+    </string-array>
+
+    <string-array name="THEMES">
+        <item>Standard</item>
+        <item>Pomegranate</item>
+        <item>Green sea</item>
+        <item>Pumpkin</item>
+        <item>Asbestos</item>
+        <item>Wistaria</item>
+        <item>Orange</item>
+        <item>Wet asphalt</item>
+    </string-array>
+
+    <string name="LT1">8:00 - 9:35</string>
+    <string name="LT2">9:50 - 11:25</string>
+    <string name="LT3">11:55 - 13:30</string>
+    <string name="LT4">13:45 - 15:20</string>
+    <string name="label_less">Schedule</string>
+    <string name="no_less">No lesson</string>
+
+    <string name="alarm_label">Alarm clock</string>
+    <string name="select_audio">Select a file</string>
+    <string name="alarm_text">The time for which the alarm will work (in minutes) until the first next lesson</string>
+    <string name="alarm_on_off">on/off  </string>
+    <string name="alarm_off">Alarm off</string>
+    <string name="realarm">Alarm postponed for 5 minutes</string>
+
+    <string name="no_inet1">Data not shown</string>
+    <string name="no_inet2">I`m sorry but you have not loaded schedule of any groups, this requires an Internet connection.
+         Connect to the internet and restart the application.</string>
+    <string name="no_widget">Sorry but there is no timetable in the cache of any groups.</string>
+    <string name="no_group">To continue enter your group/teacher by its(his) from the list.</string>
+    <string name="ni_text">No connection to the Internet.</string>
+
+    <string name="vendor">Rapoo © 2015</string>
+    <string name="DualcoM">DualcoM™ Software developers</string>
+
+    <string name="about_label">About</string>
+    <string name="about">Service to notify students about the new CAI and the current schedule.</string>
+
+    <string name="guide_run">Welcome!\n\nLearn how to use the application before using it.</string>
+    <string name="guide1">To view the schedule only need to enter your group in the search box.</string>
+    <string name="guide2">Type Indicator weeks will show you now the denominator or the number of.</string>
+    <string name="guide3">Set the widget that will show you the schedule for the day right on the screen launcher.</string>
+    <string name="guide4">That`s all! Now you can go to the application.</string>
+    <string name="guide_btn">GO TO APP</string>
+    <string name="guide_text">Next, a gesture to the left</string>
+
+    <string name="compare_start">Turn the screen to switch to the comparison group</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-7148094931915684/9163886655</string>
+    <string name="banner_ad_unit_id2">ca-app-pub-7148094931915684/7613101450</string>
+
+    <string name="action_settings">Settings</string>
+
+</resources>

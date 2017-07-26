@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "42276162530",
+    "firebase_url": "https://nau-khai.firebaseio.com",
+    "project_id": "nau-khai",
+    "storage_bucket": "nau-khai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42276162530:android:56e30bfb1c437948",
+        "android_client_info": {
+          "package_name": "org.dualcom.xai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42276162530-nc2m4drrd7b6i68bcom9tifgkbhq5ctj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1b5l5dH2k9ZT_-O75Wv2CnT6N37DD0Kw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

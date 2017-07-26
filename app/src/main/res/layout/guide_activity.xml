@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@android:id/tabhost"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        android:orientation="vertical" >
+
+
+
+        <FrameLayout
+
+            android:id="@android:id/tabcontent"
+
+            android:layout_width="0dp"
+
+            android:layout_height="0dp"
+
+            android:layout_weight="0" />
+
+        <android.support.v4.view.ViewPager
+
+            android:id="@+id/guider"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="0dp"
+
+            android:layout_weight="0.81"
+            android:background="@color/main_color" />
+
+
+        <TabWidget
+
+            android:id="@android:id/tabs"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_weight="0"
+
+            android:showDividers="none"
+
+            android:orientation="horizontal"
+
+            android:background="@color/dark_tabs"
+
+            android:baselineAligned="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/guide_text"
+            android:id="@+id/textView16"
+            android:layout_gravity="center_horizontal"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:textColor="#000" />
+
+    </LinearLayout>
+
+
+
+</TabHost>

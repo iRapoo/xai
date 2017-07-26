@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">НАУ \"ХАИ\"</string>
+    <string name="main_name">НАУ \"ХАИ\"</string>
+    <string name="widget_name">Расписание на сегодня</string>
+    <string name="widget_name2">Текущее расписание</string>
+    <string name="app_version">Версия</string>
+
+    <string name="Welcome">Начнем!</string>
+    <string name="Welcomtext">Нажмите эту кнопку чтобы продолжить...</string>
+    <string name="Welcom_skip">Пропустить</string>
+
+
+    <string name="news_label">Новости</string>
+    <string name="Open_less">СМОТРЕТЬ</string>
+    <string name="ADD_GROUP">Нет твоей группы?</string>
+    <string name="Language">Выбрать язык</string>
+    <string name="GET_DATA">Получение данных...</string>
+    <string name="SELECT">Группа</string>
+    <string name="SELECT_GROUP">Выбрать группу</string>
+    <string name="Search">Поиск</string>
+    <string name="LastSel">Расписание в кеше</string>
+    <string name="widgetGroup">Выберите группу из кеша</string>
+    <string name="SLIDE_LEFT">Сдвинуть вправо</string>
+    <string name="present">С Днем студента!</string>
+    <string name="label_vk">Сообщество ВКонтакте</string>
+    <string name="label_profile">Профиль</string>
+    <string name="open_list">Открыть список</string>
+    <string name="cancel">Отмена</string>
+    <string name="notiseDel">Зажмите чтобы удалить запись...</string>
+    <string name="notiseLast">Последнюю запись удалить нельзя...</string>
+    <string name="notiseDelOK">Запись удалена успешно...</string>
+    <string name="loading">Загрузка...</string>
+    <string name="send">Отправить</string>
+
+    <string name="incorrect_title">Обратная связь</string>
+    <string name="incorrect_ok_title">Принято к рассмотрению</string>
+    <string name="incorrect_ok_text">Ваше обращение будет рассмотрено в течении 24ч.</string>
+    <string name="incorrect_error_title">Ошибка</string>
+    <string name="incorrect_error_text">Необходимо указать текст обращения, чтобы мы могли понять вашу проблемму.</string>
+    <string name="incorrect_hint">Введите текст обращения</string>
+    <string name="incorrect_send">Послать обращение</string>
+    <string name="incoorect_not_found">История обращений пуста</string>
+
+    <string name="inc_notific_title">Получен ответ на ваше обращение</string>
+    <string name="inc_notific_text">Нажмите чтобы прочитать</string>
+
+    <string name="attention">Внимание!!!</string>
+    <string name="thank4add">Спасибо за добавление!</string>
+    <string name="teacher_attention1">Вы включили редактирование профиля преподавателя. Не загружайте большие изображения. Не корректные данные не будут публиковаться.</string>
+    <string name="teacher_attention2">Мы рассмотрим ваши данные для профиля в ближайшее время.</string>
+    <string name="send_data">Отправка данных на сервер...</string>
+    <string name="teacher_name">Ф.И.О преподавателя</string>
+    <string name="teacher_rank">Звание преподавателя</string>
+    <string name="teacher_extra">Дополнительная информация</string>
+
+    <string name="Today">Сегодня</string>
+    <string name="loadWidget">Загрузка виджета...</string>
+
+    <string name="label_GN">Группа не найдена</string>
+    <string name="GNTRUE">Не беспокойтесь теперь мы знаем об этом и занимаемся этой проблеммой, в течении нескольких часов расписание вашей группы будет в приложении!</string>
+    <string name="GNFALE">Если вы уверены что ваша группа существует можете поискать её в списке групп.</string>
+    <string name="GNCLEAR">Чтобы заявить свою группу укажите её ниже и повторите запрос</string>
+
+    <string name="GetUpdate">Обновление расписания</string>
+    <string name="Update">Получить обновление</string>
+    <string name="UpdateText">На сервере есть изменения в расписании вашей группы, рекомендуется обновится.\n\nПроцесс займет не больше секунды. </string>
+
+    <string name="ER_LABEL">Ошибка 404</string>
+    <string name="ER_CONTENT">Не найдено записей. Скорее всего вы указали не правельно номер группы.</string>
+
+    <string-array name="TYPE_WEEK">
+        <item>Числитель</item>
+        <item>Знаменатель</item>
+    </string-array>
+
+    <string name="WelcomText">Данное приложение находится на этапе тестирования и может не содержать расписание всех групп.
+    По этому вопросу посетите сайт www.e-xai.com</string>
+
+    <string name="sky_stat">Доступность сервера</string>
+
+    <string name="timeout">Не беспокойтесь идет загрузка данных с сервера, но если это окно показывается более 10 секунд, рекомендуется
+        перезапустить приложение и сообщить администрации.</string>
+
+	<string-array name="DAYS">
+		<item>ПН</item>
+		<item>ВТ</item>
+		<item>СР</item>
+		<item>ЧТ</item>
+		<item>ПТ</item>
+	</string-array>
+
+    <string-array name="GetList">
+        <item>Группы</item>
+        <item>Преподаватели</item>
+    </string-array>
+
+    <string-array name="MONTHES">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
+
+    <string name="popmenu0">Сменить расписание</string>
+    <string name="popmenu01">Будильник</string>
+    <string name="popmenu1">Посетить сообщество</string>
+    <string name="popmenu2">Написать обращение</string>
+    <string name="popmenu3">О приложении</string>
+    <string name="popmenu4">Изменить оформление</string>
+
+    <string name="support">Поддержка</string>
+
+    <string-array name="drawers">
+        <item>Новости приложения</item>
+        <item>Загрузить расписание</item>
+        <item>Будильник к первой паре</item>
+        <item>Посетить сообщество</item>
+        <item>Обратная связь</item>
+        <item>О программе</item>
+        <item>Перевести расписание</item>
+    </string-array>
+
+    <string-array name="THEMES">
+        <item>Стандартный</item>
+        <item>Гранатовый</item>
+        <item>Зеленое море</item>
+        <item>Тыква</item>
+        <item>Асбест</item>
+        <item>Глициния</item>
+        <item>Апельсиновый</item>
+        <item>Мокрый асфальт</item>
+    </string-array>
+
+    <string name="LT1">8:00 - 9:35</string>
+    <string name="LT2">9:50 - 11:25</string>
+    <string name="LT3">11:55 - 13:30</string>
+    <string name="LT4">13:45 - 15:20</string>
+    <string name="label_less">Группа</string>
+    <string name="no_less">Нет пары</string>
+
+    <string name="alarm_label">Будильник</string>
+    <string name="select_audio">Выбрать файл</string>
+    <string name="alarm_text">Время, за которое сработает будильник (в минутах) до первой ближайшей пары</string>
+    <string name="alarm_on_off">вкл/выкл  </string>
+    <string name="alarm_off">Будильник отключен</string>
+    <string name="realarm">Будильник отложен на 5 минут</string>
+
+    <string name="no_inet1">Данные не указаны</string>
+    <string name="no_inet2">Извините но у вас не загружено расписание ни одной группы, для этого необходимо интернет соединение.
+        Подключитесь к интернету и перезапустите приложение.</string>
+    <string name="no_widget">Извините но в кеше нет расписания ни одной группы.</string>
+    <string name="no_group">Чтобы продолжить укажите свою группу/преподавателя выбрав её(его) из списка.</string>
+    <string name="ni_text">Нет подключения к интернету.</string>
+
+    <string name="vendor">Rapoo © 2015</string>
+    <string name="DualcoM">DualcoM™ Software developers</string>
+
+    <string name="about_label">О программе</string>
+    <string name="about">Сервис для уведомления студентов ХАИ о новом и текущем расписании.</string>
+
+    <string name="guide_run">Добро пожаловать!\n\nУзнайте о возможностях приложения перед его использованием.</string>
+    <string name="guide1">Для просмотра расписания нужно только вписать свою группу в поле для поиска.</string>
+    <string name="guide2">Индикатор типа недели покажет вам знаменатель сейчас или числить.</string>
+    <string name="guide3">Установите виджет который покажет вам расписание на текущий день прямо на экране лаунчера.</string>
+    <string name="guide4">Вот и все! Теперь можно перейти к приложению.</string>
+    <string name="guide_btn">ПЕРЕЙТИ К ПРИЛОЖЕНИЮ</string>
+    <string name="guide_text">Далее жест влево</string>
+
+    <string name="compare_start">Поверните экран чтобы перейти в режим сравнения групп</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-7148094931915684/9163886655</string>
+    <string name="banner_ad_unit_id2">ca-app-pub-7148094931915684/7613101450</string>
+
+    <string name="action_settings">Settings</string>
+
+</resources>

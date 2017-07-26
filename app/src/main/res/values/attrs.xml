@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="main">
+        <attr name="top_color" format="color"></attr>
+        <attr name="main_color" format="color"></attr>
+        <attr name="extra_color" format="color"></attr>
+    </declare-styleable>
+</resources>
