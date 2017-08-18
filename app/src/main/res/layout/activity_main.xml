@@ -183,19 +183,20 @@
             android:background="@color/main_color">
 
             <LinearLayout
-                android:orientation="vertical"
+                android:id="@+id/about_btn"
                 android:layout_width="130dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:id="@+id/about_btn">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <ImageView
+                    android:id="@+id/imageView20"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:id="@+id/imageView20"
-                    android:background="@drawable/event"
-                    android:layout_margin="15dp" />
+                    android:layout_margin="15dp"
+                    android:background="@drawable/event" />
             </LinearLayout>
 
             <LinearLayout
