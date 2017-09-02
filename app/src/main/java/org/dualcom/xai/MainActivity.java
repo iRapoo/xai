@@ -165,6 +165,13 @@ public class MainActivity extends AppCompatActivity {
                     "VERSION=" + VERSION);
         }
 
+        //Получение списка групп
+        if (isNetworkAvailable()) {
+            new GetGroupsUpd().execute("list_group2.php");
+            new GetTeachersUpd().execute("list_teach.php");
+        }
+        //***********************
+
         //mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
 
         /*if (Storage.emptyData(context, "TUTORIAL"))
@@ -675,6 +682,74 @@ public class MainActivity extends AppCompatActivity {
                     "group=" + Storage.loadData(context, "NOW_GROUP"));
         //****************//
 
+    }
+
+    class GetGroupsUpd extends AsyncTask<String, String, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            String HOST = "http://rapoo.mysit.ru/android/";
+
+            try{
+                DefaultHttpClient hc = new DefaultHttpClient();
+                HttpPost postMethod = new HttpPost(HOST+params[0]);
+                List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+
+                int count = params.length;
+                String[] param = null;
+
+                for(int i = 1; i < count; i++) {
+                    param = params[i].split("=");
+                    nameValuePairs.add(new BasicNameValuePair(param[0], param[1]));
+                }
+
+                postMethod.setEntity(new UrlEncodedFormEntity(nameValuePairs, HTTP.UTF_8));
+
+                HttpResponse httpResponse = hc.execute(postMethod);
+                HttpEntity httpEntity = httpResponse.getEntity();
+                response = EntityUtils.toString(httpEntity, "UTF-8");
+
+                Storage.saveData(context,"GROUPS_LIST",response);
+
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+            return null;
+        }
+    }
+
+    class GetTeachersUpd extends AsyncTask<String, String, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            String HOST = "http://rapoo.mysit.ru/android/";
+
+            try{
+                DefaultHttpClient hc = new DefaultHttpClient();
+                HttpPost postMethod = new HttpPost(HOST+params[0]);
+                List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+
+                int count = params.length;
+                String[] param = null;
+
+                for(int i = 1; i < count; i++) {
+                    param = params[i].split("=");
+                    nameValuePairs.add(new BasicNameValuePair(param[0], param[1]));
+                }
+
+                postMethod.setEntity(new UrlEncodedFormEntity(nameValuePairs, HTTP.UTF_8));
+
+                HttpResponse httpResponse = hc.execute(postMethod);
+                HttpEntity httpEntity = httpResponse.getEntity();
+                response = EntityUtils.toString(httpEntity, "UTF-8");
+
+                Storage.saveData(context,"TEACH_LIST",response);
+
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+            return null;
+        }
     }
 
     class StatVersion extends AsyncTask<String, String, String> {
