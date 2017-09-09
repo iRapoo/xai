@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="org.dualcom.xai.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
@@ -27,18 +27,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="org.dualcom.xai.NewsActivity"
+            android:name=".NewsActivity"
             android:theme="@style/AppThemeNews" />
-        <activity android:name="org.dualcom.xai.StartActivity" />
+        <activity android:name=".StartActivity" />
         <activity
-            android:name="org.dualcom.xai.guide"
+            android:name=".guide"
             android:screenOrientation="portrait" />
         <activity
-            android:name="org.dualcom.xai.GetGroups"
+            android:name=".GetGroups"
             android:theme="@style/Theme.Panel"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="org.dualcom.xai.ConfigActivity"
+            android:name=".ConfigActivity"
             android:theme="@style/Theme.Panel"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
@@ -46,15 +46,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="org.dualcom.xai.GetUpdate"
+            android:name=".GetUpdate"
             android:theme="@style/Theme.Panel" />
 
         <service
-            android:name="org.dualcom.xai.MyService"
+            android:name=".MyService"
             android:process=":myservice" />
 
         <receiver
-            android:name="org.dualcom.xai.MyWidget"
+            android:name=".MyWidget"
             android:icon="@drawable/ic_launcher"
             android:label="@string/widget_name">
             <intent-filter>
@@ -67,14 +67,14 @@
                 android:resource="@xml/widget_metadata" />
         </receiver>
 
-        <activity android:name="org.dualcom.xai.vk" />
+        <activity android:name=".vk" />
         <activity
-            android:name="org.dualcom.xai.AlarmActivity"
+            android:name=".AlarmActivity"
             android:theme="@style/Theme.Panel"
             android:windowSoftInputMode="stateHidden" />
 
-        <receiver android:name="org.dualcom.xai.AlarmManagerBroadcastReceiver" />
-        <receiver android:name="org.dualcom.xai.BootCompletedReceiver">
+        <receiver android:name=".AlarmManagerBroadcastReceiver" />
+        <receiver android:name=".BootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
@@ -83,37 +83,41 @@
         </receiver>
 
         <activity
-            android:name="org.dualcom.xai.GoAlarmActivity"
+            android:name=".GoAlarmActivity"
             android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="org.dualcom.xai.incorrect"
+            android:name=".incorrect"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="org.dualcom.xai.CalendarActivity"
+            android:name=".CalendarActivity"
             android:theme="@style/Theme.Panel" />
         <activity
-            android:name="org.dualcom.xai.about_app"
+            android:name=".about_app"
             android:theme="@style/Theme.Panel" />
         <activity
-            android:name="org.dualcom.xai.windows"
+            android:name=".windows"
             android:theme="@style/Theme.Panel" />
         <activity
-            android:name="org.dualcom.xai.profile"
+            android:name=".profile"
             android:theme="@style/Theme.Panel" />
-        <activity android:name="org.dualcom.xai.WelcomeActivity" />
+        <activity android:name=".WelcomeActivity" />
 
         <service
-            android:name="org.dualcom.xai.WidgetUpdateService"
+            android:name=".WidgetUpdateService"
             android:enabled="true"
             android:exported="true" />
 
         <activity
-            android:name="org.dualcom.xai.TeacherActivity"
+            android:name=".TeacherActivity"
             android:theme="@style/Theme.Panel" />
         <activity
-            android:name="org.dualcom.xai.GetList"
+            android:name=".GetList"
             android:theme="@style/Theme.Panel" />
+        <activity
+            android:name=".MapActivity"
+            android:theme="@style/Theme.Panel" />
+
     </application>
 
 </manifest>

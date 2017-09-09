@@ -163,14 +163,11 @@ public class MainActivity extends AppCompatActivity {
                     "MANUFACTURER=" + Build.MANUFACTURER,
                     "PRODUCT=" + Build.PRODUCT,
                     "VERSION=" + VERSION);
-        }
 
-        //Получение списка групп
-        if (isNetworkAvailable()) {
+            //Получение списка групп
             new GetGroupsUpd().execute("list_group2.php");
             new GetTeachersUpd().execute("list_teach.php");
         }
-        //***********************
 
         //mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
 
@@ -326,6 +323,7 @@ public class MainActivity extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[1]).withIcon(FontAwesome.Icon.faw_object_group).withSelectable(false),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[2]).withIcon(FontAwesome.Icon.faw_clock_o).withSelectable(false).withEnabled(false),
                         new SwitchDrawerItem().withName(res.getStringArray(R.array.drawers)[6]).withIcon(FontAwesome.Icon.faw_language).withSelectable(false).withChecked(translate).withOnCheckedChangeListener(onCheckedChangeListener).withEnabled(trans_active),
+                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[7]).withIcon(FontAwesome.Icon.faw_map).withSelectable(false),
                         new SectionDrawerItem().withName(R.string.support),
                         new SecondaryDrawerItem().withName(res.getStringArray(R.array.drawers)[3]).withIcon(FontAwesome.Icon.faw_vk).withSelectable(false),
                         new SecondaryDrawerItem().withName(res.getStringArray(R.array.drawers)[4]).withIcon(FontAwesome.Icon.faw_question).withIdentifier(6).withSelectable(false),
@@ -370,15 +368,19 @@ public class MainActivity extends AppCompatActivity {
                                 Intent intent_alarm = new Intent(MainActivity.this, AlarmActivity.class);
                                 startActivity(intent_alarm);
                                 break;
-                            case 6:
+                            case 5:
+                                Intent intent_map = new Intent(MainActivity.this, MapActivity.class);
+                                startActivity(intent_map);
+                                break;
+                            case 7:
                                 Intent intent_social = new Intent(MainActivity.this, vk.class);
                                 startActivity(intent_social);
                                 break;
-                            case 7:
+                            case 8:
                                 Intent intent_incorrect = new Intent(MainActivity.this, incorrect.class);
                                 startActivity(intent_incorrect);
                                 break;
-                            case 9:
+                            case 10:
                                 Intent intent_about = new Intent(MainActivity.this, about_app.class);
                                 startActivity(intent_about);
                                 break;
@@ -1080,8 +1082,9 @@ public class MainActivity extends AppCompatActivity {
 
                     int save_count = (Storage.emptyData(context,"incorrectCount")) ? 0 : Integer.parseInt(Storage.loadData(context,"incorrectCount"));
                     int nol = (save_count>-1) ? (_count - save_count) : 0;
+                    int _nol = (nol<0) ? 0 : nol;
 
-                    drawerResult.updateBadge(6, new StringHolder(nol+""));
+                    drawerResult.updateBadge(6, new StringHolder(_nol+""));
 
                 }
 
