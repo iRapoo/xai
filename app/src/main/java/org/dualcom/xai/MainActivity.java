@@ -1,10 +1,14 @@
 package org.dualcom.xai;
 
 import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -86,10 +90,10 @@ public class MainActivity extends AppCompatActivity {
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
     CharSequence Titles[]={"Home","Events"};
-    int Numboftabs =2;
+    int Numboftabs = 2;
 
-    private String response;
-    private String res;
+    private String response = "";
+    private String res = "";
     private String schedule = "";
 
     Context context = this;
@@ -107,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
     public JSONObject count_message;
 
     public String VERSION = "";
+
+    public Boolean translate = true;
+
+    private static final int NOTIFY_ID = 999;
 
     //public FlowingDrawer mDrawer;
     /*public ListView lvMain;
@@ -308,7 +316,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        Boolean translate = (Storage.loadData(context,"translate").equals("true")) ? true : false;
+        translate = (Storage.loadData(context,"translate").equals("true")) ? true : false;
         Boolean trans_active = (getResources().getConfiguration().locale.getLanguage().equals("ru")) ? true : false;
 
         Resources res = getResources();
@@ -679,9 +687,10 @@ public class MainActivity extends AppCompatActivity {
         //startType.setText(TYPE_WEEK);
 
         //Проверка ХЕШ суммы
-        if(isNetworkAvailable() && !Storage.emptyData(context, "NOW_GROUP"))
+        if(isNetworkAvailable() && !Storage.emptyData(context, "NOW_GROUP")) {
             new GetMd5().execute("md5.php",
                     "group=" + Storage.loadData(context, "NOW_GROUP"));
+        }
         //****************//
 
     }
@@ -921,8 +930,13 @@ public class MainActivity extends AppCompatActivity {
 
                     if(isNetworkAvailable()) {
                         try {
-                            schedule = new MyPHP().execute("schedule2.php",
-                                    "group=" + group).get();
+                            if(!translate) {
+                                schedule = new MyPHP().execute("schedule2.php",
+                                        "group=" + group).get();
+                            }else{
+                                schedule = new MyPHP().execute("schedule2.php",
+                                        "group=" + group, "translate=" + true).get();
+                            }
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         } catch (ExecutionException e) {
@@ -1023,7 +1037,6 @@ public class MainActivity extends AppCompatActivity {
 
     class GetIncorrect extends AsyncTask<String, String, String> {
 
-        @SuppressWarnings("WrongThread")
         @Override
         protected String doInBackground(String... params) {
             String HOST = "http://rapoo.mysit.ru/android/";
@@ -1054,7 +1067,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        @SuppressLint("NewApi")
         protected void onPostExecute(String res) {
             super.onPostExecute(res);
 
@@ -1082,10 +1094,46 @@ public class MainActivity extends AppCompatActivity {
 
                     int save_count = (Storage.emptyData(context,"incorrectCount")) ? 0 : Integer.parseInt(Storage.loadData(context,"incorrectCount"));
                     int nol = (save_count>-1) ? (_count - save_count) : 0;
-                    int _nol = (nol<0) ? 0 : nol;
+                    //int _nol = (nol<0) ? 0 : nol;
 
-                    drawerResult.updateBadge(6, new StringHolder(_nol+""));
+                    if(nol>0) {
 
+                        drawerResult.updateBadge(6, new StringHolder(nol + ""));
+
+                        //*****-------------
+
+                        Intent notificationIntent = new Intent(context, incorrect.class);
+                        PendingIntent contentIntent = PendingIntent.getActivity(context,
+                                0, notificationIntent,
+                                PendingIntent.FLAG_CANCEL_CURRENT);
+
+                        Resources res2 = context.getResources();
+                        Notification.Builder builder = new Notification.Builder(context);
+
+                        builder.setContentIntent(contentIntent)
+                                .setSmallIcon(R.drawable.notific_response)
+                                // большая картинка
+                                .setLargeIcon(BitmapFactory.decodeResource(res2, R.drawable.incorrect_response))
+                                //.setTicker(res.getString(R.string.warning)) // текст в строке состояния
+                                .setTicker(getString(R.string.inc_notific_title))
+                                .setWhen(System.currentTimeMillis())
+                                .setAutoCancel(true)
+                                //.setContentTitle(res.getString(R.string.notifytitle)) // Заголовок уведомления
+                                .setContentTitle(getString(R.string.inc_notific_title))
+                                //.setContentText(res.getString(R.string.notifytext))
+                                .setContentText(getString(R.string.inc_notific_text)); // Текст уведомления
+
+                        // Notification notification = builder.getNotification(); // до API 16
+                        Notification notification = null;
+                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                            notification = builder.build();
+                        }
+
+                        NotificationManager notificationManager = (NotificationManager) context
+                                .getSystemService(Context.NOTIFICATION_SERVICE);
+                        notificationManager.notify(NOTIFY_ID, notification);
+
+                    }
                 }
 
             }
