@@ -16,14 +16,17 @@
         android:gravity="left">
 
         <TextView
-            android:text="текст сообщения"
+            android:id="@+id/messageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/messageView"
             android:layout_weight="1"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:maxWidth="250dp"
+            android:text="текст сообщения"
             android:textColor="#000"
-            android:textSize="18sp"
-            android:maxWidth="250dp" />
+            android:textColorLink="@color/extra_color"
+            android:textSize="18sp" />
 
         <TextView
             android:text="Дата"

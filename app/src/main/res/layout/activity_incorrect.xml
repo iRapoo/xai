@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:weightSum="1"
@@ -210,13 +211,55 @@
                     android:background="@color/white"
                     android:paddingLeft="5dp" />
 
-                <Button
-                    android:text="@string/send"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn_send"
-                    android:layout_weight="1"
-                    android:layout_marginTop="-5dp"
-                    android:layout_width="250dp" />
+                <RelativeLayout
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/btn_send_img"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="-5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_panel" />
+
+                    <ImageView
+                        android:id="@+id/imageView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/image_load" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal">
+
+                    <Button
+                        android:id="@+id/btn_send"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="-5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_panel" />
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/incorrect_send" />
+
+                </RelativeLayout>
+
+
 
             </LinearLayout>
 

@@ -2,6 +2,7 @@ package org.dualcom.xai;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -26,14 +27,14 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 
-import org.dualcom.xai.MyClass.Storage;
-
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.dualcom.xai.MyClass.*;
 
 public class incorrect extends Activity {
 
@@ -50,6 +51,7 @@ public class incorrect extends Activity {
     public TextView incorrect_not_found;
     public EditText message;
     public Button btn_send;
+    public String deviceManifest = "";
 
     public ArrayList<incorrect_const> incorrects = new ArrayList<incorrect_const>();
     public incorrect_box boxAdapter;
@@ -81,6 +83,35 @@ public class incorrect extends Activity {
         final String PRODUCT = Build.PRODUCT;
         UID = SERIAL+BRAND+MANUFACTURER+PRODUCT;
         //************************
+
+        //Сбор данных ************************
+
+        int sdkVersion = Build.VERSION.SDK_INT;
+        String release = Build.VERSION.RELEASE;
+        String VERSION = ""; int CODE = 0;
+        try {
+            VERSION = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+            CODE = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        String[] CashPosition = Storage.loadData(context,"S_GROUP").split(":,");
+
+        deviceManifest += "Android/Sdk: "+release+"/"+sdkVersion+"\n";
+        deviceManifest += "AppVersion/Code: "+VERSION+"/"+CODE+" \n";
+        deviceManifest += "Device: "+MANUFACTURER+" "+PRODUCT+" \n";
+        deviceManifest += "NowPosition: "+Storage.loadData(context, "NOW_GROUP")+" \n";
+        deviceManifest += "CashPosition: [ \n";
+        for(int i = 1; i < CashPosition.length; i++){
+            deviceManifest += "------- "+CashPosition[i]+"\n";
+        }
+        deviceManifest += " ]";
+
+
+        //Windows.alert(context, "Тест сообщения", deviceManifest);
+
+        //************************************
 
         if(isNetworkAvailable())
             new GetIncorrect().execute("get_incorrect.php", "uid=" + UID);
@@ -119,7 +150,8 @@ public class incorrect extends Activity {
 
                         new SandIncorrect().execute("incorrectSend.php",
                                 "uid=" + UID,
-                                "text=" + text);
+                                "text=" + text,
+                                "manifest=" + deviceManifest);
                     }
 
                 }
@@ -139,7 +171,8 @@ public class incorrect extends Activity {
 
                     new SandIncorrect().execute("incorrectSend.php",
                             "uid=" + UID,
-                            "text=" + text);
+                            "text=" + text,
+                            "manifest=" + deviceManifest);
                 }
 
             }

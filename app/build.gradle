@@ -8,8 +8,8 @@ android {
         applicationId "org.dualcom.xai"
         minSdkVersion 14
         targetSdkVersion 26
-        versionCode 138
-        versionName "1.1.4.f1"
+        versionCode 139
+        versionName "1.1.4.f2"
         multiDexEnabled true
     }
     buildTypes {
