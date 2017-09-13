@@ -1127,6 +1127,7 @@ public class MainActivity extends AppCompatActivity {
                         Notification notification = null;
                         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
                             notification = builder.build();
+                            notification.defaults = Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE;
                         }
 
                         NotificationManager notificationManager = (NotificationManager) context
