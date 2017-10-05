@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (!Storage.loadData(context, "INFO_VERSION").equals(VERSION) && isNetworkAvailable()) {
-            new StatVersion().execute("device.php",
+            new StatVersion().execute("device",
                     "UID=" + Build.SERIAL,
                     "BRAND=" + Build.BRAND,
                     "MANUFACTURER=" + Build.MANUFACTURER,
@@ -173,8 +173,8 @@ public class MainActivity extends AppCompatActivity {
                     "VERSION=" + VERSION);
 
             //Получение списка групп
-            new GetGroupsUpd().execute("list_group2.php");
-            new GetTeachersUpd().execute("list_teach.php");
+            new GetGroupsUpd().execute("list_group");
+            new GetTeachersUpd().execute("list_teach");
         }
 
         //mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
@@ -402,7 +402,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Получение количества сообщений обратной связи
         if (isNetworkAvailable())
-            new GetIncorrect().execute("get_incorrect.php", "uid=" + UID);
+            new GetIncorrect().execute("get_incorrect", "uid=" + UID);
         //---------------------------------------------
 
         GO_BACK.setOnClickListener(new OnClickListener() {
@@ -688,7 +688,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Проверка ХЕШ суммы
         if(isNetworkAvailable() && !Storage.emptyData(context, "NOW_GROUP")) {
-            new GetMd5().execute("md5.php",
+            new GetMd5().execute("md5",
                     "group=" + Storage.loadData(context, "NOW_GROUP"));
         }
         //****************//
@@ -699,7 +699,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
@@ -733,7 +733,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
@@ -767,7 +767,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
@@ -809,10 +809,10 @@ public class MainActivity extends AppCompatActivity {
 
                 if(isNetworkAvailable()) {
                     if(isChecked)
-                        new SetTranslate().execute("schedule2.php",
+                        new SetTranslate().execute("schedule",
                                 "group=" + group, "translate=" + true);
                     else
-                        new SetTranslate().execute("schedule2.php",
+                        new SetTranslate().execute("schedule",
                                 "group=" + group);
 
                 }
@@ -832,7 +832,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
@@ -874,7 +874,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
@@ -931,10 +931,10 @@ public class MainActivity extends AppCompatActivity {
                     if(isNetworkAvailable()) {
                         try {
                             if(!translate) {
-                                schedule = new MyPHP().execute("schedule2.php",
+                                schedule = new MyPHP().execute("schedule",
                                         "group=" + group).get();
                             }else{
-                                schedule = new MyPHP().execute("schedule2.php",
+                                schedule = new MyPHP().execute("schedule",
                                         "group=" + group, "translate=" + true).get();
                             }
                         } catch (InterruptedException e) {
@@ -1039,7 +1039,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();

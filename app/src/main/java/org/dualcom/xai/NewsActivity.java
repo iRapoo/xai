@@ -90,7 +90,7 @@ public class NewsActivity extends AppCompatActivity {
     public String S_GROUP = "";
     public String[] tmp_s_group;
 
-    private static final String url_wall = "http://rapoo.mysit.ru/android/direct.php?update=2"; //URL стены
+    private static final String url_wall = "http://rapoo.mysit.ru/api?module=news"; //URL стены
 
     //Проверка доступности сети
     private boolean isNetworkAvailable() {
@@ -159,7 +159,7 @@ public class NewsActivity extends AppCompatActivity {
 
         //Отправка информации о новом устройстве
         if (Storage.emptyData(context, "INFO_DEVICE") && isNetworkAvailable()) {
-            new MyAsyncTask().execute("device.php",
+            new MyAsyncTask().execute("device",
                     "UID=" + Build.SERIAL,
                     "BRAND=" + Build.BRAND,
                     "MANUFACTURER=" + Build.MANUFACTURER,
@@ -181,8 +181,8 @@ public class NewsActivity extends AppCompatActivity {
 
         //Получение списка групп
         if (isNetworkAvailable()) {
-            new GetGroups().execute("list_group2.php");
-            new GetTeachers().execute("list_teach.php");
+            new GetGroups().execute("list_group");
+            new GetTeachers().execute("list_teach");
         }
         //***********************
 
@@ -314,7 +314,7 @@ public class NewsActivity extends AppCompatActivity {
                 if (flag_gr == 1) {
                     if (isNetworkAvailable() && Storage.emptyData(context, search.getText() + "") == true) {
                         //Windows.alert(context, "test", data[1]);
-                        schedule = new MyPHP().execute("schedule2.php",
+                        schedule = new MyPHP().execute("schedule",
                                 "group=" + search.getText()).get();
 
                         Storage.saveData(context, search.getText() + "", schedule);
@@ -339,7 +339,7 @@ public class NewsActivity extends AppCompatActivity {
 
                     if (G_Name.length() > 0) {
                         try {
-                            G_NRESULT = new MyPHP().execute("add_group.php",
+                            G_NRESULT = new MyPHP().execute("add_group",
                                     "val=" + G_Name + "").get();
 
                             if (G_NRESULT.equals("1"))
@@ -406,7 +406,7 @@ public class NewsActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
@@ -448,7 +448,7 @@ public class NewsActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
@@ -482,7 +482,7 @@ public class NewsActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
@@ -517,7 +517,7 @@ public class NewsActivity extends AppCompatActivity {
         @SuppressWarnings("WrongThread")
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();

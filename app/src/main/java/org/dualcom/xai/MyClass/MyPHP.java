@@ -35,7 +35,7 @@ public class MyPHP extends AsyncTask<String, Integer, String> {
         progressBar.setVisibility(View.VISIBLE);
     }*/
 
-    public static String HOST = "http://rapoo.mysit.ru/android/";
+    public static String HOST = "http://rapoo.mysit.ru/api?module=";
     @Override
     protected String doInBackground(String... params) {
         try{

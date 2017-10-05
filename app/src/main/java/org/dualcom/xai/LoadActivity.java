@@ -53,7 +53,7 @@ public class LoadActivity extends Activity {
         }
 
         if(isNetworkAvailable())
-            new MyAsyncTask(progressBar).execute("update2.php",
+            new MyAsyncTask(progressBar).execute("update",
                     "ver=" + versionName );
 
     }
@@ -77,7 +77,7 @@ public class LoadActivity extends Activity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();

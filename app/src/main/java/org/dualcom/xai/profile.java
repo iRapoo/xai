@@ -16,7 +16,7 @@ public class profile extends Activity {
 
     private WebView mWebView;
     private ProgressBar progress;
-    private static final String url_profile = "http://rapoo.mysit.ru/android/profile.php";
+    private static final String url_profile = "http://rapoo.mysit.ru/api?module=profile";
 
     //Проверка доступности сети
     private boolean isNetworkAvailable() {

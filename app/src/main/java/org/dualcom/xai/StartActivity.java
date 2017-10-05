@@ -92,7 +92,7 @@ public class StartActivity extends Activity {
     private ProgressBar progress;
     private static final int NOTIFY_ID = 120;
     private static final boolean BETA = false;
-    private static final String url_wall = "http://rapoo.mysit.ru/android/direct.php?update=2"
+    private static final String url_wall = "http://rapoo.mysit.ru/api?module=news"
             +((BETA) ? "&beta=true" : ""); //URL стены
 
     public static String getDATA;
@@ -184,7 +184,7 @@ public class StartActivity extends Activity {
         }*/
             //Новый алгоритм
             if (Storage.emptyData(context, "INFO_DEVICE") && isNetworkAvailable()) {
-                new MyAsyncTask().execute("device.php",
+                new MyAsyncTask().execute("device",
                         "UID=" + Build.SERIAL,
                         "BRAND=" + Build.BRAND,
                         "MANUFACTURER=" + Build.MANUFACTURER,
@@ -201,13 +201,13 @@ public class StartActivity extends Activity {
             UID = SERIAL + BRAND + MANUFACTURER + PRODUCT;
             //************************
             if (isNetworkAvailable())
-                new GetIncorrect().execute("get_incorrect.php", "uid=" + UID);
+                new GetIncorrect().execute("get_incorrect", "uid=" + UID);
             //***********************
 
             //Получение списка групп
             if (isNetworkAvailable()) {
-                new GetGroups().execute("list_group2.php");
-                new GetTeachers().execute("list_teach.php");
+                new GetGroups().execute("list_group");
+                new GetTeachers().execute("list_teach");
             }
             /*************************/
 
@@ -396,7 +396,7 @@ public class StartActivity extends Activity {
                 if (flag_gr == 1) {
                     if (isNetworkAvailable() && Storage.emptyData(context, search.getText() + "") == true) {
                         //Windows.alert(context, "test", data[1]);
-                        schedule = new MyPHP().execute("schedule2.php",
+                        schedule = new MyPHP().execute("schedule",
                                 "group=" + search.getText()).get();
 
                         Storage.saveData(context, search.getText() + "", schedule);
@@ -421,7 +421,7 @@ public class StartActivity extends Activity {
 
                     if (G_Name.length() > 0) {
                         try {
-                            G_NRESULT = new MyPHP().execute("add_group.php",
+                            G_NRESULT = new MyPHP().execute("add_group",
                                     "val=" + G_Name + "").get();
 
                             if (G_NRESULT.equals("1"))
@@ -500,7 +500,7 @@ public class StartActivity extends Activity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
@@ -542,7 +542,7 @@ public class StartActivity extends Activity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
@@ -576,7 +576,7 @@ public class StartActivity extends Activity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
@@ -611,7 +611,7 @@ public class StartActivity extends Activity {
         @SuppressWarnings("WrongThread")
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();

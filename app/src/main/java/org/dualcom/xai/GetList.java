@@ -121,7 +121,7 @@ public class GetList extends FragmentActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
@@ -155,7 +155,7 @@ public class GetList extends FragmentActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();

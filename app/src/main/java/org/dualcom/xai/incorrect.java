@@ -114,7 +114,7 @@ public class incorrect extends Activity {
         //************************************
 
         if(isNetworkAvailable())
-            new GetIncorrect().execute("get_incorrect.php", "uid=" + UID);
+            new GetIncorrect().execute("get_incorrect", "uid=" + UID);
         else
             nointernet.setVisibility(nointernet.VISIBLE);
 
@@ -148,7 +148,7 @@ public class incorrect extends Activity {
                         message.setEnabled(false);
                         btn_send.setEnabled(false);
 
-                        new SandIncorrect().execute("incorrectSend.php",
+                        new SandIncorrect().execute("incorrectSend",
                                 "uid=" + UID,
                                 "text=" + text,
                                 "manifest=" + deviceManifest);
@@ -169,7 +169,7 @@ public class incorrect extends Activity {
                     message.setEnabled(false);
                     btn_send.setEnabled(false);
 
-                    new SandIncorrect().execute("incorrectSend.php",
+                    new SandIncorrect().execute("incorrectSend",
                             "uid=" + UID,
                             "text=" + text,
                             "manifest=" + deviceManifest);
@@ -188,7 +188,7 @@ public class incorrect extends Activity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
@@ -220,7 +220,7 @@ public class incorrect extends Activity {
             super.onPostExecute(res);
 
             if(res.equals("true"))
-                new GetIncorrect().execute("get_incorrect.php",
+                new GetIncorrect().execute("get_incorrect",
                         "uid=" + UID);
 
         }
@@ -232,7 +232,7 @@ public class incorrect extends Activity {
         @SuppressWarnings("WrongThread")
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/android/";
+            String HOST = "http://rapoo.mysit.ru/api?module=";
 
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
