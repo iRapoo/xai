@@ -64,14 +64,15 @@
                         android:textColor="@color/white" />
 
                     <ImageButton
+                        android:id="@+id/ProfileEdit"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:id="@+id/ProfileEdit"
-                        android:background="@drawable/profile_edit_btn"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_margin="5dp" />
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/profile_edit_btn"
+                        android:visibility="gone" />
 
                     <ImageButton
                         android:layout_width="50dp"

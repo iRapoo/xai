@@ -105,10 +105,10 @@ public class list_teach extends Fragment {
                 try {
                     if (isNetworkAvailable() && Storage.emptyData(context,adapter.getItem(position)+"") == true){
                         if(Storage.loadData(context,"translate").equals("true"))
-                            schedule = new MyPHP().execute("schedule2.php?t=true",
+                            schedule = new MyPHP().execute("schedule&t=true",
                                     "group=" + adapter.getItem(position), "translate=" + true).get();
                         else
-                            schedule = new MyPHP().execute("schedule2.php?t=true",
+                            schedule = new MyPHP().execute("schedule&t=true",
                                     "group=" + adapter.getItem(position)).get();
                         /*schedule = new MyPHP().execute("schedule2.php?t=true",
                                 "group=" + adapter.getItem(position)).get();*/

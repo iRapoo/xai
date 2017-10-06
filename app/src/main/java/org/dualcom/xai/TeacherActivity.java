@@ -76,7 +76,7 @@ public class TeacherActivity extends Activity {
     public EditText ProfileEditName;
     public EditText ProfileEditRank;
     public EditText ProfileEditExtra;
-    public String HOST = "http://rapoo.mysit.ru/api?module=teachers";
+    public String HOST = "http://rapoo.mysit.ru/api?module=teachers&file=";
     public String _def = null;
     public String URL = null;
     public StringBuffer buffer = null;
@@ -294,7 +294,7 @@ public class TeacherActivity extends Activity {
             }
 
             //Picasso.with(context).load("http://rapoo.mysit.ru/teachers/asd.php?img="+params[0]).into(ProfileIMG);
-            aq.id(R.id.ProfileIMG).image(HOST+"&file=getImage&img="+params[0], true, true, 0, R.drawable.teacher_profile, null, AQuery.FADE_IN);
+            aq.id(R.id.ProfileIMG).image(HOST+"getImage&img="+params[0], true, true, 0, R.drawable.teacher_profile, null, AQuery.FADE_IN);
 
         }
     }
@@ -318,7 +318,7 @@ public class TeacherActivity extends Activity {
                 ProfileExtra.setVisibility(ProfileExtra.VISIBLE);
             }
 
-            aq.id(R.id.ProfileIMG).image(HOST + "&file=getImage&img=" + params[0], true, true, 0, R.drawable.teacher_profile, null, AQuery.FADE_IN);
+            aq.id(R.id.ProfileIMG).image(HOST + "getImage&img=" + params[0], true, true, 0, R.drawable.teacher_profile, null, AQuery.FADE_IN);
         }else {
             ProfileIMG.setImageResource(R.drawable.teacher_profile);
             LoadText.setVisibility(LoadText.GONE);
