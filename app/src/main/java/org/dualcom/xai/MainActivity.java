@@ -70,6 +70,7 @@ import org.json.simple.parser.ParseException;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
@@ -222,8 +223,6 @@ public class MainActivity extends AppCompatActivity {
         Button GO_BACK = (Button) findViewById(R.id.GO_BACK);
         RelativeLayout GO_MENU = (RelativeLayout) findViewById(R.id.GO_MENU);
         Button fast_change_group = (Button) findViewById(R.id.fast_change_group);
-        Button vk = (Button) findViewById(R.id.settings);
-        Button incorrect = (Button) findViewById(R.id.incorrect);
         TextView main_label = (TextView) findViewById(R.id.main_label);
         TextView main_type = (TextView) findViewById(R.id.main_type);
         final Button GO_SETTING = (Button) findViewById(R.id.GO_SETTING);
@@ -328,8 +327,8 @@ public class MainActivity extends AppCompatActivity {
                 //.withAccountHeader(headerResult)
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[0]).withIcon(FontAwesome.Icon.faw_newspaper_o).withSelectable(false),
-                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[1]).withIcon(FontAwesome.Icon.faw_object_group).withSelectable(false),
-                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[2]).withIcon(FontAwesome.Icon.faw_clock_o).withSelectable(false).withEnabled(false),
+                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[1]).withIcon(FontAwesome.Icon.faw_download).withSelectable(false),
+                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[2]).withIcon(FontAwesome.Icon.faw_clock_o).withSelectable(false),
                         new SwitchDrawerItem().withName(res.getStringArray(R.array.drawers)[6]).withIcon(FontAwesome.Icon.faw_language).withSelectable(false).withChecked(translate).withOnCheckedChangeListener(onCheckedChangeListener).withEnabled(trans_active),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[7]).withIcon(FontAwesome.Icon.faw_map).withSelectable(false),
                         new SectionDrawerItem().withName(R.string.support),
@@ -564,6 +563,21 @@ public class MainActivity extends AppCompatActivity {
 
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
 
+        if(c.get(Calendar.HOUR_OF_DAY) >= 17 && dow < 5)
+        {
+            DAY[DATE.getWeek()-1] = getResources().getString(R.string.today);
+            DAY[DATE.getWeek()] = getResources().getString(R.string.tommorow);
+        }
+        if(c.get(Calendar.HOUR_OF_DAY) < 17)
+        {
+            DAY[DATE.getWeek()] = getResources().getString(R.string.today);
+            DAY[DATE.getWeek()+1] = getResources().getString(R.string.tommorow);
+        }
+        if(c.get(Calendar.HOUR_OF_DAY) >= 17 && dow == 5)
+        {
+            DAY[4] = getResources().getString(R.string.today);
+        }
+
         adapter =  new ViewPagerAdapter(getSupportFragmentManager(),DAY,DAY.length);
 
         // Assigning ViewPager View and setting the adapter
@@ -575,6 +589,7 @@ public class MainActivity extends AppCompatActivity {
         int width = display.getWidth();  // deprecated
         int height = display.getHeight();  // deprecated
         Boolean tab_long = (width<500) ? false : true;
+        tab_long = true;
 
 
         // Assiging the Sliding Tab Layout View
@@ -683,7 +698,7 @@ public class MainActivity extends AppCompatActivity {
         String[] TMP_WEEK = getResources().getStringArray(R.array.TYPE_WEEK);
         String TYPE_WEEK = (DATE.getWeekType() == 0) ? TMP_WEEK[0] : TMP_WEEK[1];
         main_label.setText(Storage.loadData(context, "NOW_GROUP")); //+" | "+TYPE_WEEK
-        main_type.setText(TYPE_WEEK);
+        main_type.setText(monthes[month] + " " + day_of_month + ", " + TYPE_WEEK);
         //startType.setText(TYPE_WEEK);
 
         //Проверка ХЕШ суммы

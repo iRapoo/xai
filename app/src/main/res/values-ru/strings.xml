@@ -83,12 +83,15 @@
         перезапустить приложение и сообщить администрации.</string>
 
 	<string-array name="DAYS">
-		<item>ПН</item>
-		<item>ВТ</item>
-		<item>СР</item>
-		<item>ЧТ</item>
-		<item>ПТ</item>
+		<item>Понедельник</item>
+		<item>Вторник</item>
+		<item>Среда</item>
+		<item>Четверг</item>
+		<item>Пятница</item>
 	</string-array>
+
+    <string name="today">Сегодня</string>
+    <string name="tommorow">Завтра</string>
 
     <string-array name="GetList">
         <item>Группы</item>

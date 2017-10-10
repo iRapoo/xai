@@ -81,12 +81,15 @@
     <string name="timeout">Do not worry about loading data from the server, but if the window is displayed more than 10 seconds, it is recommended restart the application and inform the administration.</string>
 
     <string-array name="DAYS">
-        <item>MO</item>
-        <item>TU</item>
-        <item>WE</item>
-        <item>TH</item>
-        <item>FR</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
     </string-array>
+
+    <string name="today">Today</string>
+    <string name="tommorow">Tomorrow</string>
 
     <string-array name="GetList">
         <item>Groups</item>
