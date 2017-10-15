@@ -563,16 +563,23 @@ public class MainActivity extends AppCompatActivity {
 
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
 
-        if(c.get(Calendar.HOUR_OF_DAY) >= 17 && dow < 5)
+        if(c.get(Calendar.HOUR_OF_DAY) >= 17 && dow < 5 && dow > 0)
         {
             DAY[DATE.getWeek()-1] = getResources().getString(R.string.today);
             DAY[DATE.getWeek()] = getResources().getString(R.string.tommorow);
         }
-        if(c.get(Calendar.HOUR_OF_DAY) < 17)
+
+        if(c.get(Calendar.HOUR_OF_DAY) < 17 && dow < 5 && dow > 0)
         {
             DAY[DATE.getWeek()] = getResources().getString(R.string.today);
             DAY[DATE.getWeek()+1] = getResources().getString(R.string.tommorow);
         }
+
+        if(c.get(Calendar.HOUR_OF_DAY) < 17 && dow == 5)
+        {
+            DAY[4] = getResources().getString(R.string.today);
+        }
+
         if(c.get(Calendar.HOUR_OF_DAY) >= 17 && dow == 5)
         {
             DAY[4] = getResources().getString(R.string.today);

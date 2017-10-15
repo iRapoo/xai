@@ -9,7 +9,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 145
-        versionName "1.1.7.f0"
+        versionName "1.1.6.f1"
         multiDexEnabled true
 
     }
