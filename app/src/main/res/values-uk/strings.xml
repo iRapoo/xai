@@ -81,6 +81,14 @@
     <string name="timeout">Не турбуйтеся йде завантаження даних з сервера, але якщо це вікно показується більше 10 секунд, рекомендується перезапустити програму і повідомити адміністрацію.</string>
 
     <string-array name="DAYS">
+        <item>ПН</item>
+        <item>ВТ</item>
+        <item>СР</item>
+        <item>ЧТ</item>
+        <item>ПТ</item>
+    </string-array>
+
+    <string-array name="DAYS_FULL">
         <item>Понеділок</item>
         <item>Вівторок</item>
         <item>Середа</item>

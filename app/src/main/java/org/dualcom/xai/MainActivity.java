@@ -236,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
         int dow = (c.get(Calendar.DAY_OF_WEEK)-1);
         int month = c.get(Calendar.MONTH);
 
-        String[] DAY = getResources().getStringArray(R.array.DAYS);
+        String[] DAY = getResources().getStringArray(R.array.DAYS_FULL);
 
         int day_of_month = c.get(Calendar.DAY_OF_MONTH);
         String[] monthes = context.getResources().getStringArray(R.array.MONTHES);
