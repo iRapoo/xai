@@ -96,7 +96,7 @@
         <item>П`ятниця</item>
     </string-array>
 
-    <string name="stud_week">й навчальний тиждень</string>
+    <string name="stud_week">-й навчальний тиждень</string>
 
     <string name="today">Сьогодні</string>
     <string name="tommorow">Завтра</string>
