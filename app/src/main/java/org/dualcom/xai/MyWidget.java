@@ -191,6 +191,7 @@ public class MyWidget extends AppWidgetProvider {
         remoteViews.setTextViewText(R.id.LabelGroup, group);
         remoteViews.setTextViewText(R.id.LabelType, TYPE_WEEK);
         remoteViews.setTextViewText(R.id.LabelDate, monthes[month]+" "+day_of_month+", "+DAY[DATE.getWeek()]);
+        remoteViews.setTextViewText(R.id.LabelWeek, DATE.getStudWeek() + context.getResources().getString(R.string.stud_week));
         //remoteViews.setTextViewText(R.id.LabelWidget, tmp_ml + ": " + group + " | " + TYPE_WEEK + " | " + DAY[DATE.getWeek()]);
         appWidgetManager.updateAppWidget(widgetID, remoteViews);
     }

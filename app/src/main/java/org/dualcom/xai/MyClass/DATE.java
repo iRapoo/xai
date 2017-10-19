@@ -80,6 +80,29 @@ public class DATE {
         return time;
     }
 
+    public static int getStudWeek(){ //Немер учебной недели
+        Calendar c = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"), Locale.UK);
+        Calendar c2 = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"), Locale.UK);
+
+        c.set(Calendar.DAY_OF_MONTH, 1);
+        c.set(Calendar.MONTH, Calendar.SEPTEMBER);
+
+        int week = c.get(Calendar.WEEK_OF_YEAR);
+        int week2 = c2.get(Calendar.WEEK_OF_YEAR);
+
+        int stud_week = (week2-week)+1;
+
+        if(stud_week<0){
+            c.set(Calendar.MONTH, Calendar.FEBRUARY);
+
+            week = c.get(Calendar.WEEK_OF_YEAR);
+            week2 = c2.get(Calendar.WEEK_OF_YEAR);
+
+            stud_week = (week2-week)+1;
+        }
+
+        return stud_week;
+    }
 
     public static int getYear(){ //Год
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy");

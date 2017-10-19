@@ -96,6 +96,8 @@
         <item>Friday</item>
     </string-array>
 
+    <string name="stud_week">th school week</string>
+
     <string name="today">Today</string>
     <string name="tommorow">Tomorrow</string>
 

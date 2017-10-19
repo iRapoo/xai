@@ -11,41 +11,41 @@
 
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/loadWidget"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@color/main_color"
-        android:id="@+id/loadWidget"
+        android:orientation="vertical"
         android:visibility="visible">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="250dp"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:gravity="center">
 
             <ImageView
+                android:id="@+id/imageView3"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:id="@+id/imageView3"
                 android:background="@drawable/logo_big" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/loadWidget"
-                android:id="@+id/textView11"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>
@@ -92,12 +92,19 @@
             android:layout_marginRight="10dp">
 
             <TextView
+                android:id="@+id/LabelDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="День недели"
-                android:id="@+id/LabelDate"
                 android:textColor="#FFF"
-                android:textSize="25dp" />
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/LabelWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1я учебная неделя"
+                android:textColor="#FFF" />
 
         </LinearLayout>
     </LinearLayout>
