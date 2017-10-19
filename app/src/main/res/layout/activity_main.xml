@@ -31,7 +31,8 @@
             <RelativeLayout
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical|center_horizontal">
+                android:gravity="center_vertical|center_horizontal"
+                android:id="@+id/relativeLayout3">
 
                 <Button
                     android:id="@+id/GO_BACK"
@@ -53,10 +54,11 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical|center"
-                android:orientation="vertical"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true">
+                android:layout_toLeftOf="@+id/linearLayout3"
+                android:layout_toStartOf="@+id/linearLayout3"
+                android:gravity="right"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/main_label"
@@ -79,12 +81,41 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/relativeLayout3"
+                android:layout_toRightOf="@+id/relativeLayout3"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/LabelDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="15"
+                    android:text="Дата"
+                    android:textColor="#FFF"
+                    android:textSize="23dp" />
+
+                <TextView
+                    android:id="@+id/LabelWeek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1я учебная неделя"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true">
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal">
 
                 <RelativeLayout
                     android:id="@+id/GO_MENU"
@@ -135,23 +166,6 @@
 
             </LinearLayout>
         </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/main_color"
-            android:orientation="horizontal"
-            android:padding="5dp">
-
-            <TextView
-                android:id="@+id/LabelWeek"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="1я учебная неделя"
-                android:textColor="@color/white" />
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

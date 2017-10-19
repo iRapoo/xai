@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/rapoo/AndroidStudioProjects/xai/lib/SlidingMenu/assets"/><source path="/home/rapoo/AndroidStudioProjects/xai/lib/SlidingMenu/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/home/rapoo/AndroidStudioProjects/xai/lib/SlidingMenu/src/debug/assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\CloudMail\#StudioProjects\xai\lib\SlidingMenu\assets"/><source path="D:\CloudMail\#StudioProjects\xai\lib\SlidingMenu\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\CloudMail\#StudioProjects\xai\lib\SlidingMenu\src\debug\assets"/></dataSet></merger>
