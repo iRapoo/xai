@@ -225,7 +225,6 @@ public class MainActivity extends AppCompatActivity {
         Button fast_change_group = (Button) findViewById(R.id.fast_change_group);
         TextView main_label = (TextView) findViewById(R.id.main_label);
         TextView main_type = (TextView) findViewById(R.id.main_type);
-        TextView label_date = (TextView) findViewById(R.id.LabelDate);
         TextView label_week = (TextView) findViewById(R.id.LabelWeek);
         final Button GO_SETTING = (Button) findViewById(R.id.GO_SETTING);
         final LinearLayout ABOUT_BTN = (LinearLayout) findViewById(R.id.about_btn);
@@ -708,8 +707,7 @@ public class MainActivity extends AppCompatActivity {
         String[] TMP_WEEK = getResources().getStringArray(R.array.TYPE_WEEK);
         String TYPE_WEEK = (DATE.getWeekType() == 0) ? TMP_WEEK[0] : TMP_WEEK[1];
         main_label.setText(Storage.loadData(context, "NOW_GROUP")); //+" | "+TYPE_WEEK
-        main_type.setText(TYPE_WEEK);
-        label_date.setText(monthes[month] + " " + day_of_month + ", "+DAY_SHORT[DATE.getWeek()]);
+        main_type.setText(monthes[month] + " " + day_of_month + ", " + DAY_SHORT[DATE.getWeek()] + " / " + TYPE_WEEK);
         label_week.setText(DATE.getStudWeek() + getResources().getString(R.string.stud_week));
         //startType.setText(TYPE_WEEK);
 
