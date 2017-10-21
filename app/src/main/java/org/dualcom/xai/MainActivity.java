@@ -703,6 +703,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        day_of_month = c.get(Calendar.DAY_OF_MONTH);
+
         String tmp_ml = getString(R.string.SELECT);
         String[] TMP_WEEK = getResources().getStringArray(R.array.TYPE_WEEK);
         String TYPE_WEEK = (DATE.getWeekType() == 0) ? TMP_WEEK[0] : TMP_WEEK[1];

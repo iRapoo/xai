@@ -86,7 +86,7 @@
                     android:gravity="center"
                     android:text="1я учебная неделя"
                     android:textColor="@color/white"
-                    android:textSize="8sp" />
+                    android:textSize="9sp" />
 
             </LinearLayout>
 
