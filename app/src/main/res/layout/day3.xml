@@ -25,40 +25,40 @@
             android:background="@drawable/border">
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/TOP9"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="@drawable/selector"
-                android:clickable="true"
-                android:id="@+id/TOP9"
-                android:paddingLeft="65dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/TOPt9"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
+                    android:paddingLeft="65dp"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
                     android:textSize="15dp" />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/BOT9"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="@drawable/selector"
-                android:clickable="true"
-                android:id="@+id/BOT9"
-                android:paddingLeft="65dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/BOTt9"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
+                    android:paddingLeft="65dp"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
                     android:textSize="15dp" />
@@ -81,40 +81,40 @@
             android:background="@drawable/border">
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/TOP10"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="@drawable/selector"
-                android:clickable="true"
-                android:id="@+id/TOP10"
-                android:paddingLeft="65dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/TOPt10"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
+                    android:paddingLeft="65dp"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
                     android:textSize="15dp" />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/BOT10"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="@drawable/selector"
-                android:clickable="true"
-                android:id="@+id/BOT10"
-                android:paddingLeft="65dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/BOTt10"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
+                    android:paddingLeft="65dp"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
                     android:textSize="15dp" />
@@ -138,40 +138,40 @@
             android:background="@drawable/border">
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/TOP11"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="@drawable/selector"
-                android:clickable="true"
-                android:id="@+id/TOP11"
-                android:paddingLeft="65dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/TOPt11"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
+                    android:paddingLeft="65dp"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
                     android:textSize="15dp" />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/BOT11"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="@drawable/selector"
-                android:clickable="true"
-                android:id="@+id/BOT11"
-                android:paddingLeft="65dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/BOTt11"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
+                    android:paddingLeft="65dp"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
                     android:textSize="15dp" />
@@ -194,40 +194,40 @@
             android:baselineAligned="false">
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/TOP12"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="@drawable/selector"
-                android:clickable="true"
-                android:id="@+id/TOP12"
-                android:paddingLeft="65dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/TOPt12"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
+                    android:paddingLeft="65dp"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
                     android:textSize="15dp" />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/BOT12"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:background="@drawable/selector"
-                android:clickable="true"
-                android:id="@+id/BOT12"
-                android:paddingLeft="65dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/BOTt12"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
+                    android:paddingLeft="65dp"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
                     android:textSize="15dp" />
