@@ -29,6 +29,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
+                android:background="@drawable/selector"
+                android:clickable="true"
                 android:id="@+id/TOP17"
                 android:paddingLeft="65dp">
 
@@ -36,8 +38,6 @@
                     android:id="@+id/TOPt17"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/selector"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
@@ -49,6 +49,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
+                android:background="@drawable/selector"
+                android:clickable="true"
                 android:id="@+id/BOT17"
                 android:paddingLeft="65dp">
 
@@ -56,8 +58,6 @@
                     android:id="@+id/BOTt17"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/selector"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
@@ -85,6 +85,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
+                android:background="@drawable/selector"
+                android:clickable="true"
                 android:id="@+id/TOP18"
                 android:paddingLeft="65dp">
 
@@ -92,8 +94,6 @@
                     android:id="@+id/TOPt18"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/selector"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
@@ -105,6 +105,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
+                android:background="@drawable/selector"
+                android:clickable="true"
                 android:id="@+id/BOT18"
                 android:paddingLeft="65dp">
 
@@ -112,8 +114,6 @@
                     android:id="@+id/BOTt18"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/selector"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
@@ -142,6 +142,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
+                android:background="@drawable/selector"
+                android:clickable="true"
                 android:id="@+id/TOP19"
                 android:paddingLeft="65dp">
 
@@ -149,8 +151,6 @@
                     android:id="@+id/TOPt19"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/selector"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
@@ -162,6 +162,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
+                android:background="@drawable/selector"
+                android:clickable="true"
                 android:id="@+id/BOT19"
                 android:paddingLeft="65dp">
 
@@ -169,8 +171,6 @@
                     android:id="@+id/BOTt19"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/selector"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
@@ -198,6 +198,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
+                android:background="@drawable/selector"
+                android:clickable="true"
                 android:id="@+id/TOP20"
                 android:paddingLeft="65dp">
 
@@ -205,8 +207,6 @@
                     android:id="@+id/TOPt20"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/selector"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"
@@ -218,6 +218,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
+                android:background="@drawable/selector"
+                android:clickable="true"
                 android:id="@+id/BOT20"
                 android:paddingLeft="65dp">
 
@@ -225,8 +227,6 @@
                     android:id="@+id/BOTt20"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/selector"
-                    android:clickable="true"
                     android:gravity="center"
                     android:text="@string/no_less"
                     android:textColor="@color/dark_grey"

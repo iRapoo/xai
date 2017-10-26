@@ -259,7 +259,7 @@ public class NewsActivity extends AppCompatActivity {
         /*if(!Storage.emptyData(context,"NOW_GROUP"))
             toolbarLayout.setTitle(Storage.loadData(context, "NOW_GROUP"));
         else*/
-            toolbarLayout.setTitle("   " + getString(R.string.news_label));
+            toolbarLayout.setTitle("      " + getString(R.string.news_label));
 
         //Установка даты и типа недели
         Calendar c = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"), Locale.UK);
