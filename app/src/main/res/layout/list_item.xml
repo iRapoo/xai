@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/selector"
-    android:clickable="true"
     android:padding="10dp"
     android:text="TEST"
     android:textColor="#000"
