@@ -33,13 +33,15 @@
                 android:paddingLeft="65dp">
 
                 <TextView
+                    android:id="@+id/TOPt17"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:text="@string/no_less"
-                    android:id="@+id/TOPt17"
-                    android:textSize="15dp"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:textColor="@color/dark_grey" />
+                    android:text="@string/no_less"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="15dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -51,13 +53,15 @@
                 android:paddingLeft="65dp">
 
                 <TextView
+                    android:id="@+id/BOTt17"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:text="@string/no_less"
-                    android:id="@+id/BOTt17"
-                    android:textSize="15dp"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:textColor="@color/dark_grey" />
+                    android:text="@string/no_less"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="15dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -85,13 +89,15 @@
                 android:paddingLeft="65dp">
 
                 <TextView
+                    android:id="@+id/TOPt18"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:text="@string/no_less"
-                    android:id="@+id/TOPt18"
-                    android:textSize="15dp"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:textColor="@color/dark_grey" />
+                    android:text="@string/no_less"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="15dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -103,13 +109,15 @@
                 android:paddingLeft="65dp">
 
                 <TextView
+                    android:id="@+id/BOTt18"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:text="@string/no_less"
-                    android:id="@+id/BOTt18"
-                    android:textSize="15dp"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:textColor="@color/dark_grey" />
+                    android:text="@string/no_less"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="15dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -138,13 +146,15 @@
                 android:paddingLeft="65dp">
 
                 <TextView
+                    android:id="@+id/TOPt19"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:text="@string/no_less"
-                    android:id="@+id/TOPt19"
-                    android:textSize="15dp"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:textColor="@color/dark_grey" />
+                    android:text="@string/no_less"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="15dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -156,13 +166,15 @@
                 android:paddingLeft="65dp">
 
                 <TextView
+                    android:id="@+id/BOTt19"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:text="@string/no_less"
-                    android:id="@+id/BOTt19"
-                    android:textSize="15dp"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:textColor="@color/dark_grey" />
+                    android:text="@string/no_less"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="15dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -190,13 +202,15 @@
                 android:paddingLeft="65dp">
 
                 <TextView
+                    android:id="@+id/TOPt20"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:text="@string/no_less"
-                    android:id="@+id/TOPt20"
-                    android:textSize="15dp"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:textColor="@color/dark_grey" />
+                    android:text="@string/no_less"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="15dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -208,13 +222,15 @@
                 android:paddingLeft="65dp">
 
                 <TextView
+                    android:id="@+id/BOTt20"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:text="@string/no_less"
-                    android:id="@+id/BOTt20"
-                    android:textSize="15dp"
+                    android:background="@drawable/selector"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:textColor="@color/dark_grey" />
+                    android:text="@string/no_less"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="15dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

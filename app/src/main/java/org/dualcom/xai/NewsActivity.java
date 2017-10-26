@@ -155,6 +155,8 @@ public class NewsActivity extends AppCompatActivity {
                 break;
         }
 
+        toolbarLayout.setBackgroundResource(R.drawable.header);
+
         //aq.id(R.id.ImageBg).image(HOST+"getImage.php", true, false, 0, R.color.main_color, null, AQuery.FADE_IN);
 
         //Отправка информации о новом устройстве
@@ -254,10 +256,10 @@ public class NewsActivity extends AppCompatActivity {
     }
 
     void getStartInfo(){
-        if(!Storage.emptyData(context,"NOW_GROUP"))
+        /*if(!Storage.emptyData(context,"NOW_GROUP"))
             toolbarLayout.setTitle(Storage.loadData(context, "NOW_GROUP"));
-        else
-            toolbarLayout.setTitle(getString(R.string.news_label));
+        else*/
+            toolbarLayout.setTitle("   " + getString(R.string.news_label));
 
         //Установка даты и типа недели
         Calendar c = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"), Locale.UK);

@@ -13,6 +13,7 @@
 
     <color name="red">#B33</color>
     <color name="greylite">#F7F9F4</color>
+    <color name="silver">#bdc3c7</color>
     <color name="grey">#7f8c8d</color>
     <color name="dark_grey">#777777</color>
     <color name="menu_focused_pressed_gray_color">#404040</color>

@@ -224,8 +224,8 @@ public class MainActivity extends AppCompatActivity {
         RelativeLayout GO_MENU = (RelativeLayout) findViewById(R.id.GO_MENU);
         Button fast_change_group = (Button) findViewById(R.id.fast_change_group);
         TextView main_label = (TextView) findViewById(R.id.main_label);
-        TextView main_type = (TextView) findViewById(R.id.main_type);
-        TextView label_week = (TextView) findViewById(R.id.LabelWeek);
+        /*TextView main_type = (TextView) findViewById(R.id.main_type);
+        TextView label_week = (TextView) findViewById(R.id.LabelWeek);*/
         final Button GO_SETTING = (Button) findViewById(R.id.GO_SETTING);
         final LinearLayout ABOUT_BTN = (LinearLayout) findViewById(R.id.about_btn);
 
@@ -399,6 +399,10 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .build();
 
+        TextView main_type = (TextView) drawerResult.getHeader().findViewById(R.id.main_type);
+        TextView main_date = (TextView) drawerResult.getHeader().findViewById(R.id.main_date);
+        TextView label_week = (TextView) drawerResult.getHeader().findViewById(R.id.LabelWeek);
+
         drawerResult.setSelection(1, false);
 
         //Получение количества сообщений обратной связи
@@ -565,7 +569,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
 
-        if(c.get(Calendar.HOUR_OF_DAY) >= 17 && dow < 5 && dow > 0)
+        //Сегодня - завтра *****************************************
+
+        /*if(c.get(Calendar.HOUR_OF_DAY) >= 17 && dow < 5 && dow > 0)
         {
             DAY[DATE.getWeek()-1] = getResources().getString(R.string.today);
             DAY[DATE.getWeek()] = getResources().getString(R.string.tommorow);
@@ -585,7 +591,9 @@ public class MainActivity extends AppCompatActivity {
         if(c.get(Calendar.HOUR_OF_DAY) >= 17 && dow == 5)
         {
             DAY[4] = getResources().getString(R.string.today);
-        }
+        }*/
+
+        //Сегодня - завтра *****************************************
 
         adapter =  new ViewPagerAdapter(getSupportFragmentManager(),DAY,DAY.length);
 
@@ -709,7 +717,8 @@ public class MainActivity extends AppCompatActivity {
         String[] TMP_WEEK = getResources().getStringArray(R.array.TYPE_WEEK);
         String TYPE_WEEK = (DATE.getWeekType() == 0) ? TMP_WEEK[0] : TMP_WEEK[1];
         main_label.setText(Storage.loadData(context, "NOW_GROUP")); //+" | "+TYPE_WEEK
-        main_type.setText(monthes[month] + " " + day_of_month + ", " + DAY_SHORT[DATE.getWeek()] + " / " + TYPE_WEEK);
+        main_date.setText(monthes[month] + " " + day_of_month + ", " + DAY_SHORT[DATE.getWeek()]);
+        main_type.setText(TYPE_WEEK);
         label_week.setText(DATE.getStudWeek() + getResources().getString(R.string.stud_week));
         //startType.setText(TYPE_WEEK);
 

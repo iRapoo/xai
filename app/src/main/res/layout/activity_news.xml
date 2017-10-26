@@ -27,34 +27,35 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/AppTheme.PopupOverlay">
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center_vertical"
+                    android:orientation="vertical"
                     android:paddingRight="5dp">
 
                     <TextView
-                        android:text="25.10.2016"
+                        android:id="@+id/start_date"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/start_date"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
                         android:layout_gravity="right"
                         android:gravity="right"
-                        android:textColor="@color/white" />
+                        android:text="25.10.2016"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:text="Знаменатель"
+                        android:id="@+id/start_type"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/start_type"
                         android:gravity="right"
+                        android:text="Знаменатель"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
                 </LinearLayout>
