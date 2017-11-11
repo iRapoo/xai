@@ -16,7 +16,7 @@
         android:layout_height="fill_parent"
         android:background="@color/main_color"
         android:orientation="vertical"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -51,45 +51,46 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
+        android:background="@color/main_color"
         android:gravity="center"
-        android:background="@color/main_color">
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:layout_marginLeft="10dp">
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/label_less"
                 android:id="@+id/LabelGroup"
-                android:textColor="#FFF"
-                android:textSize="20dp"
-                android:maxLength="15" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Тип недели"
+                android:maxLength="15"
+                android:text="@string/label_less"
+                android:textColor="#FFF"
+                android:textSize="18sp" />
+
+            <TextView
                 android:id="@+id/LabelType"
-                android:textColor="#FFF" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Тип недели"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFF"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:gravity="center|right"
-            android:layout_marginRight="10dp">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/LabelDate"
@@ -97,14 +98,15 @@
                 android:layout_height="wrap_content"
                 android:text="День недели"
                 android:textColor="#FFF"
-                android:textSize="23sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/LabelWeek"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1я учебная неделя"
-                android:textColor="#FFF" />
+                android:textColor="#FFF"
+                android:textSize="14sp" />
 
         </LinearLayout>
     </LinearLayout>
