@@ -16,7 +16,7 @@
         android:layout_height="fill_parent"
         android:background="@color/main_color"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <LinearLayout
             android:layout_width="fill_parent"
