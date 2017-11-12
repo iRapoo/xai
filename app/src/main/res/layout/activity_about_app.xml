@@ -15,74 +15,74 @@
         android:gravity="center">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:background="@color/main_color">
+            android:orientation="vertical">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center">
+                android:background="@color/main_color"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/imageView21"
                     android:layout_width="150dp"
                     android:layout_height="81dp"
-                    android:id="@+id/imageView21"
                     android:background="@drawable/emblem" />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center_horizontal">
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/name_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Расписание НАУ &quot;ХАИ&quot;"
-                    android:id="@+id/name_text"
-                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/material_drawer_dark_background"
                     android:textSize="25dp" />
 
                 <TextView
+                    android:id="@+id/version_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="Версия $CODE$"
-                    android:id="@+id/version_text"
-                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/material_drawer_dark_background"
                     android:textSize="20dp" />
 
                 <TextView
+                    android:id="@+id/year_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="(Rapoo © 2015)"
-                    android:id="@+id/year_text"
-                    android:textColor="@color/white" />
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/material_drawer_dark_background" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <Button
+                        android:id="@+id/close_about"
                         style="?android:attr/buttonStyleSmall"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
-                        android:text="OK"
-                        android:id="@+id/close_about"
                         android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
-                        android:background="@color/main_color"
+                        android:layout_alignParentRight="true"
                         android:layout_margin="10dp"
-                        android:textColor="#FFF" />
+                        android:background="@drawable/selector"
+                        android:text="OK"
+                        android:textColor="@color/material_drawer_dark_background" />
                 </RelativeLayout>
 
             </LinearLayout>

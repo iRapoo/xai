@@ -31,7 +31,7 @@ public class about_app extends Activity {
 
         NAME_TEXT.setText(getString(R.string.app_name));
         VERSION_TEXT.setText(getString(R.string.app_version) + " " + version);
-        YEAR_TEXT.setText("(Quenix™ Software © 2015-" + DATE.getYear() + ")");
+        YEAR_TEXT.setText("© 2015-" + DATE.getYear() + ", Quenix Software");
 
         CLOSE_ABOUT.setOnClickListener(new View.OnClickListener() {
             @Override

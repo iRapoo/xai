@@ -163,7 +163,7 @@
 
     <string name="alarm_label">Будильник</string>
     <string name="select_audio">Выбрать музончик</string>
-    <string name="alarm_text">Время, за которое сработает будильник (в минутах) до первой ближайшей пары</string>
+    <string name="alarm_text">Как сильно ты хочешь поспать до начала пары?</string>
     <string name="alarm_on_off">вкл/выкл  </string>
     <string name="alarm_on">Будильник включен</string>
     <string name="alarm_off">Будильник отключен</string>

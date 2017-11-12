@@ -161,7 +161,7 @@
 
     <string name="alarm_label">Alarm clock</string>
     <string name="select_audio">Select a file</string>
-    <string name="alarm_text">The time for which the alarm will work (in minutes) until the first next lesson</string>
+    <string name="alarm_text">How much do you want to sleep before the pair starts?</string>
     <string name="alarm_on_off">on/off  </string>
     <string name="alarm_on">Alarm on</string>
     <string name="alarm_off">Alarm off</string>

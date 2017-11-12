@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Как сильно ты хочешь поспать до начала пары?"
+            android:text="@string/alarm_text"
             android:textColor="@color/material_drawer_dark_background" />
 
         <SeekBar

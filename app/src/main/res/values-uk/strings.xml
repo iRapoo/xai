@@ -161,7 +161,7 @@
 
     <string name="alarm_label">Будильник</string>
     <string name="select_audio">Вибрати файл</string>
-    <string name="alarm_text">Час, за який спрацює будильник (в хвилинах) до першої найближчої пари</string>
+    <string name="alarm_text">Як сильно ти хочеш поспати до початку пари?</string>
     <string name="alarm_on_off">вкл/выкл  </string>
     <string name="alarm_on">Будильник включений</string>
     <string name="alarm_off">Будильник вимкнений</string>
