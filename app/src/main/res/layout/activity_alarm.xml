@@ -1,72 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="org.dualcom.xai.xyz.dualcom.xai.AlarmActivity"
-    android:background="@color/main_color">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/alarm_text"
-        android:id="@+id/textView15" />
-
-    <NumberPicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/numberPicker"
-        android:layout_below="@+id/textView15"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="39dp" />
-
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/alarm_on_off"
-        android:id="@+id/on_alarm"
-        android:textColor="#FFF"
-        android:layout_alignBottom="@+id/numberPicker"
-        android:layout_alignRight="@+id/textView15"
-        android:layout_alignEnd="@+id/textView15" />
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="org.dualcom.xai.xyz.dualcom.xai.AlarmActivity">
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ChangeMusic"
-        android:layout_alignTop="@+id/numberPicker"
-        android:layout_toRightOf="@+id/numberPicker"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:paddingLeft="20dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@color/main_color"
         android:gravity="center"
-        android:clickable="false">
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/imageView"
-            android:background="@drawable/audio"
-            android:layout_alignTop="@+id/numberPicker"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="left" />
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/CountTimer"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/select_audio"
-            android:id="@+id/file_path"
-            android:layout_alignTop="@+id/imageView"
-            android:layout_toRightOf="@+id/imageView"
-            android:layout_toEndOf="@+id/imageView"
-            android:textSize="15dp"
-            android:layout_marginLeft="10dp" />
+            android:gravity="center"
+            android:text="30 МИНУТ"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
     </LinearLayout>
-</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Как сильно ты хочешь поспать до начала пары?"
+            android:textColor="@color/material_drawer_dark_background" />
+
+        <SeekBar
+            android:id="@+id/SeekSleep"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:max="120"
+            android:min="1"
+            android:progress="3" />
+
+        <LinearLayout
+            android:id="@+id/ChangeMusic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/numberPicker"
+            android:layout_toRightOf="@+id/numberPicker"
+            android:background="@drawable/selector"
+            android:clickable="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <IconTextView
+                android:id="@+id/ChangeMusicText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="{fa-music}"
+                android:textColor="@color/extra_color"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_drawer_background"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/AlarmState"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Включено"
+            android:textColor="@color/material_drawer_dark_background"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id="@+id/on_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/numberPicker"
+            android:layout_alignEnd="@+id/textView15"
+            android:layout_alignRight="@+id/textView15"
+            android:textColor="@color/material_drawer_dark_background" />
+    </LinearLayout>
+
+</LinearLayout>

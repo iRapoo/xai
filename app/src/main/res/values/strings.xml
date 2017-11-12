@@ -163,8 +163,11 @@
     <string name="select_audio">Select a file</string>
     <string name="alarm_text">The time for which the alarm will work (in minutes) until the first next lesson</string>
     <string name="alarm_on_off">on/off  </string>
+    <string name="alarm_on">Alarm on</string>
     <string name="alarm_off">Alarm off</string>
     <string name="realarm">Alarm postponed for 5 minutes</string>
+    <string name="alarm_per_minutes">WITHIN</string>
+    <string name="alarm_minutes">MINUTES</string>
 
     <string name="no_inet1">Data not shown</string>
     <string name="no_inet2">I`m sorry but you have not loaded schedule of any groups, this requires an Internet connection.

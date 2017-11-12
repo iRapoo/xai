@@ -163,8 +163,11 @@
     <string name="select_audio">Вибрати файл</string>
     <string name="alarm_text">Час, за який спрацює будильник (в хвилинах) до першої найближчої пари</string>
     <string name="alarm_on_off">вкл/выкл  </string>
+    <string name="alarm_on">Будильник включений</string>
     <string name="alarm_off">Будильник вимкнений</string>
     <string name="realarm">Будильник відкладений на 5 хвилин</string>
+    <string name="alarm_per_minutes">ЗА</string>
+    <string name="alarm_minutes">ХВИЛИН</string>
 
     <string name="no_inet1">Data not shown</string>
     <string name="no_inet2">Вибачте але у вас не завантажено розклад жодної групи, для цього необхідно інтернет з`єднання.
