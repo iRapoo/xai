@@ -201,9 +201,10 @@ public class MainActivity extends AppCompatActivity {
         String group = (intent.getAction() != null) ? intent.getAction() : Storage.loadData(context, "NOW_GROUP");
         if(Storage.emptyData(context, "NOW_GROUP")){
             if(!isNetworkAvailable()) {
-                Intent intent_no_group = new Intent(MainActivity.this, StartActivity.class);
+                Intent intent_no_group = new Intent(MainActivity.this, NewsActivity.class);
                 startActivity(intent_no_group);
-                startActivity(intent_no_group);
+                this.finish();
+                //startActivity(intent_no_group);
             }
             else {
                 Intent intent_now_group = new Intent(MainActivity.this, GetList.class);
@@ -330,7 +331,7 @@ public class MainActivity extends AppCompatActivity {
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[0]).withIcon(FontAwesome.Icon.faw_newspaper_o).withSelectable(false),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[1]).withIcon(FontAwesome.Icon.faw_download).withSelectable(false),
-                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[2]).withIcon(FontAwesome.Icon.faw_clock_o).withSelectable(false),
+                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[2]).withIcon(FontAwesome.Icon.faw_clock_o).withSelectable(false).withEnabled(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN),
                         new SwitchDrawerItem().withName(res.getStringArray(R.array.drawers)[6]).withIcon(FontAwesome.Icon.faw_language).withSelectable(false).withChecked(translate).withOnCheckedChangeListener(onCheckedChangeListener).withEnabled(trans_active),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[7]).withIcon(FontAwesome.Icon.faw_map).withSelectable(false),
                         new SectionDrawerItem().withName(R.string.support),
@@ -1159,8 +1160,8 @@ public class MainActivity extends AppCompatActivity {
                                 //.setContentText(res.getString(R.string.notifytext))
                                 .setContentText(getString(R.string.inc_notific_text)); // Текст уведомления
 
-                        // Notification notification = builder.getNotification(); // до API 16
-                        Notification notification = null;
+                        Notification notification = builder.getNotification(); // до API 16
+                        //Notification notification = null;
                         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
                             notification = builder.build();
                             notification.defaults = Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE;

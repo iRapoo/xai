@@ -6,10 +6,10 @@ android {
 
     defaultConfig {
         applicationId "org.dualcom.xai"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 27
-        versionCode 161
-        versionName "1.1.8.f2"
+        versionCode 163
+        versionName "1.1.9.f0"
         multiDexEnabled true
 
     }
@@ -30,7 +30,6 @@ repositories {
 ext {
     ApiBuildVersion = '27.0.1'
     playServicesVersion = '11.6.0'
-    AsyncHttpClient = '2.1.0-alpha26'
 }
 
 dependencies {
@@ -44,7 +43,7 @@ dependencies {
     implementation "net.opacapp:multiline-collapsingtoolbar:1.6.0"
     implementation "com.github.amlcurran.showcaseview:library:5.4.3"
     implementation "com.mikepenz:fontawesome-typeface:4.7.0.0@aar"
-    //implementation "org.asynchttpclient:async-http-client:${AsyncHttpClient}"
+    implementation "com.github.ybq:Android-SpinKit:1.1.0"
 
     //Google Firebase
     implementation "com.google.firebase:firebase-ads:${playServicesVersion}"
