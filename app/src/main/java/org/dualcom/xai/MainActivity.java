@@ -49,6 +49,9 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
+import com.startapp.android.publish.adsCommon.StartAppAd;
+import com.startapp.android.publish.adsCommon.StartAppSDK;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -117,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int NOTIFY_ID = 999;
 
+    private StartAppAd startAppAd = new StartAppAd(this);
+
     //public FlowingDrawer mDrawer;
     /*public ListView lvMain;
 
@@ -147,6 +152,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StartAppSDK.init(this, "210748147", false);
+        StartAppAd.disableSplash();
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -329,7 +336,7 @@ public class MainActivity extends AppCompatActivity {
                 .withHeader(R.layout.drawer_header)
                 //.withAccountHeader(headerResult)
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[0]).withIcon(FontAwesome.Icon.faw_newspaper_o).withSelectable(false),
+                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[0]).withIcon(FontAwesome.Icon.faw_gg).withSelectable(false),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[1]).withIcon(FontAwesome.Icon.faw_download).withSelectable(false),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[2]).withIcon(FontAwesome.Icon.faw_clock_o).withSelectable(false).withEnabled(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN),
                         new SwitchDrawerItem().withName(res.getStringArray(R.array.drawers)[6]).withIcon(FontAwesome.Icon.faw_language).withSelectable(false).withChecked(translate).withOnCheckedChangeListener(onCheckedChangeListener).withEnabled(trans_active),
@@ -338,7 +345,7 @@ public class MainActivity extends AppCompatActivity {
                         new SecondaryDrawerItem().withName(res.getStringArray(R.array.drawers)[3]).withIcon(FontAwesome.Icon.faw_vk).withSelectable(false),
                         new SecondaryDrawerItem().withName(res.getStringArray(R.array.drawers)[4]).withIcon(FontAwesome.Icon.faw_question).withIdentifier(6).withSelectable(false),
                         new DividerDrawerItem(),
-                        new SecondaryDrawerItem().withName(res.getStringArray(R.array.drawers)[5]).withIcon(FontAwesome.Icon.faw_info).withSelectable(false)
+                        new SecondaryDrawerItem().withName(res.getStringArray(R.array.drawers)[5]).withIcon(FontAwesome.Icon.faw_info).withSelectable(false).withBadge(VERSION)
                 )
                 .withOnDrawerListener(new Drawer.OnDrawerListener() {
                     @Override
@@ -1185,11 +1192,14 @@ public class MainActivity extends AppCompatActivity {
             drawerResult.closeDrawer();
         }
         else{
-            MainActivity.super.onBackPressed();
+            startAppAd.onBackPressed();
+            super.onBackPressed();
+
+            /*MainActivity.super.onBackPressed();
             moveTaskToBack(true);
             MainActivity.super.onBackPressed();
             System.runFinalizersOnExit(true);
-            System.exit(0);
+            System.exit(0);*/
         }
 
     }

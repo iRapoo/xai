@@ -15,10 +15,10 @@
         android:showDividers="end">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@color/main_color">
+            android:background="@color/extra_color"
+            android:orientation="horizontal">
 
             <TabWidget
 
@@ -30,13 +30,13 @@
 
                 android:layout_weight="0"
 
-                android:showDividers="none"
-
-                android:orientation="horizontal"
-
                 android:background="@drawable/tabs_style"
 
                 android:baselineAligned="true"
+
+                android:orientation="horizontal"
+
+                android:showDividers="none"
                 android:tabStripEnabled="false" />
 
         </LinearLayout>

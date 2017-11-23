@@ -23,6 +23,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.mikepenz.fontawesome_typeface_library.FontAwesome;
+import com.startapp.android.publish.adsCommon.StartAppSDK;
 
 import org.dualcom.xai.MyClass.Storage;
 import org.w3c.dom.Text;

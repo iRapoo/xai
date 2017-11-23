@@ -8,8 +8,8 @@ android {
         applicationId "org.dualcom.xai"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 163
-        versionName "1.1.9.f0"
+        versionCode 172
+        versionName "1.2.0.f8"
         multiDexEnabled true
 
     }
@@ -44,6 +44,7 @@ dependencies {
     implementation "com.github.amlcurran.showcaseview:library:5.4.3"
     implementation "com.mikepenz:fontawesome-typeface:4.7.0.0@aar"
     implementation "com.github.ybq:Android-SpinKit:1.1.0"
+    implementation "com.startapp:inapp-sdk:3.6.8"
 
     //Google Firebase
     implementation "com.google.firebase:firebase-ads:${playServicesVersion}"

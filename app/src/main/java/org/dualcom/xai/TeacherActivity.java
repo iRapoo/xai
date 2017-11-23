@@ -58,6 +58,7 @@ import java.util.logging.Handler;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.startapp.android.publish.adsCommon.StartAppSDK;
 
 public class TeacherActivity extends Activity {
 
@@ -105,11 +106,11 @@ public class TeacherActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher);
 
-        MobileAds.initialize(getApplicationContext(), "ca-app-pub-7148094931915684/7613101450");
+        /*MobileAds.initialize(getApplicationContext(), "ca-app-pub-7148094931915684/7613101450");
 
         AdView mAdView2 = (AdView) findViewById(R.id.adView2);
         AdRequest adRequest2 = new AdRequest.Builder().build();
-        mAdView2.loadAd(adRequest2);
+        mAdView2.loadAd(adRequest2);*/
 
         aq = new AQuery(this);
 

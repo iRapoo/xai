@@ -162,6 +162,7 @@
     <orderEntry type="library" name="com.google.firebase:firebase-analytics-11.6.0" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-ads-license-11.6.0" level="project" />
     <orderEntry type="library" name="__local_aars__:D.\#DEV\#Android\#StudioProjects\xai\app\libs\android-iconify-1.0.6.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.startapp:inapp-sdk-3.6.8" level="project" />
     <orderEntry type="library" name="com.github.amlcurran.showcaseview:library-5.4.3" level="project" />
     <orderEntry type="library" name="com.mikepenz:iconics-core-2.9.5" level="project" />
     <orderEntry type="library" name="net.opacapp:multiline-collapsingtoolbar-1.6.0" level="project" />

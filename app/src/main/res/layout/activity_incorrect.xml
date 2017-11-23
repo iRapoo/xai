@@ -28,10 +28,10 @@
                 android:layout_height="50dp">
 
                 <Button
+                    android:id="@+id/GO_BACK"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:id="@+id/GO_BACK"
-                    android:background="@drawable/btn_panel" />
+                    android:background="@drawable/selector" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -154,62 +154,63 @@
             android:orientation="vertical">
 
             <TextView
-                android:text="@string/incoorect_not_found"
+                android:id="@+id/incorrect_not_found"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="60dp"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_alignParentStart="true"
+                android:layout_marginBottom="75dp"
                 android:gravity="center_horizontal"
-                android:textColor="@color/grey"
-                android:id="@+id/incorrect_not_found" />
+                android:text="@string/incoorect_not_found"
+                android:textColor="@color/grey" />
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_alignBaseline="@+id/incorrect_not_found"
                 android:layout_alignParentTop="false"
-                android:layout_alignBaseline="@+id/incorrect_not_found">
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
 
                 <ListView
-                    android:layout_width="match_parent"
                     android:id="@+id/list_incorrect"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:foregroundGravity="bottom"
                     android:divider="@android:color/transparent"
-                    android:stackFromBottom="true"
+                    android:foregroundGravity="bottom"
                     android:paddingBottom="40dp"
-                    android:scrollIndicators="bottom" />
+                    android:scrollIndicators="bottom"
+                    android:stackFromBottom="true" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="75dp"
                 android:layout_alignParentBottom="true"
-                android:background="@drawable/incorrect_shadow"
-                android:layout_marginTop="-10dp"
-                android:layout_marginRight="-10dp"
+                android:layout_marginBottom="-10dp"
                 android:layout_marginLeft="-10dp"
-                android:layout_marginBottom="-10dp">
+                android:layout_marginRight="-10dp"
+                android:layout_marginTop="-10dp"
+                android:background="@drawable/incorrect_shadow"
+                android:orientation="horizontal">
 
                 <EditText
+                    android:id="@+id/message"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textCapSentences|textAutoCorrect|textAutoComplete"
-                    android:imeOptions="actionDone"
-                    android:ems="10"
-                    android:id="@+id/message"
-                    android:textColor="#000"
-                    android:hint="@string/incorrect_hint"
-                    android:textColorLink="@color/main_color"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    android:paddingLeft="5dp" />
+                    android:ems="10"
+                    android:hint="@string/incorrect_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences|textAutoCorrect|textAutoComplete"
+                    android:paddingLeft="5dp"
+                    android:textColor="#000"
+                    android:textColorLink="@color/main_color" />
 
                 <RelativeLayout
                     android:layout_width="35dp"
@@ -237,7 +238,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:layout_width="50dp"
+                    android:layout_width="65dp"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical|center_horizontal">
 
@@ -247,7 +248,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="-5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/btn_panel" />
+                        android:background="@drawable/selector" />
 
                     <ImageView
                         android:id="@+id/imageView13"
@@ -258,7 +259,6 @@
                         android:background="@drawable/incorrect_send" />
 
                 </RelativeLayout>
-
 
 
             </LinearLayout>

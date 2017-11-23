@@ -13,9 +13,11 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -29,9 +31,7 @@ import android.widget.TextView;
 
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.ViewTarget;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
+import com.startapp.android.publish.adsCommon.StartAppSDK;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -58,7 +58,7 @@ import java.util.Locale;
 import java.util.TimeZone;
 import java.util.concurrent.ExecutionException;
 
-public class NewsActivity extends AppCompatActivity {
+public class NewsActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
 
     public Context context = this;
     public CollapsingToolbarLayout toolbarLayout;
@@ -90,6 +90,8 @@ public class NewsActivity extends AppCompatActivity {
     public String S_GROUP = "";
     public String[] tmp_s_group;
 
+    private SwipeRefreshLayout mSwipeRefreshLayout;
+
     private static final String url_wall = "http://rapoo.mysit.ru/api?module=news"; //URL стены
 
     //Проверка доступности сети
@@ -110,11 +112,19 @@ public class NewsActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        MobileAds.initialize(getApplicationContext(), "ca-app-pub-7148094931915684/9163886655");
+        /*MobileAds.initialize(getApplicationContext(), "ca-app-pub-7148094931915684/9163886655");
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        mAdView.loadAd(adRequest);*/
+
+        //StartAppSDK.init(context, appID, false);
+        //StartAppAd.showAd(context);
+
+        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+        mSwipeRefreshLayout.setOnRefreshListener(this);
+
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.top_color, R.color.main_color, R.color.extra_color);
 
         toolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
         startDate = (TextView) findViewById(R.id.start_date);
@@ -392,6 +402,26 @@ public class NewsActivity extends AppCompatActivity {
                     break;
             }
         }
+    }
+
+    @Override
+    public void onRefresh() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Отменяем анимацию обновления
+                mSwipeRefreshLayout.setRefreshing(false);
+
+                progress.setProgress(0);
+                progress.setVisibility(View.VISIBLE);
+
+                if (isNetworkAvailable()) {
+                    mWebView.loadUrl(url_wall);
+                }else
+                    nointernet.setVisibility(nointernet.VISIBLE);
+
+            }
+        }, 2000);
     }
 
     @SuppressWarnings("deprecation")

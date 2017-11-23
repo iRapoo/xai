@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.github.chrisbanes.photoview.PhotoView;
+import com.startapp.android.publish.adsCommon.StartAppSDK;
 
 public class MapActivity extends Activity {
 
