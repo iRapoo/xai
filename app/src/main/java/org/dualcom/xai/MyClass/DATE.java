@@ -104,6 +104,41 @@ public class DATE {
         return stud_week;
     }
 
+    public static String getArrWeek(int point) {
+        String[] arr = new String[7];
+
+        Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"), Locale.UK);
+        //calendar.setTime(new Date());
+
+        int dow = (calendar.get(Calendar.DAY_OF_WEEK)-1);
+
+        switch (dow){
+            case 5: //Пятница +3 дня
+                if(calendar.get(Calendar.HOUR_OF_DAY) > 16)
+                    calendar.add(Calendar.DAY_OF_MONTH,3);
+                break;
+            case 6: //Суббота +2 дня
+                calendar.add(Calendar.DAY_OF_MONTH,2);
+                break;
+            case 0: //Воскресенье +1 день
+                calendar.add(Calendar.DAY_OF_MONTH,1);
+                break;
+        }
+
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+
+        for(int i = 0; i < 7; i++){
+
+            String DAY = (calendar.get(Calendar.DAY_OF_MONTH)<10) ? "0" + calendar.get(Calendar.DAY_OF_MONTH) : calendar.get(Calendar.DAY_OF_MONTH)+"";
+            String MONTH = (calendar.get(Calendar.MONTH)<10) ? "0" + (calendar.get(Calendar.MONTH)+1) : (calendar.get(Calendar.MONTH)+1)+"";
+
+            arr[i] = DAY + "." + MONTH + "." + calendar.get(Calendar.YEAR);
+            calendar.add(Calendar.DAY_OF_WEEK, 1); //Прибавляем сутки
+        }
+
+        return arr[point];
+    }
+
     public static int getYear(){ //Год
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy");
         return Integer.parseInt(dateFormat.format(new Date()));

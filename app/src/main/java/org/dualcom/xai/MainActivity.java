@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StartAppSDK.init(this, "210748147", false);
+        StartAppSDK.init(this, "210748147", true);
         StartAppAd.disableSplash();
         setContentView(R.layout.activity_main);
 
@@ -440,105 +440,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*startDate = (TextView) findViewById(R.id.start_date);
-        startType = (TextView) findViewById(R.id.start_type);
-        /*drawerGroup = (TextView) findViewById(R.id.drawerGroup);
-        drawerBg = (ImageView) findViewById(R.id.drawerBg);*/
-
-        /*group = (group.contains(".,")) ? group.split(".,")[1] : group;
-        drawerGroup.setText((group.length()>5) ? group.substring(0,6) : group);
-
-        switch (DATE.getNowTime()){
-
-            case 0:
-                drawerBg.setBackgroundResource(R.drawable.morning);
-                break;
-            case 1:
-                drawerBg.setBackgroundResource(R.drawable.morning);
-                break;
-            case 2:
-                drawerBg.setBackgroundResource(R.drawable.morning);
-                break;
-            case 3:
-                drawerBg.setBackgroundResource(R.drawable.morning);
-                break;
-            case 4:
-                drawerBg.setBackgroundResource(R.drawable.sun);
-                break;
-            case 5:
-                drawerBg.setBackgroundResource(R.drawable.sun);
-                break;
-            case 6:
-                drawerBg.setBackgroundResource(R.drawable.sun);
-                break;
-            case 7:
-                drawerBg.setBackgroundResource(R.drawable.sun);
-                break;
-            default:
-                drawerBg.setBackgroundResource(R.drawable.evening);
-                break;
-        }
-
-        fillData();
-        boxAdapter = new BoxAdapter(this, Drawers);
-        lvMain = (ListView) findViewById(R.id.lvMain);
-        lvMain.setAdapter(boxAdapter);
-
-        lvMain.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                switch (position){
-                    case 0:
-                        Intent intent_news = new Intent(MainActivity.this, StartActivity.class);
-                        startActivity(intent_news);
-                        break;
-                    case 1:
-                        if(isNetworkAvailable()) {
-                            Intent intent_change = new Intent(MainActivity.this, GetList.class);
-                            intent_change.putExtra("type", "0");
-                            startActivity(intent_change);
-                        }else{
-                            Intent intent_change = new Intent(MainActivity.this, GetGroups.class);
-                            intent_change.putExtra("type", "0");
-                            startActivity(intent_change);
-                        }
-                        break;
-                    case 2:
-                        Intent intent_alarm = new Intent(MainActivity.this, AlarmActivity.class);
-                        startActivity(intent_alarm);
-                        break;
-                    case 3:
-                        Intent intent_social = new Intent(MainActivity.this, vk.class);
-                        startActivity(intent_social);
-                        break;
-                    case 4:
-                        Intent intent_incorrect = new Intent(MainActivity.this, incorrect.class);
-                        startActivity(intent_incorrect);
-                        break;
-                    case 5:
-                        Intent intent_about = new Intent(MainActivity.this, about_app.class);
-                        startActivity(intent_about);
-                        break;
-                }
-            }
-        });
-
-        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL);
-        mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
-            @Override
-            public void onDrawerStateChange(int oldState, int newState) {
-                if (newState == ElasticDrawer.STATE_CLOSED) {
-                    Log.i("MainActivity", "Drawer STATE_CLOSED");
-                }
-            }
-
-            @Override
-            public void onDrawerSlide(float openRatio, int offsetPixels) {
-                Log.i("MainActivity", "openRatio=" + openRatio + " ,offsetPixels=" + offsetPixels);
-            }
-        });*/
-        //--------------------------------------------------
-
         //******************************//
 
         //Кнопка быстрой смены группы
@@ -571,37 +472,6 @@ public class MainActivity extends AppCompatActivity {
             this_time.setBackgroundResource(LIST.times_draw(DATE.getNowTime()));
         }
         //***************************************
-
-        /*toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        setSupportActionBar(toolbar);*/
-
-        // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
-
-        //Сегодня - завтра *****************************************
-
-        /*if(c.get(Calendar.HOUR_OF_DAY) >= 17 && dow < 5 && dow > 0)
-        {
-            DAY[DATE.getWeek()-1] = getResources().getString(R.string.today);
-            DAY[DATE.getWeek()] = getResources().getString(R.string.tommorow);
-        }
-
-        if(c.get(Calendar.HOUR_OF_DAY) < 17 && dow < 5 && dow > 0)
-        {
-            DAY[DATE.getWeek()] = getResources().getString(R.string.today);
-            DAY[DATE.getWeek()+1] = getResources().getString(R.string.tommorow);
-        }
-
-        if(c.get(Calendar.HOUR_OF_DAY) < 17 && dow == 5)
-        {
-            DAY[4] = getResources().getString(R.string.today);
-        }
-
-        if(c.get(Calendar.HOUR_OF_DAY) >= 17 && dow == 5)
-        {
-            DAY[4] = getResources().getString(R.string.today);
-        }*/
-
-        //Сегодня - завтра *****************************************
 
         adapter =  new ViewPagerAdapter(getSupportFragmentManager(),DAY,DAY.length);
 
@@ -636,69 +506,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Setting the ViewPager For the SlidingTabsLayout
         tabs.setViewPager(pager);
-
-
-        /*mTabHost = (TabHost) findViewById(android.R.id.tabhost);
-
-        TabWidget tabWidget = (TabWidget) findViewById(android.R.id.tabs);
-
-        mTabHost.setup();
-
-        mViewPager = (ViewPager) findViewById(R.id.pager);
-
-        mTabsAdapter = new TabsAdapter(this, mTabHost, mViewPager);
-
-        String[] DAY = getResources().getStringArray(R.array.DAYS);
-
-        mTabsAdapter.addTab(mTabHost.newTabSpec("day1").setIndicator(DAY[0]), day1.class, null);
-
-        mTabsAdapter.addTab(mTabHost.newTabSpec("day2").setIndicator(DAY[1]), day2.class, null);
-
-        mTabsAdapter.addTab(mTabHost.newTabSpec("day3").setIndicator(DAY[2]), day3.class, null);
-
-        mTabsAdapter.addTab(mTabHost.newTabSpec("day4").setIndicator(DAY[3]), day4.class, null);
-
-        mTabsAdapter.addTab(mTabHost.newTabSpec("day5").setIndicator(DAY[4]), day5.class, null);
-
-        for(int i = 0; i < 5; i++) {
-            TextView textView = (TextView) mTabHost.getTabWidget().getChildAt(i)
-                    .findViewById(android.R.id.title);
-            textView.setGravity(Gravity.CENTER);
-            textView.getLayoutParams().height = ViewGroup.LayoutParams.MATCH_PARENT;
-            textView.getLayoutParams().width = ViewGroup.LayoutParams.WRAP_CONTENT;
-        }*/
-        //Изменение табов
-        /*for (int i = 0; i < mTabHost.getTabWidget().getChildCount(); i++) {
-            mTabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.bg_selector);
-        }
-        /****************/
-            /*/ Change background
-            for(int i=0; i < tabWidget.getChildCount(); i++)
-                tabWidget.getChildAt(i).setBackgroundResource(R.drawable.tab_indicator_holo);*/
-
-
-
-        /*if (savedInstanceState != null)
-        {
-
-            mTabHost.setCurrentTabByTag(savedInstanceState.getString("tab"));
-
-        }
-
-        for(int i=0;i<mTabHost.getTabWidget().getChildCount();i++)
-        {
-            TextView tv = (TextView) mTabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
-            tv.setTextColor(getResources().getColor(R.color.white));
-        }*/
-
-        //Windows.alert(context,"",DATE.getWeek(DATE.getYear(),DATE.getMonth(),DATE.getDay())+", "+DATE.getYear()+" - "+DATE.getMonth()+" - "+DATE.getDay());
-
-        //Выбор текущего дня недели
-        /*mTabHost.setCurrentTab(DATE.getWeek());
-        /******************/
-
-        //Windows.alert(context,"",Storage.loadData(context,"327ст"));
-        //Windows.alert(context, "Проверка",JSON.getJSON(context, "day0", "1-1"));
 
         switch (dow){
 

@@ -202,7 +202,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
         }
 
         int padding = (int) (TAB_VIEW_PADDING_DIPS * getResources().getDisplayMetrics().density);
-        textView.setPadding(padding, padding, padding, padding);
+        textView.setPadding(padding, 17, padding, 17);
 
         return textView;
     }
@@ -241,7 +241,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
                 tabView.setSelected(true);
             }
 
-            tabTitleView.setText(adapter.getPageTitle(i));
+            tabTitleView.setText(adapter.getPageTitle(i) + "\n" + DATE.getArrWeek(i));
             tabView.setOnClickListener(tabClickListener);
 
             String desc = mContentDescriptions.get(i, null);
