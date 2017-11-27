@@ -29,7 +29,7 @@ repositories {
 
 ext {
     ApiBuildVersion = '27.0.1'
-    playServicesVersion = '11.6.0'
+    playServicesVersion = '11.6.2'
 }
 
 dependencies {
