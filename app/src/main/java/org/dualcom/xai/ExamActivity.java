@@ -31,38 +31,47 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.dualcom.xai.MyClass.*;
 
 public class ExamActivity extends Activity {
 
+    public TextView textView;
+    public int columnSaveIndex;
+
     private String LOG_TAG = "ReadExcelFromUrl";
-    ArrayList<ExamCart> shoppingCartList;
+    ArrayList<ExamCart> examCartList;
+    ArrayList<ExamGroups> examGroupsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam);
 
+        textView = (TextView) findViewById(R.id.textView);
+
         //URL path for the Excel file
-        String url = "http://rapoo.mysit.ru/data/test.xls";
+        String url = "http://rapoo.mysit.ru/data/3.xls";
         excelURL(url);
     }
 
     private void displayCart() {
 
+        String text = "";
+
         //Array list of countries
         List<String> myList = new ArrayList<String>();
-        for(int i = 0, l = shoppingCartList.size(); i < l; i++){
-            ExamCart shoppingCart = shoppingCartList.get(i);
-            String myData = shoppingCart.getItemNumber() + ": " +
-                    shoppingCart.getDescription() + "\nPrice: $" +
-                    shoppingCart.getPrice() + "\nQuantity: " +
-                    shoppingCart.getQuantity();
+        for(int i = 0, l = examGroupsList.size(); i < l; i++){ //examCartList.size()
+            ExamGroups examGroups = examGroupsList.get(i);
+            String myData = "Группа: " + examGroups.getGroup() + "\n";
             myList.add(myData);
             System.out.println("My data..................."+ myData);
+            text += myData+"\n";
         }
+
+        textView.setText("Всего: "+ examGroupsList.size() +"\n" + text);
 
         //Display the Excel data in a ListView
         /*ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
@@ -150,7 +159,9 @@ public class ExamActivity extends Activity {
 
         private void parseExcel(InputStream fis){
 
-            shoppingCartList = new ArrayList<ExamCart>();
+            examCartList = new ArrayList<ExamCart>();
+            examGroupsList = new ArrayList<ExamGroups>();
+            columnSaveIndex = 0;
 
             try{
 
@@ -166,11 +177,9 @@ public class ExamActivity extends Activity {
 
                     HSSFRow myRow = (HSSFRow) rowIter.next();
                     // Skip the first 2 rows
-                    if(myRow.getRowNum() < 2) {
+                    if(myRow.getRowNum() != 5 && myRow.getRowNum() != 53) {
                         continue;
                     }
-
-                    ExamCart shoppingCart = new ExamCart();
 
                     Iterator<Cell> cellIter = myRow.cellIterator();
                     while(cellIter.hasNext()){
@@ -178,40 +187,35 @@ public class ExamActivity extends Activity {
                         HSSFCell myCell = (HSSFCell) cellIter.next();
                         String cellValue = "";
 
+                        if(myCell.getColumnIndex() < 1) {
+                            continue;
+                        }
+
+                        ExamGroups examGroups = new ExamGroups();
+
                         // Check for cell Type
                         if(myCell.getCellType() == HSSFCell.CELL_TYPE_STRING){
                             cellValue = myCell.getStringCellValue();
                         }
                         else {
-                            cellValue = String.valueOf(myCell.getNumericCellValue());
+                            cellValue = String.valueOf(myCell.getNumericCellValue())+"";
+                            //String s = cellValue.split(".")[0];
                         }
+
+                        if(!cellValue.equals("Дата") && !cellValue.equals("0"))
+                            examGroups.setGroup(cellValue);
+                        else
+                            continue;
 
                         // Just some log information
                         Log.v(LOG_TAG, cellValue);
 
-                        // Push the parsed data in the Java Object
-                        // Check for cell index
-                        switch (myCell.getColumnIndex()) {
-                            case 0:
-                                shoppingCart.setItemNumber(cellValue);
-                                break;
-                            case 1:
-                                shoppingCart.setDescription(cellValue);
-                                break;
-                            case 2:
-                                shoppingCart.setPrice(Double.valueOf(cellValue));
-                                break;
-                            case 3:
-                                shoppingCart.setQuantity(Double.valueOf(cellValue));
-                                break;
-                            default:
-                                break;
-                        }
+                        examGroupsList.add(examGroups);
 
                     }
 
-                    // Add object to list
-                    shoppingCartList.add(shoppingCart);
+
+
                 }
             }
             catch (Exception e){

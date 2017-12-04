@@ -2,34 +2,40 @@ package org.dualcom.xai.MyClass;
 
 public class ExamCart {
 
-    String itemNumber = null;
-    String description = null;
-    Double price = null;
-    Double quantity = null;
+    String date = null;
+    String type = null;
+    String room = null;
+    String time = null;
 
-    public String getItemNumber() {
-        return itemNumber;
+    public String getDate() {
+        return date;
     }
-    public void setItemNumber(String itemNumber) {
-        this.itemNumber = itemNumber;
+    public void setDate(String itemDate) {
+        this.date = itemDate;
     }
-    public String getDescription() {
-        return description;
+
+    public String getType() {
+        return type;
     }
-    public void setDescription(String description) {
-        this.description = description;
+    public void setType(String itemType) {
+        this.type = itemType;
     }
-    public Double getPrice() {
-        return price;
+
+    public String getRoom() {
+        return room;
     }
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setRoom(String itemRoom) {
+        this.room = itemRoom;
     }
-    public Double getQuantity() {
-        return quantity;
+
+    public String getTime() {
+        return time;
     }
-    public void setQuantity(Double quantity) {
-        this.quantity = quantity;
+    public void setTime(String itemTime) {
+        this.time = itemTime;
     }
+
+
+
 
 }
