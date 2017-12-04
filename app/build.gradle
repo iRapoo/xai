@@ -8,8 +8,8 @@ android {
         applicationId "org.dualcom.xai"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 173
-        versionName "1.2.1.f0"
+        versionCode 175
+        versionName "1.2.2.f0"
         multiDexEnabled true
 
     }
@@ -45,6 +45,8 @@ dependencies {
     implementation "com.mikepenz:fontawesome-typeface:4.7.0.0@aar"
     implementation "com.github.ybq:Android-SpinKit:1.1.0"
     implementation "com.startapp:inapp-sdk:3.6.8"
+    implementation group: 'org.apache.poi', name: 'poi', version: '3.17'
+    implementation group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '3.17'
 
     //Google Firebase
     implementation "com.google.firebase:firebase-ads:${playServicesVersion}"
@@ -55,7 +57,9 @@ dependencies {
     implementation "com.android.support:design:${ApiBuildVersion}"
     implementation "com.android.support:cardview-v7:${ApiBuildVersion}"
     implementation "com.android.support:recyclerview-v7:${ApiBuildVersion}"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }
+
 
 
 

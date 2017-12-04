@@ -338,6 +338,7 @@ public class MainActivity extends AppCompatActivity {
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[0]).withIcon(FontAwesome.Icon.faw_gg).withSelectable(false),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[1]).withIcon(FontAwesome.Icon.faw_download).withSelectable(false),
+                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[8]).withIcon(FontAwesome.Icon.faw_calendar).withSelectable(false),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[2]).withIcon(FontAwesome.Icon.faw_clock_o).withSelectable(false).withEnabled(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN),
                         new SwitchDrawerItem().withName(res.getStringArray(R.array.drawers)[6]).withIcon(FontAwesome.Icon.faw_language).withSelectable(false).withChecked(translate).withOnCheckedChangeListener(onCheckedChangeListener).withEnabled(trans_active),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[7]).withIcon(FontAwesome.Icon.faw_map).withSelectable(false),
@@ -382,22 +383,26 @@ public class MainActivity extends AppCompatActivity {
                                 }
                                 break;
                             case 3:
+                                Intent intent_exam = new Intent(MainActivity.this, ExamActivity.class);
+                                startActivity(intent_exam);
+                                break;
+                            case 4:
                                 Intent intent_alarm = new Intent(MainActivity.this, AlarmActivity.class);
                                 startActivity(intent_alarm);
                                 break;
-                            case 5:
+                            case 6:
                                 Intent intent_map = new Intent(MainActivity.this, MapActivity.class);
                                 startActivity(intent_map);
                                 break;
-                            case 7:
+                            case 8:
                                 Intent intent_social = new Intent(MainActivity.this, vk.class);
                                 startActivity(intent_social);
                                 break;
-                            case 8:
+                            case 9:
                                 Intent intent_incorrect = new Intent(MainActivity.this, incorrect.class);
                                 startActivity(intent_incorrect);
                                 break;
-                            case 10:
+                            case 11:
                                 Intent intent_about = new Intent(MainActivity.this, about_app.class);
                                 startActivity(intent_about);
                                 break;
