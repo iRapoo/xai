@@ -338,13 +338,13 @@ public class MainActivity extends AppCompatActivity {
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[0]).withIcon(FontAwesome.Icon.faw_gg).withSelectable(false),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[1]).withIcon(FontAwesome.Icon.faw_download).withSelectable(false),
-                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[8]).withIcon(FontAwesome.Icon.faw_calendar).withSelectable(false),
+                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[8]).withIcon(FontAwesome.Icon.faw_calendar).withSelectable(false).withEnabled(false).withBadge(getResources().getString(R.string.coming_soon)),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[2]).withIcon(FontAwesome.Icon.faw_clock_o).withSelectable(false).withEnabled(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN),
                         new SwitchDrawerItem().withName(res.getStringArray(R.array.drawers)[6]).withIcon(FontAwesome.Icon.faw_language).withSelectable(false).withChecked(translate).withOnCheckedChangeListener(onCheckedChangeListener).withEnabled(trans_active),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[7]).withIcon(FontAwesome.Icon.faw_map).withSelectable(false),
                         new SectionDrawerItem().withName(R.string.support),
                         new SecondaryDrawerItem().withName(res.getStringArray(R.array.drawers)[3]).withIcon(FontAwesome.Icon.faw_vk).withSelectable(false),
-                        new SecondaryDrawerItem().withName(res.getStringArray(R.array.drawers)[4]).withIcon(FontAwesome.Icon.faw_question).withIdentifier(6).withSelectable(false),
+                        new SecondaryDrawerItem().withName(res.getStringArray(R.array.drawers)[4]).withIcon(FontAwesome.Icon.faw_life_ring).withIdentifier(6).withSelectable(false),
                         new DividerDrawerItem(),
                         new SecondaryDrawerItem().withName(res.getStringArray(R.array.drawers)[5]).withIcon(FontAwesome.Icon.faw_info).withSelectable(false).withBadge(VERSION)
                 )

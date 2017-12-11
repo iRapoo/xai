@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-am\\values-am.xml",
+            "outputFile": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-am\\values-am.xml",
             "map": [
                 {
-                    "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\values-am\\values-am.xml",
+                    "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\values-am\\values-am.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-am\\values-am.xml",
+            "outputFile": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-am\\values-am.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\values-am\\values-am.xml",
+                    "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\values-am\\values-am.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

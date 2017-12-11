@@ -1,59 +1,47 @@
 [
     {
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_notification_tile_bg.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
         "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_notification_icon_background.xml.flat",
         "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable\\notification_icon_background.xml"
-    },
-    {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
-    },
-    {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_big_media_narrow.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21_notification_action_tombstone.xml.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_media_custom.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_media_custom.xml"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_media_custom.xml.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\2d100d1107437082616fd53e71b29f5d\\res\\layout\\notification_template_media_custom.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21_notification_action_background.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_custom_big.xml.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\layout\\notification_template_custom_big.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
-    },
-    {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_big_media.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_big_media.xml"
-    },
-    {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v16_notification_template_custom_big.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout-v16\\notification_template_custom_big.xml"
-    },
-    {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_media.xml.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\2d100d1107437082616fd53e71b29f5d\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_media_custom.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_media_custom.xml"
-    },
-    {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_action.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout\\notification_action.xml"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -64,8 +52,8 @@
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\layout\\notification_template_icon_group.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_slidingmenumain.xml.flat",
-        "source": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\bundles\\debug\\res\\layout\\slidingmenumain.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_media_action.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_media_action.xml"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_notification_tile_bg.xml.flat",
@@ -78,6 +66,10 @@
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21_notification_action.xml.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21_notification_action_tombstone.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -96,24 +88,36 @@
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
-        "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_big_media.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_big_media_narrow_custom.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_media_cancel_action.xml.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\2d100d1107437082616fd53e71b29f5d\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_action.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout\\notification_action.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v16_notification_template_custom_big.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout-v16\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_custom_big.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout\\notification_template_custom_big.xml"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
@@ -124,40 +128,40 @@
         "source": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\bundles\\debug\\res\\layout\\slidingmenumain.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21_notification_template_custom_big.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout-v21\\notification_template_custom_big.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_media.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_notification_bg_low.xml.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\drawable\\notification_bg_low.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_icon_group.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout\\notification_template_icon_group.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
-    },
-    {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21_notification_template_icon_group.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout-v21\\notification_template_icon_group.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_part_chronometer.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_big_media.xml.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\2d100d1107437082616fd53e71b29f5d\\res\\layout\\notification_template_big_media.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_big_media_custom.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_big_media_custom.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_lines_media.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_lines_media.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21_notification_action.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout-v21\\notification_action.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21_notification_template_icon_group.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_part_chronometer.xml.flat",
@@ -168,72 +172,72 @@
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_media_cancel_action.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_media_cancel_action.xml"
-    },
-    {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
-    },
-    {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_notification_bg.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable\\notification_bg.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21_notification_template_custom_big.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_action_tombstone.xml.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\layout\\notification_action_tombstone.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_action_tombstone.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout\\notification_action_tombstone.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_notification_bg_low.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable\\notification_bg_low.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_big_media_custom.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_big_media_custom.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_big_media_narrow.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_media_action.xml.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\2d100d1107437082616fd53e71b29f5d\\res\\layout\\notification_media_action.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_custom_big.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout\\notification_template_custom_big.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_notification_bg.xml.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\drawable\\notification_bg.xml"
     },
     {
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_action_tombstone.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_big_media_narrow_custom.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_big_media_narrow_custom.xml"
-    },
-    {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21_notification_action_background.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-v21\\notification_action_background.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_lines_media.xml.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\2d100d1107437082616fd53e71b29f5d\\res\\layout\\notification_template_lines_media.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21_notification_action_tombstone.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout-v21\\notification_action_tombstone.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_slidingmenumain.xml.flat",
+        "source": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\bundles\\debug\\res\\layout\\slidingmenumain.xml"
+    },
+    {
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
-    },
-    {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_notification_icon_background.xml.flat",
@@ -248,48 +252,44 @@
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\2d100d1107437082616fd53e71b29f5d\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
-    },
-    {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_part_chronometer.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout\\notification_template_part_chronometer.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_part_time.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout\\notification_template_part_time.xml"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_media.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_media.xml"
-    },
-    {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_lines_media.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_template_lines_media.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_media_cancel_action.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_media_action.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\cbc7ac36dbd89a3cf6a9bd7c947177eb\\res\\layout\\notification_media_action.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_notification_bg.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable\\notification_bg.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_part_time.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout\\notification_template_part_time.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_notification_tile_bg.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable\\notification_tile_bg.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21_notification_action.xml.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout-v21\\notification_action.xml"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
@@ -300,16 +300,16 @@
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\layout\\notification_action.xml"
     },
     {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_icon_group.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\layout\\notification_template_icon_group.xml"
-    },
-    {
-        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_notification_bg_low.xml.flat",
-        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable\\notification_bg_low.xml"
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21_notification_action_background.xml.flat",
         "source": "C:\\Users\\myxpe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\b1ae7c83931b32007cc1055f9c16d020\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "D:\\home\\rapoo\\AndroidStudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "D:\\home\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\42b3f0d826d19d1d65d00658b3cff92d\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v16_notification_template_custom_big.xml.flat",

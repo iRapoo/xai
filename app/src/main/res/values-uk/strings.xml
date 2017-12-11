@@ -129,6 +129,7 @@
     <string name="popmenu4">Змінити оформлення</string>
 
     <string name="support">Підтримка</string>
+    <string name="coming_soon">скоро</string>
 
     <string-array name="drawers">
         <item>Новини додатки</item>

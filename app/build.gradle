@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27.0.1"
+    buildToolsVersion "27.0.2"
 
     defaultConfig {
         applicationId "org.dualcom.xai"
@@ -28,7 +28,7 @@ repositories {
 }
 
 ext {
-    ApiBuildVersion = '27.0.1'
+    ApiBuildVersion = '27.0.2'
     playServicesVersion = '11.6.2'
 }
 
@@ -45,8 +45,6 @@ dependencies {
     implementation "com.mikepenz:fontawesome-typeface:4.7.0.0@aar"
     implementation "com.github.ybq:Android-SpinKit:1.1.0"
     implementation "com.startapp:inapp-sdk:3.6.8"
-    implementation group: 'org.apache.poi', name: 'poi', version: '3.17'
-    implementation group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '3.17'
 
     //Google Firebase
     implementation "com.google.firebase:firebase-ads:${playServicesVersion}"

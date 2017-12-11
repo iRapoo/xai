@@ -129,6 +129,7 @@
     <string name="popmenu4">Change Theme</string>
 
     <string name="support">Support</string>
+    <string name="coming_soon">soon</string>
 
     <string-array name="drawers">
         <item>View News</item>
