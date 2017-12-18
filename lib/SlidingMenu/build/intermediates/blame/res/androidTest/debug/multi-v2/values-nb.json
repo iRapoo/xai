@@ -16,6 +16,21 @@
             ]
         },
         {
+            "outputFile": "D:\\#Projects\\Android\\Apps\\xai\\lib\\SlidingMenu\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-nb\\values-nb.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\c58e25e8ac83ee9f0c0833445dcd3f39\\res\\values-nb\\values-nb.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "D:\\#DEV\\#Android\\#StudioProjects\\xai\\lib\\SlidingMenu\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-nb\\values-nb.xml",
             "map": [
                 {
