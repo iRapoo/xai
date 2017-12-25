@@ -18,9 +18,10 @@
     <color name="dark_grey">#777777</color>
     <color name="menu_focused_pressed_gray_color">#404040</color>
 
-    <color name="top_color">#2f6686</color>
-    <color name="main_color">#357295</color>
-    <color name="extra_color">#5474a3</color>
+    <color name="top_color">#00796B</color>
+    <color name="main_color">#00796B</color>
+    <color name="extra_color">#00796B</color>
+    <color name="selector_color">#e0f2f1</color>
 
     <color name="tabsScrollColor">#00897B</color>
 

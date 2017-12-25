@@ -21,9 +21,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".ScheduleActivity"
             android:label="@string/app_name"
-            android:windowSoftInputMode="stateHidden">
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -150,7 +151,8 @@
 
         <!-- End of StartApp activities integration -->
 
-        <activity android:name=".ExamActivity"></activity>
+        <activity android:name=".ExamActivity" />
+
     </application>
 
 </manifest>

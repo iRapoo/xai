@@ -31,7 +31,8 @@
                     android:id="@+id/GO_BACK"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/selector" />
+                    android:layout_marginLeft="-25dp"
+                    android:background="@drawable/button_selector" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -238,25 +239,25 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:layout_width="65dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical|center_horizontal">
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center">
 
                     <Button
                         android:id="@+id/btn_send"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="-5dp"
+                        android:layout_marginRight="-25dp"
                         android:layout_weight="1"
-                        android:background="@drawable/selector" />
+                        android:background="@drawable/button_selector" />
 
                     <ImageView
                         android:id="@+id/imageView13"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:background="@drawable/incorrect_send" />
+                        android:background="@drawable/ic_send_black_24dp" />
 
                 </RelativeLayout>
 

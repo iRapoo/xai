@@ -29,8 +29,6 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.github.amlcurran.showcaseview.ShowcaseView;
-import com.github.amlcurran.showcaseview.targets.ViewTarget;
 import com.startapp.android.publish.adsCommon.StartAppSDK;
 
 import org.apache.http.HttpEntity;
@@ -213,13 +211,13 @@ public class NewsActivity extends AppCompatActivity implements SwipeRefreshLayou
 
         if (Storage.emptyData(context, "TUTORIAL")) {
 
-            ViewTarget target = new ViewTarget(R.id.fab, this);
+            /*ViewTarget target = new ViewTarget(R.id.fab, this);
             new ShowcaseView.Builder(this)
                     .setTarget(target)
                     .setContentTitle(getString(R.string.Welcome))
                     .setContentText(getString(R.string.Welcomtext))
                     .setStyle(R.style.CustomShowcaseTheme)
-                    .build();
+                    .build();*/
 
             /*TourGuide mTourGuideHandler = TourGuide.init(this).with(TourGuide.Technique.Click)
                     .setPointer(new Pointer())

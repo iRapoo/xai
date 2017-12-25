@@ -23,7 +23,10 @@ public class WrapContentViewPager extends ViewPager {
         int child = (Storage.loadData(getContext(), "TabId").equals("Tab2")) ? 1 : 0;
 
         View view = getChildAt(child);
-        view.measure(widthMeasureSpec, heightMeasureSpec);
+
+        if (view != null) {
+            view.measure(widthMeasureSpec, heightMeasureSpec);
+        }
 
 
         setMeasuredDimension(getMeasuredWidth(), measureHeight(heightMeasureSpec, view));

@@ -156,6 +156,11 @@
         <item>Мокрый асфальт</item>
     </string-array>
 
+    <string-array name="state">
+        <item>включено</item>
+        <item>выключено</item>
+    </string-array>
+
     <string name="LT1">8:00 - 9:35</string>
     <string name="LT2">9:50 - 11:25</string>
     <string name="LT3">11:55 - 13:30</string>
@@ -180,6 +185,9 @@
     <string name="no_group">Чтобы продолжить укажите свою группу/преподавателя выбрав её(его) из списка.</string>
     <string name="ni_text">Нет подключения к интернету.</string>
 
+    <string name="title_no_internet">Ууупс!</string>
+    <string name="text_no_internet">Не найдено подключение к Интернету.\nПроверьте свое соединение.</string>
+
     <string name="vendor">Rapoo © 2015</string>
     <string name="DualcoM">DualcoM™ Software developers</string>
 
@@ -200,5 +208,12 @@
     <string name="banner_ad_unit_id2">ca-app-pub-7148094931915684/7613101450</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="title_news">Новости</string>
+    <string name="title_schedule">Расписание</string>
+    <string name="title_other">Другое</string>
+
+    <string name="translate_schedule">Переводим расписание</string>
+    <string name="double_press">Нажмите снова для выхода</string>
 
 </resources>

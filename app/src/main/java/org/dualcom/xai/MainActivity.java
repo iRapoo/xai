@@ -412,9 +412,9 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .build();
 
-        TextView main_type = (TextView) drawerResult.getHeader().findViewById(R.id.main_type);
+        /*TextView main_type = (TextView) drawerResult.getHeader().findViewById(R.id.main_type);
         TextView main_date = (TextView) drawerResult.getHeader().findViewById(R.id.main_date);
-        TextView label_week = (TextView) drawerResult.getHeader().findViewById(R.id.LabelWeek);
+        TextView label_week = (TextView) drawerResult.getHeader().findViewById(R.id.LabelWeek);*/
 
         drawerResult.setSelection(1, false);
 
@@ -537,9 +537,9 @@ public class MainActivity extends AppCompatActivity {
         String[] TMP_WEEK = getResources().getStringArray(R.array.TYPE_WEEK);
         String TYPE_WEEK = (DATE.getWeekType() == 0) ? TMP_WEEK[0] : TMP_WEEK[1];
         main_label.setText(Storage.loadData(context, "NOW_GROUP")); //+" | "+TYPE_WEEK
-        main_date.setText(monthes[month] + " " + day_of_month + ", " + DAY_SHORT[DATE.getWeek()]);
+        /*main_date.setText(monthes[month] + " " + day_of_month + ", " + DAY_SHORT[DATE.getWeek()]);
         main_type.setText(TYPE_WEEK);
-        label_week.setText(DATE.getStudWeek() + getResources().getString(R.string.stud_week));
+        label_week.setText(DATE.getStudWeek() + getResources().getString(R.string.stud_week));*/
         //startType.setText(TYPE_WEEK);
 
         //Проверка ХЕШ суммы

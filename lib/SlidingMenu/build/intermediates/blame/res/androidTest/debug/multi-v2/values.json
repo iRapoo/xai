@@ -4,7 +4,7 @@
             "outputFile": "D:\\#Projects\\Android\\Apps\\xai\\lib\\SlidingMenu\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\d1c0c1cef7aac7313da6749a0be0b5d7\\res\\values\\values.xml",
+                    "source": "C:\\Users\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.1.aar\\83bdfdf1cb33dff908477031defaa7e6\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\c58e25e8ac83ee9f0c0833445dcd3f39\\res\\values\\values.xml",
+                    "source": "C:\\Users\\rapoo\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\06867082e31f2e70215c98c5f426de87\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,54,55,59,60,61",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

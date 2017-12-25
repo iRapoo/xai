@@ -38,7 +38,8 @@
                     android:id="@+id/GO_BACK"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/selector" />
+                    android:layout_marginLeft="-25dp"
+                    android:background="@drawable/button_selector" />
 
                 <ImageView
                     android:id="@+id/imageView13"
@@ -114,7 +115,8 @@
                         android:id="@+id/fast_change_group"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:background="@drawable/selector" />
+                        android:layout_marginRight="-25dp"
+                        android:background="@drawable/button_selector" />
 
                     <ImageView
                         android:id="@+id/imageView14"
