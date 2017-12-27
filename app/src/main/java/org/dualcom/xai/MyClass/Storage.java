@@ -12,17 +12,25 @@ public class Storage {
         ed.putString(key, value);
         ed.commit();
     }
-    
     public static String loadData(Context context, String key){
         SharedPreferences sPref = PreferenceManager.getDefaultSharedPreferences(context);
         String loadScores = sPref.getString(key, "");
         return loadScores;
     }
-
     public static boolean emptyData(Context context, String key){
         SharedPreferences sPref = PreferenceManager.getDefaultSharedPreferences(context);
         String loadScores = sPref.getString(key, "");
         boolean res = (loadScores == "" || loadScores == null || loadScores == "null" || loadScores.length() < 1) ? true : false;
+        return res;
+    }
+    public static boolean removeData(Context context, String key){
+        SharedPreferences sPref = PreferenceManager.getDefaultSharedPreferences(context);
+        boolean res = sPref.edit().remove(key).commit();
+        return res;
+    }
+    public static boolean clearData(Context context){
+        SharedPreferences sPref = PreferenceManager.getDefaultSharedPreferences(context);
+        boolean res = sPref.edit().clear().commit();
         return res;
     }
 }
