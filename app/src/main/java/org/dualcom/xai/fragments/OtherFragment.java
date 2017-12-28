@@ -1,8 +1,10 @@
 package org.dualcom.xai.fragments;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -14,6 +16,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
@@ -46,6 +49,7 @@ import org.dualcom.xai.MyClass.Storage;
 import org.dualcom.xai.MyClass.Windows;
 import org.dualcom.xai.MyClass.isInternet;
 import org.dualcom.xai.R;
+import org.dualcom.xai.ScheduleActivity;
 import org.dualcom.xai.StartActivity;
 import org.dualcom.xai.about_app;
 import org.dualcom.xai.incorrect;
@@ -66,7 +70,7 @@ public class OtherFragment extends Fragment {
     public String VERSION = "";
     public Boolean translate = true;
 
-    private Drawer drawer = null;
+    public Drawer drawer = null;
     ProgressDialog progressDoalog;
 
     protected BottomSheetLayout bottomSheetLayout;
@@ -139,11 +143,38 @@ public class OtherFragment extends Fragment {
 
         ((ViewGroup) rootView.findViewById(R.id.drawerFrame)).addView(drawer.getSlider());
 
-        TextView appVersion = (TextView) drawer.getHeader().findViewById(R.id.appVersion);
+        TextView appVersion = drawer.getHeader().findViewById(R.id.appVersion);
         appVersion.setText(getString(R.string.app_version) + " " + VERSION);
 
-        TextView appCopyright = (TextView) drawer.getHeader().findViewById(R.id.appCopyright);
+        TextView appCopyright = drawer.getHeader().findViewById(R.id.appCopyright);
         appCopyright.setText("© 2015-" + DATE.getYear() + ", Quenix Software");
+
+        Button btn_clear_data = drawer.getHeader().findViewById(R.id.btn_clear_data);
+        btn_clear_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Внимание!");
+                builder.setMessage("Вы уверены что хотите очистить данные приложения?");
+                builder.setPositiveButton("Удалить", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        if(Storage.clearData(context)){
+                            Intent intent = new Intent(getActivity(), ScheduleActivity.class);
+                            startActivity(intent);
+                            getActivity().finish();
+                        }
+                    }
+                });
+                builder.setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
 
         drawer.setSelection(1, false);
 

@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     android:adjustViewBounds="true"
     android:orientation="vertical"
-    android:padding="20dp"
     android:scaleType="fitXY">
 
     <ImageView
@@ -17,7 +16,7 @@
         android:layout_centerVertical="true"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="TODO"
         android:src="@mipmap/ic_launcher_round"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,11 +56,13 @@
 
     <TextView
         android:id="@+id/appCopyright"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:paddingBottom="20dp"
         android:text="Quenix Software"
         android:textColor="@color/dark_grey"
         android:textSize="12sp"
@@ -69,5 +70,30 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appVersion" />
+
+    <RelativeLayout
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:gravity="center_vertical|center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_clear_data"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="-25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_delete_sweep" />
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
