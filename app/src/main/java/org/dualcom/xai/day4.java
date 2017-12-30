@@ -1,13 +1,12 @@
 package org.dualcom.xai;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.dualcom.xai.MyClass.DATE;
@@ -15,120 +14,65 @@ import org.dualcom.xai.MyClass.JSON;
 import org.dualcom.xai.MyClass.LIST;
 import org.dualcom.xai.MyClass.Storage;
 
-/**
- * Created by Виталий on 01.02.2015.
- */
+import static org.dualcom.xai.ScheduleActivity.moreFragment;
+
 public class day4 extends Fragment {
 
-    Context context;
+    public View rootView;
+    public Context context;
 
-    public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.day4, container, false);
-
+        rootView = inflater.inflate(R.layout.day4, container, false);
         context = container.getContext();
+
         String group = Storage.loadData(context, "NOW_GROUP");
-
-        /*if (DATE.getWeekType() == 0) {
-            for (int i = 12; i < 16; i++) {
-                if(DATE.getNowTime()+12 == i && DATE.getWeek() == 3)
-                    ((LinearLayout) view.findViewById(LIST.TOP(i))).setBackgroundColor(getResources().getColor(R.color.blue_dark_color_top));
-                else
-                    ((LinearLayout) view.findViewById(LIST.TOP(i))).setBackgroundColor(getResources().getColor(R.color.blue_dark_color));
-                ((TextView) view.findViewById(LIST.TOPt(i))).setTextColor(getResources().getColor(R.color.white));
-            }
-        } else {
-            for (int i = 12; i < 16; i++) {
-                if(DATE.getNowTime()+12 == i && DATE.getWeek() == 3)
-                    ((LinearLayout) view.findViewById(LIST.BOT(i))).setBackgroundColor(getResources().getColor(R.color.blue_dark_color_top));
-                else
-                    ((LinearLayout) view.findViewById(LIST.BOT(i))).setBackgroundColor(getResources().getColor(R.color.blue_dark_color));
-                ((TextView) view.findViewById(LIST.BOTt(i))).setTextColor(getResources().getColor(R.color.white));
-            }
-        }
-
-        for(int i = 1; i < 5; i++){
-            final String json = JSON.getJSON(context, "day3", i + "-0", group);
-            final TextView TextView = (TextView) view.findViewById(LIST.TOPt(i+11));
-            if(json != "0") {
-                TextView.setText(json.split("//")[0]);
-                TextView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast toast = Toast.makeText(context,
-                                json.split("//")[1], Toast.LENGTH_SHORT);
-                        toast.show();
-                    }
-                });
-            }
-        }
-
-        for(int i = 1; i < 5; i++){
-            final String json = JSON.getJSON(context, "day3", i+"-1", group);
-            final TextView TextView = (TextView) view.findViewById(LIST.BOTt(i+11));
-            if(json != "0") {
-                TextView.setText(json.split("//")[0]);
-                TextView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast toast = Toast.makeText(context,
-                                json.split("//")[1], Toast.LENGTH_SHORT);
-                        toast.show();
-                    }
-                });
-            }
-        }*/
 
         for(int i = 1; i < 5; i++){
             final String json_t = JSON.getJSON(context, "day3", i + "-0", group);
-            final TextView TextView_t = (TextView) view.findViewById(LIST.TOPt(i + 11));
+            final TextView TextView_t = rootView.findViewById(LIST.TOPt(i + 11));
 
             final String json_b = JSON.getJSON(context, "day3", i+"-1", group);
-            final TextView TextView_b = (TextView) view.findViewById(LIST.BOTt(i + 11));
+            final TextView TextView_b = rootView.findViewById(LIST.BOTt(i + 11));
 
-            if(json_t != "0") {
+            if(!json_t.equals("0")) {
                 TextView_t.setText(json_t.split("//")[0]);
                 TextView_t.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        /*Toast toast = Toast.makeText(context,
-                                json_t.split("//")[1], Toast.LENGTH_SHORT);
-                        toast.show();*/
-                        Intent intent = new Intent(getActivity(), TeacherActivity.class);
-                        intent.putExtra("teacher", json_t.split("//")[1]);
-                        startActivity(intent);
+                        Storage.saveData(context, "_tmp_lesson", json_t.split("//")[0]);
+                        Storage.saveData(context, "_tmp_teacher", json_t.split("//")[1]);
+                        moreFragment.show(getActivity().getSupportFragmentManager(), R.id.bottomsheet);
                     }
                 });
             }
 
-            if(json_b != "0") {
+            if(!json_b.equals("0")) {
                 TextView_b.setText(json_b.split("//")[0]);
                 TextView_b.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        /*Toast toast = Toast.makeText(context,
-                                json_b.split("//")[1], Toast.LENGTH_SHORT);
-                        toast.show();*/
-                        Intent intent = new Intent(getActivity(), TeacherActivity.class);
-                        intent.putExtra("teacher", json_b.split("//")[1]);
-                        startActivity(intent);
+                        Storage.saveData(context, "_tmp_lesson", json_b.split("//")[0]);
+                        Storage.saveData(context, "_tmp_teacher", json_b.split("//")[1]);
+                        moreFragment.show(getActivity().getSupportFragmentManager(), R.id.bottomsheet);
                     }
                 });
             }
 
             if(json_t.equals(json_b))
-                ((LinearLayout) view.findViewById(LIST.BOT(i+11))).setVisibility(View.GONE);
+                rootView.findViewById(LIST.BOT(i+11)).setVisibility(View.GONE);
 
             else{
                 if(DATE.getWeekType() == 0)
-                    ((LinearLayout) view.findViewById(LIST.TOP(i + 11))).setBackgroundResource(R.drawable.less_now);
+                    rootView.findViewById(LIST.TOP(i + 11)).setBackgroundResource(R.drawable.less_now);
                 else
-                    ((LinearLayout) view.findViewById(LIST.BOT(i + 11))).setBackgroundResource(R.drawable.less_now);
+                    rootView.findViewById(LIST.BOT(i + 11)).setBackgroundResource(R.drawable.less_now);
             }
 
         }
 
-        return view;
+        return rootView;
 
     }
 

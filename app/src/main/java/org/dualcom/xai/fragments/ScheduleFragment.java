@@ -80,7 +80,7 @@ public class ScheduleFragment extends Fragment {
             adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager(), DAY, DAY.length);
 
             // Assigning ViewPager View and setting the adapter
-            pager = (ViewPager) rootView.findViewById(R.id.pager);
+            pager = rootView.findViewById(R.id.pager);
             pager.setAdapter(adapter);
 
             //display

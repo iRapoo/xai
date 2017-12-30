@@ -1,5 +1,6 @@
 package org.dualcom.xai;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -34,6 +35,9 @@ import tourguide.tourguide.ToolTip;
 import tourguide.tourguide.TourGuide;
 
 public class ScheduleActivity extends AppCompatActivity {
+
+    @SuppressLint("StaticFieldLeak")
+    public static MoreFragment moreFragment = new MoreFragment();
 
     private StartAppAd startAppAd = new StartAppAd(this);
 

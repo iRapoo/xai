@@ -23,6 +23,12 @@ public class Storage {
         boolean res = (loadScores == "" || loadScores == null || loadScores == "null" || loadScores.length() < 1) ? true : false;
         return res;
     }
+    public static String getWithRemoveData(Context context, String key){
+        SharedPreferences sPref = PreferenceManager.getDefaultSharedPreferences(context);
+        String loadScores = sPref.getString(key, "");
+        boolean res = sPref.edit().remove(key).commit();
+        return (res) ? loadScores : "error";
+    }
     public static boolean removeData(Context context, String key){
         SharedPreferences sPref = PreferenceManager.getDefaultSharedPreferences(context);
         boolean res = sPref.edit().remove(key).commit();
