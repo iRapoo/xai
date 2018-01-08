@@ -1,6 +1,7 @@
 package org.dualcom.xai.fragments;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -25,6 +26,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.dualcom.xai.MyClass.LIST;
+import org.dualcom.xai.MyClass.Storage;
+import org.dualcom.xai.R;
+
 public class MapFragment extends SupportMapFragment
         implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
@@ -37,6 +42,8 @@ public class MapFragment extends SupportMapFragment
     GoogleApiClient mGoogleApiClient;
     Location mLastLocation;
     Marker mCurrLocationMarker;
+
+    public Context context;
 
     @Override
     public void onResume() {
@@ -64,6 +71,8 @@ public class MapFragment extends SupportMapFragment
     @Override
     public void onMapReady(GoogleMap googleMap)
     {
+        context = getActivity().getApplicationContext();
+
         mGoogleMap = googleMap;
         mGoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
@@ -125,15 +134,18 @@ public class MapFragment extends SupportMapFragment
 
         //Place current location marker
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+        latLng = LIST.getLatLng(Storage.loadData(context, "_tmp_lesson"));
+
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
-        markerOptions.title("Это Вы...");
-        markerOptions.snippet("Ваше местоположение!");
+        markerOptions.title(getResources().getStringArray(R.array.housings)[LIST.getHousing(Storage.loadData(context, "_tmp_lesson"))]);
+        //markerOptions.snippet("Ваше местоположение!");
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker()); //BitmapDescriptorFactory.fromResource(R.drawable.no_photo)
         mCurrLocationMarker = mGoogleMap.addMarker(markerOptions);
 
         //move map camera
-        mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,14));
+        //mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,16));
+        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,16));
 
     }
 

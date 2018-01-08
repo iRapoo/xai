@@ -8,6 +8,7 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
@@ -48,7 +49,7 @@ public class NewsFragment extends Fragment {
         mWebView.getSettings().setJavaScriptEnabled(true);
 
         mWebView.loadUrl(isInternet.API + "news");
-
+        
         // Inflate the layout for this fragment
         return rootView;
     }

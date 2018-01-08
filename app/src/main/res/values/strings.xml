@@ -159,6 +159,17 @@
         <item>disabled</item>
     </string-array>
 
+    <string-array name="housings">
+        <item>Laboratory building</item>
+        <item>Main building</item>
+        <item>Aircraft Corps</item>
+        <item>Housing №2</item>
+        <item>Radio Corps</item>
+        <item>Motor housing</item>
+        <item>Pulse housing</item>
+        <item>Sports facilities</item>
+    </string-array>
+
     <string name="LT1">8:00 - 9:35</string>
     <string name="LT2">9:50 - 11:25</string>
     <string name="LT3">11:55 - 13:30</string>

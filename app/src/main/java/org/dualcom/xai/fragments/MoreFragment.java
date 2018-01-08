@@ -31,7 +31,7 @@ public class MoreFragment extends BottomSheetFragment {
         rootView = (rootView==null) ? inflater.inflate(R.layout.fragment_more, container, false) : rootView;
         context = rootView.getContext();
 
-        _lesson = Storage.getWithRemoveData(context, "_tmp_lesson");
+        _lesson = Storage.loadData(context, "_tmp_lesson");
         _teacher = Storage.getWithRemoveData(context, "_tmp_teacher");
 
         TextView nameLesson = rootView.findViewById(R.id.nameLesson);

@@ -1,10 +1,8 @@
 package org.dualcom.xai.MyClass;
 
+import com.google.android.gms.maps.model.LatLng;
 import org.dualcom.xai.R;
 
-/**
- * Created by Виталий on 02.02.2015.
- */
 public class LIST {
 
     public static int TOP(int value){
@@ -81,24 +79,30 @@ public class LIST {
         return list[value];
     }*/
 
-    //Набор оформлений
-    public static int themes(int value){
-        int list[] = {
-                R.style.blueTheme,R.style.pomegrangeTheme,R.style.greenSeaTheme,R.style.pumpkinTheme,
-                R.style.asbestosTheme,R.style.wisteriaTheme,R.style.orangeTheme,R.style.asphaltTheme
+    public static int getHousing(String line){
+        int value = 7; //Манеж default
+
+        String housing[] = {
+                " лк. ", " г. ", " с ", " к-2 ", " р. ", " м. ", " им. "
         };
 
-        return list[value];
+        for(int i = 0; i < housing.length; i++){
+            if(line.contains(housing[i]))
+                value = i;
+        }
+
+        return value;
     }
 
-    public static int themesImage(int value){
-        int list[] = {
-                R.drawable.theme1,R.drawable.theme2,R.drawable.theme3,R.drawable.theme4,
-                R.drawable.theme5,R.drawable.theme6,R.drawable.theme7,R.drawable.theme8
+    public static LatLng getLatLng(String line){
+        int value = getHousing(line);
+
+        LatLng latLng[] = {
+                new LatLng(50.043368, 36.289603), new LatLng(50.042790, 36.284777), new LatLng(50.041822, 36.285847),
+                new LatLng(50.044507, 36.286963), new LatLng(50.042882, 36.291340), new LatLng(50.043269, 36.287467),
+                new LatLng(50.044248, 36.291805), /*Манеж*/new LatLng(50.045120, 36.283847)/**/
         };
-
-        return list[value];
+        return latLng[value];
     }
-    //********************
 
 }

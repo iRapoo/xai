@@ -161,6 +161,17 @@
         <item>выключено</item>
     </string-array>
 
+    <string-array name="housings">
+        <item>Лабораторный корпус</item>
+        <item>Главный корпус</item>
+        <item>Самолетный корпус</item>
+        <item>Корпус №2</item>
+        <item>Радиокорпус</item>
+        <item>Моторный корпус</item>
+        <item>Импульсный корпус</item>
+        <item>Спортивные помещения</item>
+    </string-array>
+
     <string name="LT1">8:00 - 9:35</string>
     <string name="LT2">9:50 - 11:25</string>
     <string name="LT3">11:55 - 13:30</string>
