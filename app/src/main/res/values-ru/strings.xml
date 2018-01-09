@@ -33,6 +33,8 @@
     <string name="loading">Загрузка...</string>
     <string name="send">Отправить</string>
 
+    <string name="message">Сообщение</string>
+
     <string name="incorrect_title">Обратная связь</string>
     <string name="incorrect_ok_title">Принято к рассмотрению</string>
     <string name="incorrect_ok_text">Ваше обращение будет рассмотрено в течении 24ч.</string>

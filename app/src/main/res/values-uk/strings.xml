@@ -33,6 +33,8 @@
     <string name="loading">Завантаження...</string>
     <string name="send">Відправити</string>
 
+    <string name="message">Повідомлення</string>
+
     <string name="incorrect_title">Зворотній звязок</string>
     <string name="incorrect_ok_title">Прийнято до розгляду</string>
     <string name="incorrect_ok_text">Ваше звернення буде розглянуто протягом 24 год.</string>

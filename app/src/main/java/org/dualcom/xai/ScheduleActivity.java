@@ -3,6 +3,7 @@ package org.dualcom.xai;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,10 +26,15 @@ import com.startapp.android.publish.adsCommon.StartAppSDK;
 
 import org.dualcom.xai.MyClass.*;
 import org.dualcom.xai.fragments.*;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import q.rorbin.badgeview.Badge;
+import q.rorbin.badgeview.QBadgeView;
 import tourguide.tourguide.Overlay;
 import tourguide.tourguide.Pointer;
 import tourguide.tourguide.ToolTip;
@@ -53,6 +59,11 @@ public class ScheduleActivity extends AppCompatActivity {
 
     public TourGuide mTourGuideHandler;
 
+    public BottomNavigationView navigation;
+    public View navigationBadge;
+    public int countBage = 0;
+    public Badge theBadge;
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -67,9 +78,20 @@ public class ScheduleActivity extends AppCompatActivity {
                     addFragment(new ScheduleFragment());
                     return true;
                 case R.id.navigation_other:
-                    if(Storage.emptyData(context, "NOW_GROUP"))
-                        mTourGuideHandler.cleanUp();
-                    addFragment(new OtherFragment());
+                    if(countBage>0){
+                        Intent intent_incorrect = new Intent(ScheduleActivity.this, incorrect.class);
+                        countBage = 0;
+                        navigation.getMenu().findItem(R.id.navigation_other).setTitle(R.string.title_other);
+                        navigation.getMenu().findItem(R.id.navigation_other).setIcon(R.drawable.ic_menu_black_24dp);
+                        //new QBadgeView(context).bindTarget(navigationBadge).hide(false);
+                        theBadge.hide(true);
+
+                        startActivity(intent_incorrect);
+                    }else {
+                        if (Storage.emptyData(context, "NOW_GROUP"))
+                            mTourGuideHandler.cleanUp();
+                        addFragment(new OtherFragment());
+                    }
                     return true;
             }
             return false;
@@ -103,11 +125,13 @@ public class ScheduleActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        BottomNavigationView navigation = findViewById(R.id.navigation);
+        navigation = findViewById(R.id.navigation);
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigation.setSelectedItemId(R.id.navigation_schedule);
         navigation.getMenu().findItem(R.id.navigation_schedule).setTitle(Storage.loadData(context, "NOW_GROUP"));
+
+        navigationBadge = navigation.getChildAt(0);
 
         addFragment(new ScheduleFragment());
 
@@ -137,8 +161,10 @@ public class ScheduleActivity extends AppCompatActivity {
             //getTeachers();
         }
 
-        if (isInternet.active(context))
+        if (isInternet.active(context)) {
             CheckMD5(); //Проверка обновлений расписания
+            getIncorrect(); //Проверка сообщений обратной связи
+        }
 
 
     }
@@ -215,6 +241,65 @@ public class ScheduleActivity extends AppCompatActivity {
             {
                 Map<String, String>  params = new HashMap<String, String>();
                 params.put("group", Storage.loadData(context, "NOW_GROUP"));
+
+                return params;
+            }
+        };
+
+        queue.add(stringRequest);
+
+    }
+
+    private void getIncorrect() {
+
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url = isInternet.API + "get_incorrect";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        JSONParser parser = new JSONParser();
+
+                        Object obj = null;
+                        try {
+                            obj = parser.parse(response);
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+
+                        JSONObject jsonObj = (JSONObject) obj;
+
+                        JSONObject count_message = (JSONObject) jsonObj.get("count");
+                        int _count = Integer.parseInt(count_message.get("value").toString());
+
+                        JSONObject messages = (JSONObject) jsonObj.get("message" + (_count-1));
+                        String from = messages.get("from") + "";
+
+                        if(!(_count+"").equals(Storage.loadData(context,"incorrectCount")) &&
+                                from.equals("admin")){
+
+                            int save_count = (Storage.emptyData(context,"incorrectCount")) ? 0 : Integer.parseInt(Storage.loadData(context,"incorrectCount"));
+                            countBage = (save_count>-1) ? (_count - save_count) : 0;
+
+                            if(countBage>0) {
+                                theBadge = new QBadgeView(context).bindTarget(navigationBadge).setBadgeNumber(countBage).setGravityOffset(25,2,true);
+                                navigation.getMenu().findItem(R.id.navigation_other).setTitle(R.string.message);
+                                navigation.getMenu().findItem(R.id.navigation_other).setIcon(R.drawable.ic_message_black_24dp);
+                            }
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Snackbar.make(findViewById(R.id.navigation), "Ошибка загрузки обратной связи", Snackbar.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams()
+            {
+                Map<String, String>  params = new HashMap<String, String>();
+                params.put("uid", UID);
 
                 return params;
             }
