@@ -83,7 +83,6 @@ public class ScheduleActivity extends AppCompatActivity {
                         countBage = 0;
                         navigation.getMenu().findItem(R.id.navigation_other).setTitle(R.string.title_other);
                         navigation.getMenu().findItem(R.id.navigation_other).setIcon(R.drawable.ic_menu_black_24dp);
-                        //new QBadgeView(context).bindTarget(navigationBadge).hide(false);
                         theBadge.hide(true);
 
                         startActivity(intent_incorrect);
