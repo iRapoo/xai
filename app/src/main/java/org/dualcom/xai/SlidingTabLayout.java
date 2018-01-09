@@ -233,7 +233,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
             }
 
             if (mDistributeEvenly) {
-                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, LayoutParams.WRAP_CONTENT, 1f);
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, 1f);
                 tabView.setLayoutParams(lp);
             }
 

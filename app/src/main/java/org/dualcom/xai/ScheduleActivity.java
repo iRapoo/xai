@@ -162,7 +162,9 @@ public class ScheduleActivity extends AppCompatActivity {
 
         if (isInternet.active(context)) {
             CheckMD5(); //Проверка обновлений расписания
-            getIncorrect(); //Проверка сообщений обратной связи
+
+            if(!Storage.emptyData(context, "NOW_GROUP"))
+                getIncorrect(); //Проверка сообщений обратной связи
         }
 
 
