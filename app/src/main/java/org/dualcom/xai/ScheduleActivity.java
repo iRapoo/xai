@@ -260,22 +260,25 @@ public class ScheduleActivity extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        JSONParser parser = new JSONParser();
 
-                        Object obj = null;
+                        if(response.equals("false")) return;
+
+                        int _count = 0;
+                        String from = "";
+
+                        JSONParser parser = new JSONParser();
                         try {
-                            obj = parser.parse(response);
+                            Object obj = parser.parse(response);
+                            JSONObject jsonObj = (JSONObject) obj;
+
+                            JSONObject count_message = (JSONObject) jsonObj.get("count");
+                            _count = Integer.parseInt(count_message.get("value").toString());
+
+                            JSONObject messages = (JSONObject) jsonObj.get("message" + (_count-1));
+                            from = messages.get("from") + "";
                         } catch (ParseException e) {
                             e.printStackTrace();
                         }
-
-                        JSONObject jsonObj = (JSONObject) obj;
-
-                        JSONObject count_message = (JSONObject) jsonObj.get("count");
-                        int _count = Integer.parseInt(count_message.get("value").toString());
-
-                        JSONObject messages = (JSONObject) jsonObj.get("message" + (_count-1));
-                        String from = messages.get("from") + "";
 
                         if(!(_count+"").equals(Storage.loadData(context,"incorrectCount")) &&
                                 from.equals("admin")){
