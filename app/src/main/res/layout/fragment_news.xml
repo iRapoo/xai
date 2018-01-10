@@ -74,7 +74,7 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/title_news"
+                android:text="@string/news_label"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold" />
