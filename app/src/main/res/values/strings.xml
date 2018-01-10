@@ -34,6 +34,7 @@
     <string name="send">Send</string>
 
     <string name="message">Message</string>
+    <string name="auditory">Classroom</string>
 
     <string name="incorrect_title">Feedback</string>
     <string name="incorrect_ok_title">Accepted for Review</string>
@@ -55,6 +56,7 @@
     <string name="teacher_name">Full name of the teacher</string>
     <string name="teacher_rank">Rank teacher</string>
     <string name="teacher_extra">Additional Information</string>
+    <string name="full_info">Detailed information</string>
 
     <string name="Today">Today</string>
     <string name="loadWidget">Loading widget...</string>

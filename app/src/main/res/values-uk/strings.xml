@@ -34,6 +34,7 @@
     <string name="send">Відправити</string>
 
     <string name="message">Повідомлення</string>
+    <string name="auditory">Аудиторія</string>
 
     <string name="incorrect_title">Зворотній звязок</string>
     <string name="incorrect_ok_title">Прийнято до розгляду</string>
@@ -55,6 +56,7 @@
     <string name="teacher_name">П.І.Б викладача</string>
     <string name="teacher_rank">Звання викладача</string>
     <string name="teacher_extra">Додаткова інформація</string>
+    <string name="full_info">Детальна інформація</string>
 
     <string name="Today">Cьогодні</string>
     <string name="loadWidget">Завантаження віджета...</string>

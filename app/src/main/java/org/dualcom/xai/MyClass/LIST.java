@@ -79,11 +79,26 @@ public class LIST {
         return list[value];
     }*/
 
+    public static String getHousingStr(String line){
+        String value = ""; //Манеж default
+
+        String housing[] = {
+                " лк. ", " г. ", " с ", " к-2 ", " р. ", " м. ", " ім. "
+        };
+
+        for(int i = 0; i < housing.length; i++){
+            if(line.contains(housing[i]))
+                value = housing[i];
+        }
+
+        return value;
+    }
+
     public static int getHousing(String line){
         int value = 7; //Манеж default
 
         String housing[] = {
-                " лк. ", " г. ", " с ", " к-2 ", " р. ", " м. ", " им. "
+                " лк. ", " г. ", " с ", " к-2 ", " р. ", " м. ", " ім. "
         };
 
         for(int i = 0; i < housing.length; i++){

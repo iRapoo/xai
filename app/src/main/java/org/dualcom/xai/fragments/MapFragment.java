@@ -84,6 +84,7 @@ public class MapFragment extends SupportMapFragment
                 buildGoogleApiClient();
                 mGoogleMap.setMyLocationEnabled(true);
                 mGoogleMap.getUiSettings().setMyLocationButtonEnabled(false);
+                onLocationSet();
             } else {
                 //Request Location Permission
                 checkLocationPermission();
@@ -114,7 +115,7 @@ public class MapFragment extends SupportMapFragment
         if (ContextCompat.checkSelfPermission(getActivity(),
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
-            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+            //LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this); //велючить для автофокуса
         }
     }
 
@@ -145,8 +146,23 @@ public class MapFragment extends SupportMapFragment
 
         //move map camera
         //mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,16));
-        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,16));
+        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,18));
 
+    }
+
+    public void onLocationSet() {
+        LatLng latLng = LIST.getLatLng(Storage.loadData(context, "_tmp_lesson"));
+
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(latLng);
+        markerOptions.title(getResources().getStringArray(R.array.housings)[LIST.getHousing(Storage.loadData(context, "_tmp_lesson"))]);
+        markerOptions.snippet(getResources().getString(R.string.auditory) + ": " + Storage.getWithRemoveData(context, "_tmp_auditory"));
+        markerOptions.icon(BitmapDescriptorFactory.defaultMarker()); //BitmapDescriptorFactory.fromResource(R.drawable.no_photo)
+        mCurrLocationMarker = mGoogleMap.addMarker(markerOptions);
+
+        //move map camera
+        //mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,18));
+        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,18));
     }
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;

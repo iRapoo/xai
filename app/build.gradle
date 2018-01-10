@@ -8,8 +8,8 @@ android {
         applicationId "org.dualcom.xai"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 184
-        versionName "1.2.4.f7"
+        versionCode 185
+        versionName "1.2.4.f8"
         multiDexEnabled true
 
         vectorDrawables.useSupportLibrary = true

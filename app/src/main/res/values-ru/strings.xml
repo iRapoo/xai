@@ -34,6 +34,7 @@
     <string name="send">Отправить</string>
 
     <string name="message">Сообщение</string>
+    <string name="auditory">Аудитория</string>
 
     <string name="incorrect_title">Обратная связь</string>
     <string name="incorrect_ok_title">Принято к рассмотрению</string>
@@ -55,6 +56,7 @@
     <string name="teacher_name">Ф.И.О преподавателя</string>
     <string name="teacher_rank">Звание преподавателя</string>
     <string name="teacher_extra">Дополнительная информация</string>
+    <string name="full_info">Подробная информация</string>
 
     <string name="Today">Сегодня</string>
     <string name="loadWidget">Загрузка виджета...</string>
