@@ -1,5 +1,6 @@
 package org.dualcom.xai.fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
@@ -15,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -47,6 +49,7 @@ public class ScheduleFragment extends Fragment {
 
     protected BottomSheetLayout bottomSheetLayout;
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -57,6 +60,19 @@ public class ScheduleFragment extends Fragment {
         LinearLayout frameSchedule = rootView.findViewById(R.id.frameSchedule);
         RelativeLayout frameStart = rootView.findViewById(R.id.frameStart);
         ConstraintLayout NoInternet = rootView.findViewById(R.id.NoInternet);
+        TextView numWeek = rootView.findViewById(R.id.numWeek);
+        ImageView typeWeekImg = rootView.findViewById(R.id.typeWeekImg);
+        TextView typeWeek = rootView.findViewById(R.id.typeWeek);
+
+        numWeek.setText(DATE.getStudWeek() + getResources().getString(R.string.stud_week).toUpperCase());
+        String[] TMP_WEEK = getResources().getStringArray(R.array.TYPE_WEEK);
+        String TYPE_WEEK = (DATE.getWeekType() == 0) ? TMP_WEEK[0] : TMP_WEEK[1];
+        typeWeek.setText(TYPE_WEEK.toUpperCase());
+
+        if(DATE.getWeekType() == 0)
+            typeWeekImg.setImageResource(R.drawable.ic_top_week);
+        else
+            typeWeekImg.setImageResource(R.drawable.ic_bottom_week);
 
         bottomSheetLayout = rootView.findViewById(R.id.bottomsheet);
 

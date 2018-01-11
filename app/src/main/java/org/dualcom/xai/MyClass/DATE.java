@@ -93,7 +93,8 @@ public class DATE {
         int stud_week = (week2-week)+1;
 
         if(stud_week<0){
-            c.set(Calendar.MONTH, Calendar.FEBRUARY);
+            c.set(Calendar.MONTH, Calendar.JANUARY);
+            c.set(Calendar.DAY_OF_MONTH, 15);
 
             week = c.get(Calendar.WEEK_OF_YEAR);
             week2 = c2.get(Calendar.WEEK_OF_YEAR);
