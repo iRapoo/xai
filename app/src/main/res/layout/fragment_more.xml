@@ -33,7 +33,7 @@
                     android:layout_weight="1"
                     android:text="@string/full_info"
                     android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:textSize="18sp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -50,7 +50,8 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginLeft="5dp"
-                android:src="@drawable/ic_bookmark" />
+                android:src="@drawable/ic_bookmark"
+                android:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -83,7 +84,8 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginLeft="5dp"
-                android:src="@drawable/ic_perm_contact_calendar" />
+                android:src="@drawable/ic_perm_contact_calendar"
+                android:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,7 +108,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/DarkGrayFaded">
 
             <fragment
                 android:id="@+id/mapView"
@@ -118,7 +121,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_widet"
+                android:background="@color/DarkGrayFaded"
                 android:orientation="horizontal"
                 android:padding="10dp">
 
@@ -140,7 +143,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="15dp"
+                android:layout_marginBottom="15dp"
                 android:text="Место для рекламы"
                 android:textColor="@color/dark_grey" />
 
