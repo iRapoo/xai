@@ -66,9 +66,11 @@ public class day3 extends Fragment {
                 rootView.findViewById(LIST.BOT(i+7)).setVisibility(View.GONE);
             else{
                 if(DATE.getWeekType() == 0)
-                    rootView.findViewById(LIST.TOP(i + 7)).setBackgroundResource(R.drawable.less_now);
+                    TextView_t.setTextColor(getResources().getColor(R.color.silver));
+                    //rootView.findViewById(LIST.TOP(i - 1)).setBackgroundResource(R.drawable.less_now);
                 else
-                    rootView.findViewById(LIST.BOT(i + 7)).setBackgroundResource(R.drawable.less_now);
+                    TextView_b.setTextColor(getResources().getColor(R.color.silver));
+                //rootView.findViewById(LIST.BOT(i - 1)).setBackgroundResource(R.drawable.less_now);
             }
 
         }
