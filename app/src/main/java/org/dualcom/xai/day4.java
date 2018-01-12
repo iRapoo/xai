@@ -63,7 +63,7 @@ public class day4 extends Fragment {
             if(json_t.equals(json_b))
                 rootView.findViewById(LIST.BOT(i+11)).setVisibility(View.GONE);
             else{
-                if(DATE.getWeekType() == 0)
+                if(DATE.getWeekType() == 1)
                     TextView_t.setTextColor(getResources().getColor(R.color.silver));
                     //rootView.findViewById(LIST.TOP(i - 1)).setBackgroundResource(R.drawable.less_now);
                 else

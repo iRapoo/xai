@@ -114,12 +114,14 @@ public class MyWidget2 extends AppWidgetProvider {
                 remoteViews.setViewVisibility(LIST.BOT(i - 1),View.GONE);
                 //((LinearLayout) view.findViewById(LIST.BOT(i - 1))).setVisibility(View.GONE);
             else{
-                if(DATE.getWeekType() == 0)
-                    remoteViews.setInt(LIST.TOP(i - 1),"setBackgroundResource",R.drawable.less_now);
+                if(DATE.getWeekType() == 1)
+                    remoteViews.setTextColor(LIST.TOPt(i - 1), context.getResources().getColor(R.color.silver));
+                    //remoteViews.setInt(LIST.TOP(i - 1),"setBackgroundResource",R.drawable.less_now);
                     //((LinearLayout) view.findViewById(LIST.TOP(i - 1))).setBackgroundResource(R.drawable.less_now);
                 else
-                    remoteViews.setInt(LIST.BOT(i - 1), "setBackgroundResource", R.drawable.less_now);
-                //((LinearLayout) view.findViewById(LIST.BOT(i - 1))).setBackgroundResource(R.drawable.less_now);
+                    remoteViews.setTextColor(LIST.BOTt(i - 1), context.getResources().getColor(R.color.silver));
+                    //remoteViews.setInt(LIST.BOT(i - 1), "setBackgroundResource", R.drawable.less_now);
+                    //((LinearLayout) view.findViewById(LIST.BOT(i - 1))).setBackgroundResource(R.drawable.less_now);
             }
 
         }
