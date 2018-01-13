@@ -50,7 +50,7 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginLeft="5dp"
-                android:src="@drawable/ic_bookmark"
+                app:srcCompat="@drawable/ic_bookmark"
                 android:visibility="gone" />
 
             <LinearLayout
@@ -84,7 +84,7 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginLeft="5dp"
-                android:src="@drawable/ic_perm_contact_calendar"
+                app:srcCompat="@drawable/ic_perm_contact_calendar"
                 android:visibility="gone" />
 
             <LinearLayout

@@ -76,6 +76,8 @@ public class MapFragment extends SupportMapFragment
         mGoogleMap = googleMap;
         mGoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
+        onLocationSet();
+
         //Initialize Google Play Services
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(getActivity(),
@@ -84,7 +86,7 @@ public class MapFragment extends SupportMapFragment
                 buildGoogleApiClient();
                 mGoogleMap.setMyLocationEnabled(true);
                 mGoogleMap.getUiSettings().setMyLocationButtonEnabled(false);
-                onLocationSet();
+                //onLocationSet();
             } else {
                 //Request Location Permission
                 checkLocationPermission();

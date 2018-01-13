@@ -82,7 +82,7 @@ public class MyWidget2 extends AppWidgetProvider {
 
         String group = Storage.loadData(context, "NOW_GROUP");
 
-        Intent intent = new Intent(context, MainActivity.class);
+        Intent intent = new Intent(context, ScheduleActivity.class);
         intent.setAction(group.toString());
         PendingIntent pending = PendingIntent.getActivity(context, 0, intent, 0);
         remoteViews.setOnClickPendingIntent(R.id.widget_button, pending);

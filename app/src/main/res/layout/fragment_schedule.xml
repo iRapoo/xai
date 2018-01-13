@@ -456,7 +456,7 @@
                         android:id="@+id/imageView27"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_num_week" />
+                        app:srcCompat="@drawable/ic_num_week" />
 
                     <TextView
                         android:id="@+id/numWeek"
@@ -482,7 +482,7 @@
                         android:id="@+id/typeWeekImg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_top_week" />
+                        app:srcCompat="@drawable/ic_top_week" />
 
                     <TextView
                         android:id="@+id/typeWeek"

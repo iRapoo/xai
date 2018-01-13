@@ -110,7 +110,7 @@ public class MyWidget extends AppWidgetProvider {
         //RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget);
         remoteViews.setViewVisibility(R.id.loadWidget, View.GONE);
 
-        Intent intent = new Intent(context, MainActivity.class);
+        Intent intent = new Intent(context, ScheduleActivity.class);
         intent.setAction(group.toString());
         PendingIntent pending = PendingIntent.getActivity(context, 0, intent, 0);
         remoteViews.setOnClickPendingIntent(R.id.widget_button, pending);

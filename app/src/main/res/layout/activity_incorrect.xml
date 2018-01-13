@@ -257,7 +257,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:background="@drawable/ic_send_black_24dp" />
+                        app:srcCompat="@drawable/ic_send_black_24dp" />
 
                 </RelativeLayout>
 
