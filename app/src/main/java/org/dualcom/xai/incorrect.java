@@ -1,6 +1,5 @@
 package org.dualcom.xai;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
@@ -8,6 +7,7 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -36,7 +36,7 @@ import java.util.List;
 
 import org.dualcom.xai.MyClass.*;
 
-public class incorrect extends Activity {
+public class incorrect extends AppCompatActivity {
 
     Context context = this;
     private String response;
