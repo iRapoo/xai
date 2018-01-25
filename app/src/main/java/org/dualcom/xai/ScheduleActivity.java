@@ -134,6 +134,8 @@ public class ScheduleActivity extends AppCompatActivity {
 
         addFragment(new ScheduleFragment());
 
+        translate = Storage.loadData(context, "translate").equals("true");
+
         if(Storage.emptyData(context, "NOW_GROUP")) {
             navigation.getMenu().findItem(R.id.navigation_schedule).setTitle(getString(R.string.Welcome));
 
