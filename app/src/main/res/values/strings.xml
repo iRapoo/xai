@@ -224,6 +224,7 @@
 
     <string name="title_news">News</string>
     <string name="title_schedule">Schedule</string>
+    <string name="title_save">Cache</string>
     <string name="title_other">Other</string>
 
     <string name="translate_schedule">Translate the schedule</string>

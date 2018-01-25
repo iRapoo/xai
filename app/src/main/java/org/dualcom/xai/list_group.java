@@ -17,6 +17,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -48,14 +50,18 @@ public class list_group extends Fragment {
     public String[] tmp_s_group;
     public boolean flag = false;
     public FragmentTabHost mTabHost;
+    public GridView listGroup;
     public EditText SearchGroup;
+    public LinearLayout SearchPanel;
     public Boolean translate = true;
     public String getItem;
     ProgressDialog progressDoalog;
 
+    public ArrayAdapter<String> adapter;
+
     private WrapContentViewPager mViewPager;
 
-    public View onCreateView(@NonNull final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.activity_list_group, container, false);
 
@@ -64,10 +70,11 @@ public class list_group extends Fragment {
 
         mViewPager = view.findViewById(R.id.pager);
 
-        String type = type = "0";
+        String type = type = (Storage.emptyData(context, "_STATE_LIST")) ? "0" : Storage.getWithRemoveData(context, "_STATE_LIST");
 
-        final GridView listGroup = view.findViewById(R.id.listGroup);
-        final EditText SearchGroup = getActivity().findViewById(R.id.SearchGroup);
+        listGroup = view.findViewById(R.id.listGroup);
+        SearchGroup = getActivity().findViewById(R.id.SearchGroup);
+        SearchPanel = getActivity().findViewById(R.id.SearchPanel);
 
         String labeltext = (type.equals("0")) ? getResources().getString(R.string.SELECT_GROUP) : getResources().getString(R.string.LastSel);
 
@@ -75,7 +82,9 @@ public class list_group extends Fragment {
 
         data = group.substring(2,group.length()).split(":,");
 
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item2, data);
+        if(data.length < 10) SearchPanel.setVisibility(View.GONE);
+
+        adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item2, data);
 
         listGroup.setAdapter(adapter);
 
@@ -132,6 +141,46 @@ public class list_group extends Fragment {
 
             }
         });
+
+        //Удаление записи
+        if(type.equals("1")) {
+            Snackbar.make(getActivity().findViewById(R.id.navigation), getResources().getString(R.string.notiseDel), Snackbar.LENGTH_SHORT).show();
+
+            listGroup.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                public boolean onItemLongClick(AdapterView<?> parent, View view,
+                                               int position, long id) {
+
+                    String result = "";
+
+                    if (data.length == 1) {
+
+                        Snackbar.make(getActivity().findViewById(R.id.navigation), getResources().getString(R.string.notiseLast), Snackbar.LENGTH_SHORT).show();
+
+                    } else {
+                        for (int i = 0; i < data.length; i++) {
+                            if (!data[i].equals(adapter.getItem(position))) {
+                                result += ":," + data[i].toString();
+                            } else {
+                                Storage.saveData(context, "NOW_GROUP", ((i == 0) ? data[1] : data[i - 1]));
+                                Storage.saveData(context, data[i].toString() + "md5", null);
+                                Storage.saveData(context, data[i].toString(), null);
+                            }
+                        }
+
+                        Storage.saveData(context, "S_GROUP", result);
+                        Storage.saveData(context, "delcine", "true");
+
+                        Snackbar.make(getActivity().findViewById(R.id.navigation), getResources().getString(R.string.notiseDelOK), Snackbar.LENGTH_SHORT).show();
+
+                        data = Storage.loadData(context,"S_GROUP").substring(2,Storage.loadData(context,"S_GROUP").length()).split(":,");
+                        adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item2, data);
+                        listGroup.setAdapter(adapter);
+                    }
+
+                    return true;
+                }
+            });
+        }
 
         return view;
     }

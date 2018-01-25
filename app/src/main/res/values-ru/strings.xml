@@ -226,6 +226,7 @@
 
     <string name="title_news">Новости</string>
     <string name="title_schedule">Расписание</string>
+    <string name="title_save">Кеш</string>
     <string name="title_other">Другое</string>
 
     <string name="translate_schedule">Переводим расписание</string>

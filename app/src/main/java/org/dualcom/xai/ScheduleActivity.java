@@ -77,6 +77,12 @@ public class ScheduleActivity extends AppCompatActivity {
                 case R.id.navigation_schedule:
                     addFragment(new ScheduleFragment());
                     return true;
+                case R.id.navigation_save:
+                    addFragment(new OtherFragment());
+                    Storage.saveData(context, "_STATE_LIST", "1");
+                    new ListFragment().show(getSupportFragmentManager(), R.id.bottomsheet);
+                    navigation.setSelectedItemId(R.id.navigation_other);
+                    return true;
                 case R.id.navigation_other:
                     if(countBage>0){
                         Intent intent_incorrect = new Intent(ScheduleActivity.this, incorrect.class);
@@ -169,7 +175,13 @@ public class ScheduleActivity extends AppCompatActivity {
                 getIncorrect(); //Проверка сообщений обратной связи
         }
 
+        if(!Storage.emptyData(context, "NOW_GROUP")) {
+            String data[] = Storage.loadData(context, "S_GROUP").substring(2, Storage.loadData(context, "S_GROUP").length()).split(":,");
+            if (data.length < 2)
+                navigation.getMenu().findItem(R.id.navigation_save).setEnabled(false);
+        }
 
+        BottomNavigationViewHelper.disableShiftMode(navigation); //Отключение сдвига
     }
 
     private void CheckMD5() {

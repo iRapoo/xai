@@ -12,6 +12,11 @@
         android:title="@string/title_schedule" />
 
     <item
+        android:id="@+id/navigation_save"
+        android:icon="@drawable/ic_layers_black_24dp"
+        android:title="@string/title_save" />
+
+    <item
         android:id="@+id/navigation_other"
         android:icon="@drawable/ic_menu_black_24dp"
         android:title="@string/title_other" />

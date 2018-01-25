@@ -50,6 +50,7 @@ public class ScheduleFragment extends Fragment {
 
     protected BottomSheetLayout bottomSheetLayout;
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -74,7 +75,7 @@ public class ScheduleFragment extends Fragment {
         else
             typeWeekImg.setImageResource(R.drawable.ic_bottom_week);
 
-        bottomSheetLayout = rootView.findViewById(R.id.bottomsheet);
+        //bottomSheetLayout = rootView.findViewById(R.id.bottomsheet);
 
         if(Storage.emptyData(context, "NOW_GROUP")) {
             frameSchedule.setVisibility(View.GONE);

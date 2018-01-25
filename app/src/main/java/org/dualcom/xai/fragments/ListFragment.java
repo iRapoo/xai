@@ -33,6 +33,7 @@ import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.dualcom.xai.GetList;
 import org.dualcom.xai.MyClass.Storage;
+import org.dualcom.xai.MyClass.Windows;
 import org.dualcom.xai.MyClass.WrapContentViewPager;
 import org.dualcom.xai.MyClass.isInternet;
 import org.dualcom.xai.R;
@@ -40,6 +41,7 @@ import org.dualcom.xai.StartActivity;
 import org.dualcom.xai.TabsAdapter;
 import org.dualcom.xai.list_group;
 import org.dualcom.xai.list_teach;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,6 +67,10 @@ public class ListFragment extends BottomSheetFragment {
         mTabHost = rootView.findViewById(android.R.id.tabhost);
 
         TabWidget tabWidget = rootView.findViewById(android.R.id.tabs);
+        TextView labelSave = rootView.findViewById(R.id.labelSave);
+
+        if(Storage.emptyData(getContext(), "_STATE_LIST")) labelSave.setVisibility(View.GONE);
+        else tabWidget.setVisibility(View.GONE);
 
         mTabHost.setup();
 

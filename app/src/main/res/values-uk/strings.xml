@@ -224,6 +224,7 @@
 
     <string name="title_news">Новини</string>
     <string name="title_schedule">Розклад</string>
+    <string name="title_save">Кеш</string>
     <string name="title_other">Інше</string>
 
     <string name="translate_schedule">Переводимо розклад</string>
