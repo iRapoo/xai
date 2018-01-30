@@ -18,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -53,6 +54,7 @@ public class list_group extends Fragment {
     public GridView listGroup;
     public EditText SearchGroup;
     public LinearLayout SearchPanel;
+    public TextView _long_press;
     public Boolean translate = true;
     public String getItem;
     ProgressDialog progressDoalog;
@@ -75,6 +77,7 @@ public class list_group extends Fragment {
         listGroup = view.findViewById(R.id.listGroup);
         SearchGroup = getActivity().findViewById(R.id.SearchGroup);
         SearchPanel = getActivity().findViewById(R.id.SearchPanel);
+        _long_press = getActivity().findViewById(R.id._long_press);
 
         String labeltext = (type.equals("0")) ? getResources().getString(R.string.SELECT_GROUP) : getResources().getString(R.string.LastSel);
 
@@ -82,7 +85,10 @@ public class list_group extends Fragment {
 
         data = group.substring(2,group.length()).split(":,");
 
-        if(data.length < 10) SearchPanel.setVisibility(View.GONE);
+        if(data.length < 10) {
+            //SearchPanel.setVisibility(View.GONE);
+            _long_press.setVisibility(View.VISIBLE);
+        }
 
         adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item2, data);
 

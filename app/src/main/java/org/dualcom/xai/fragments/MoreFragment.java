@@ -17,6 +17,7 @@ import com.google.android.gms.maps.MapView;
 
 import org.dualcom.xai.MyClass.LIST;
 import org.dualcom.xai.MyClass.Storage;
+import org.dualcom.xai.MyClass.Windows;
 import org.dualcom.xai.R;
 
 public class MoreFragment extends BottomSheetFragment {
@@ -24,7 +25,7 @@ public class MoreFragment extends BottomSheetFragment {
     public View rootView;
     public Context context;
 
-    public String _lesson, _lesson_tmp, _auditory, _teacher;
+    public String _lesson, _lesson_tmp, _auditory, _teacher, _spliter;
 
     public MapFragment mapFragment;
     public FragmentTransaction transaction;
@@ -36,13 +37,13 @@ public class MoreFragment extends BottomSheetFragment {
         context = rootView.getContext();
 
         _lesson = Storage.loadData(context, "_tmp_lesson");
-        _lesson_tmp = (_lesson.split("/").length>1) ?
-                _lesson.split("/")[1].split(LIST.getHousingStr(_lesson))[1] : _lesson.split(LIST.getHousingStr(_lesson))[1];
+        _spliter = LIST.getHousingStr(_lesson.split("/")[_lesson.split("/").length-1]);
+        _lesson_tmp = _lesson.split(_spliter)[_lesson.split(_spliter).length-1];
 
-        _auditory = (_lesson.split("/").length>1) ?
-                _lesson.split("/")[0].split(LIST.getHousingStr(_lesson))[0] + LIST.getHousingStr(_lesson) + " / " + _lesson.split("/")[1].split(LIST.getHousingStr(_lesson))[0]
-                : _lesson.split(LIST.getHousingStr(_lesson))[0];
-        _auditory = _auditory + LIST.getHousingStr(_lesson);
+        _auditory = "";
+        for(int i = 0; i < (_lesson.split(_spliter).length-1); i++)
+            _auditory += _lesson.split(_spliter)[i] + _spliter;
+
         Storage.saveData(context, "_tmp_auditory", _auditory);
 
         _lesson = (_lesson_tmp.length()>1) ? _lesson_tmp : _lesson;
