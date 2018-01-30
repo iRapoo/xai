@@ -83,6 +83,7 @@ public class DATE {
     public static int getStudWeek(){ //Немер учебной недели
         Calendar c = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"), Locale.UK);
         Calendar c2 = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"), Locale.UK);
+        int tmp = (c.get(Calendar.DAY_OF_WEEK)-1);
 
         c.set(Calendar.DAY_OF_MONTH, 1);
         c.set(Calendar.MONTH, Calendar.SEPTEMBER);
@@ -102,6 +103,7 @@ public class DATE {
             stud_week = (week2-week)+1;
         }
 
+        stud_week = (tmp == 6 || tmp == 0 || (c.get(Calendar.HOUR_OF_DAY) > 17) && tmp == 5) ? (stud_week + 1) : stud_week;
         return stud_week;
     }
 
