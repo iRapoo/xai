@@ -230,6 +230,8 @@
     <string name="translate_schedule">Переводимо розклад</string>
     <string name="double_press">Натісніть знову для виходів</string>
 
+    <string name="download_new_schedule">Завантаження нового розкладу</string>
+
     <string name="google_maps_key">AIzaSyCbOri0zwjQeobHaPDWoMUfQe8GAkONsb8</string>
 
 </resources>

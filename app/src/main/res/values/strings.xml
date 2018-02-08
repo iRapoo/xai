@@ -230,6 +230,8 @@
     <string name="translate_schedule">Translate the schedule</string>
     <string name="double_press">Press again for the exit</string>
 
+    <string name="download_new_schedule">Schedule is updated</string>
+
     <string name="google_maps_key">AIzaSyCbOri0zwjQeobHaPDWoMUfQe8GAkONsb8</string>
 
 </resources>

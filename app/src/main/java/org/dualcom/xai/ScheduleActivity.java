@@ -179,6 +179,8 @@ public class ScheduleActivity extends AppCompatActivity {
             String data[] = Storage.loadData(context, "S_GROUP").substring(2, Storage.loadData(context, "S_GROUP").length()).split(":,");
             if (data.length < 2)
                 navigation.getMenu().findItem(R.id.navigation_save).setEnabled(false);
+        }else{
+            navigation.getMenu().findItem(R.id.navigation_save).setEnabled(false);
         }
 
         BottomNavigationViewHelper.disableShiftMode(navigation); //Отключение сдвига
@@ -200,7 +202,8 @@ public class ScheduleActivity extends AppCompatActivity {
                                 Storage.saveData(context,Storage.loadData(context, "NOW_GROUP")+"md5", response);
                             }else if(!response.equals(Storage.loadData(context, Storage.loadData(context, "NOW_GROUP")+"md5"))){
                                 getSchedule();
-                                Snackbar.make(findViewById(R.id.navigation), "hash: " + response, Snackbar.LENGTH_SHORT).show();
+                                //Snackbar.make(findViewById(R.id.navigation), "hash: " + response, Snackbar.LENGTH_SHORT).show();
+                                Snackbar.make(findViewById(R.id.navigation), getResources().getString(R.string.download_new_schedule), Snackbar.LENGTH_SHORT).show();
                                 Storage.saveData(context,Storage.loadData(context, "NOW_GROUP")+"md5", response);
                             }
 
