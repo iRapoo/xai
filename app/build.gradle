@@ -8,8 +8,8 @@ android {
         applicationId "org.dualcom.xai"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 197
-        versionName "1.2.8.f0"
+        versionCode 198
+        versionName "1.2.9.f0"
         multiDexEnabled true
 
         vectorDrawables.useSupportLibrary = true
@@ -66,9 +66,9 @@ dependencies {
     implementation "com.android.support:cardview-v7:${ApiBuildVersion}"
     implementation "com.android.support:recyclerview-v7:${ApiBuildVersion}"
     implementation "com.android.support.constraint:constraint-layout:1.0.2"
-    implementation "com.android.support:design:27.0.2"
-    implementation "com.android.support:support-vector-drawable:27.0.2"
-    implementation "com.android.support:support-v4:27.0.2"
+    implementation "com.android.support:design:${ApiBuildVersion}"
+    implementation "com.android.support:support-vector-drawable:${ApiBuildVersion}"
+    implementation "com.android.support:support-v4:${ApiBuildVersion}"
     implementation "com.google.android.gms:play-services-maps:${playServicesVersion}"
     implementation "com.google.android.gms:play-services-location:${playServicesVersion}"
 }

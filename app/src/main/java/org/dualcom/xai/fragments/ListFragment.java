@@ -4,12 +4,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.TextView;
@@ -46,9 +50,12 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.app.Activity.RESULT_OK;
+
 public class ListFragment extends BottomSheetFragment {
 
     private View rootView;
+    public Context context;
 
     private TabHost mTabHost;
     private WrapContentViewPager mViewPager;
@@ -57,10 +64,14 @@ public class ListFragment extends BottomSheetFragment {
 
     public String GetList[];
 
+    public EditText Search;
+    public static final int VOICE_RECOGNITION_REQUEST_CODE = 1234;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_list, container, false);
+        context = rootView.getContext();
 
         Storage.saveData(getContext(), "TabId", "Tab1");
 
@@ -68,6 +79,8 @@ public class ListFragment extends BottomSheetFragment {
 
         TabWidget tabWidget = rootView.findViewById(android.R.id.tabs);
         TextView labelSave = rootView.findViewById(R.id.labelSave);
+        ImageView VoiceBtn = rootView.findViewById(R.id.VoiceBtn);
+        Search = rootView.findViewById(R.id.SearchGroup);
 
         if(Storage.emptyData(getContext(), "_STATE_LIST")) labelSave.setVisibility(View.GONE);
         else tabWidget.setVisibility(View.GONE);
@@ -117,7 +130,54 @@ public class ListFragment extends BottomSheetFragment {
             }
         });
 
+        VoiceBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startVoiceRecognitionActivity();
+            }
+        });
+
         return rootView;
+    }
+
+    public void startVoiceRecognitionActivity() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
+                getResources().getString(R.string.say_anyware));
+        startActivityForResult(intent, VOICE_RECOGNITION_REQUEST_CODE);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        String _group = Storage.loadData(context,"GROUPS_LIST").substring(2,Storage.loadData(context,"GROUPS_LIST").length());
+        String _teach = Storage.loadData(context,"TEACH_LIST").substring(2,Storage.loadData(context,"TEACH_LIST").length());
+        String _list_str = _group + ":," + _teach;
+
+        String _list[] = _list_str.split(":,");
+
+        int flag = 0;
+        if (requestCode == VOICE_RECOGNITION_REQUEST_CODE && resultCode == RESULT_OK) {
+
+            ArrayList<String> matches = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
+            for (String _list1 : _list) {
+                for (String _match1 : matches){
+                    if(_list1.contains(_match1)){
+                        Search.setText(_match1);
+                        flag = 1;
+                    }
+                }
+            }
+
+            if(flag==0){
+                Snackbar.make(getActivity().findViewById(R.id.navigation), getResources().getString(R.string.say_not_found), Snackbar.LENGTH_LONG).show();
+            }
+
+        }
     }
 
 }

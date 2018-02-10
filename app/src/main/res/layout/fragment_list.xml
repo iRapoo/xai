@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/silver"
     tools:context="org.dualcom.xai.fragments.ListFragment">
 
     <TabHost
@@ -90,13 +91,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/SearchPanel"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/myrect"
+                    android:elevation="2dp"
                     android:orientation="vertical">
 
                     <RelativeLayout
@@ -109,7 +115,6 @@
                             android:layout_height="40dp"
                             android:background="@drawable/edittext_search"
                             android:hint="@string/Search"
-                            android:maxLength="6"
                             android:paddingLeft="50dp"
                             android:textColor="#000"></EditText>
 
@@ -121,25 +126,36 @@
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
                             android:layout_margin="5dp"
-                            android:background="@drawable/search" />
+                            app:srcCompat="@drawable/ic_search" />
+
+                        <ImageView
+                            android:id="@+id/VoiceBtn"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignTop="@+id/imageView11"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            app:srcCompat="@drawable/ic_keyboard_voice" />
+
                     </RelativeLayout>
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
+                    android:background="@drawable/myrect"
+                    android:elevation="2dp"
                     android:orientation="vertical">
 
                     <FrameLayout
-
                         android:id="@android:id/tabcontent"
-
                         android:layout_width="0dp"
-
                         android:layout_height="0dp"
-
                         android:layout_weight="0" />
 
                     <view

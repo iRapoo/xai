@@ -231,6 +231,8 @@
     <string name="double_press">Натісніть знову для виходів</string>
 
     <string name="download_new_schedule">Завантаження нового розкладу</string>
+    <string name="say_anyware">Вимовте назву групи або прізвище викладача</string>
+    <string name="say_not_found">Визначити не вдалося, спробуйте вимовити частину назви групи</string>
 
     <string name="google_maps_key">AIzaSyCbOri0zwjQeobHaPDWoMUfQe8GAkONsb8</string>
 

@@ -231,6 +231,8 @@
     <string name="double_press">Press again for the exit</string>
 
     <string name="download_new_schedule">Schedule is updated</string>
+    <string name="say_anyware">Say the name of the group or the name of the teacher</string>
+    <string name="say_not_found">To determine it was not possible, try pronouncing part of the name of the group</string>
 
     <string name="google_maps_key">AIzaSyCbOri0zwjQeobHaPDWoMUfQe8GAkONsb8</string>
 
