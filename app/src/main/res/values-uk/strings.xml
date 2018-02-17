@@ -11,7 +11,7 @@
     <string name="Welcomtext">Натисніть цю кнопку щоб продовжити...</string>
     <string name="Welcom_skip">Пропустити</string>
 
-    <string name="news_label">Новини додатка</string>
+    <string name="news_label">Стрічка оновлень</string>
     <string name="Open_less">ДИВИТИСЯ</string>
     <string name="ADD_GROUP">Немає твоєї групи?</string>
     <string name="Language">Обрати мову</string>
@@ -20,7 +20,7 @@
     <string name="SELECT_GROUP">Вибрати групу</string>
     <string name="Search">Пошук</string>
     <string name="LastSel">Розклад в кеші</string>
-    <string name="widgetGroup">Виберіть групу з кеша</string>
+    <string name="widgetGroup">Виберіть розклад з кеша</string>
     <string name="SLIDE_LEFT">Зрушити вправо</string>
     <string name="present">З Днем студента!</string>
     <string name="label_vk">Спільнота ВКонтакте</string>
@@ -222,7 +222,7 @@
 
     <string name="action_settings">Settings</string>
 
-    <string name="title_news">Новини</string>
+    <string name="title_news">Стрічка</string>
     <string name="title_schedule">Розклад</string>
     <string name="title_save">Кеш</string>
     <string name="title_other">Інше</string>

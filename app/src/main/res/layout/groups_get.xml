@@ -104,29 +104,29 @@
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <EditText
+                        android:id="@+id/SearchGroup"
                         android:layout_width="fill_parent"
                         android:layout_height="40dp"
-                        android:id="@+id/SearchGroup"
+                        android:background="@drawable/edittext_search"
                         android:hint="@string/Search"
                         android:maxLength="6"
-                        android:background="@drawable/edittext_search"
                         android:paddingLeft="40dp"
-                        android:textColor="#000">
-                    </EditText>
+                        android:textColor="#000"></EditText>
 
                     <ImageView
+                        android:id="@+id/imageView11"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:id="@+id/imageView11"
                         android:background="@drawable/search" />
                 </RelativeLayout>
 
