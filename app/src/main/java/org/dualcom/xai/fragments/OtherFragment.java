@@ -155,9 +155,9 @@ public class OtherFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Внимание!");
-                builder.setMessage("Вы уверены что хотите очистить данные приложения?");
-                builder.setPositiveButton("Удалить", new DialogInterface.OnClickListener() {
+                builder.setTitle(getString(R.string.attention));
+                builder.setMessage(getString(R.string.accept_clear_data));
+                builder.setPositiveButton(getString(R.string.delete), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         if(Storage.clearData(context)){
@@ -167,7 +167,7 @@ public class OtherFragment extends Fragment {
                         }
                     }
                 });
-                builder.setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
                     }

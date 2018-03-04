@@ -101,6 +101,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/main_color"
+            android:elevation="2dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -456,7 +457,8 @@
                         android:id="@+id/imageView27"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_num_week" />
+                        android:layout_margin="2dp"
+                        app:srcCompat="@drawable/ic_filter_9_plus" />
 
                     <TextView
                         android:id="@+id/numWeek"

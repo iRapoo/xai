@@ -177,6 +177,7 @@
     <orderEntry type="library" name="com.github.worker8:tourguide-1.0.17-SNAPSHOT" level="project" />
     <orderEntry type="library" name="net.opacapp:multiline-collapsingtoolbar-1.6.0" level="project" />
     <orderEntry type="library" name="__local_aars__:D.\#Projects\Android\Apps\xai\app\libs\android-query-full.0.26.8.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.github.vipulasri:timelineview-1.0.6" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-location-11.8.0" level="project" />
     <orderEntry type="library" name="com.android.support:support-core-utils-27.0.2" level="project" />
     <orderEntry type="library" name="com.github.ybq:Android-SpinKit-1.1.0" level="project" />

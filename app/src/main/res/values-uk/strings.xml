@@ -26,6 +26,7 @@
     <string name="label_vk">Спільнота ВКонтакте</string>
     <string name="label_profile">Профіль</string>
     <string name="open_list">Відкрити список</string>
+    <string name="delete">Видалити</string>
     <string name="cancel">Скасувати</string>
     <string name="notiseDel">Зажміть щоб видалити запис...</string>
     <string name="notiseLast">Останній запис видалити не можна...</string>
@@ -49,6 +50,7 @@
     <string name="inc_notific_text">Натисніть щоб прочитати</string>
 
     <string name="attention">Увага!!!</string>
+    <string name="accept_clear_data">Ви впевнені що хочете очистити дані додатка?</string>
     <string name="thank4add">Дякую за додавання!</string>
     <string name="teacher_attention1">Ви включили редагування профілю викладача. Не завантажуйте великі зображення. Не коректні дані не будуть публікуватися.</string>
     <string name="teacher_attention2">Ми розглянемо ваші дані для профілю найближчим часом.</string>

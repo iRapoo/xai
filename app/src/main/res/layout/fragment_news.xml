@@ -66,6 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/main_color"
+            android:elevation="2dp"
             android:gravity="center_vertical"
             android:orientation="vertical"
             android:paddingLeft="15dp">

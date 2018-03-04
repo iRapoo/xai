@@ -26,6 +26,7 @@
     <string name="label_vk">Community VKontakte</string>
     <string name="label_profile">Profile</string>
     <string name="open_list">Open list</string>
+    <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
     <string name="notiseDel">Long click to delete the entry...</string>
     <string name="notiseLast">The last entry can not be deleted...</string>
@@ -49,6 +50,7 @@
     <string name="inc_notific_text">Click to read</string>
 
     <string name="attention">Attention!!!</string>
+    <string name="accept_clear_data">Are you sure you want to clear application data?</string>
     <string name="thank4add">Thanks for adding!</string>
     <string name="teacher_attention1">You have included editing the profile of the teacher. Do not load large images. Not correct data will not be published.</string>
     <string name="teacher_attention2">We will review your data for the profile in the near future.</string>
