@@ -8,8 +8,8 @@ android {
         applicationId "org.dualcom.xai"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 200
-        versionName "1.3.1.f0"
+        versionCode 201
+        versionName "1.3.2.f0"
         multiDexEnabled true
 
         vectorDrawables.useSupportLibrary = true
@@ -32,7 +32,7 @@ repositories {
 }
 
 ext {
-    ApiBuildVersion = '27.0.2'
+    ApiBuildVersion = '27.1.0'
     playServicesVersion = '11.8.0'
 }
 

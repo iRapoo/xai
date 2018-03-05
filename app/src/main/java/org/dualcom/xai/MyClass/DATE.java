@@ -80,6 +80,40 @@ public class DATE {
         return time;
     }
 
+    public static int getNowTimeLite() {
+        int time = -1;
+
+        Date d = new Date();
+        DateFormat f = new SimpleDateFormat("HH", Locale.UK);
+        int hour = Integer.parseInt(f.format(d));
+        f = new SimpleDateFormat("mm", Locale.UK);
+        int minute = Integer.parseInt(f.format(d));
+
+
+        DateFormat formatter = new SimpleDateFormat("HH:mm", Locale.UK);
+        try {
+            Date date = formatter.parse(hour+":"+minute);
+
+            if ( formatter.parse("8:00").before(date) && formatter.parse("9:50").after(date) ) {
+                time = 0; //Пара
+            }
+            if ( formatter.parse("9:49").before(date) && formatter.parse("11:56").after(date) ) {
+                time = 1; //Пара
+            }
+            if ( formatter.parse("11:54").before(date) && formatter.parse("13:46").after(date) ) {
+                time = 2; //Пара
+            }
+            if ( formatter.parse("13:44").before(date) && formatter.parse("15:20").after(date) ) {
+                time = 3; //Пара
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
+        return time;
+    }
+
     public static int getStudWeek(){ //Немер учебной недели
         Calendar c = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"), Locale.UK);
         Calendar c2 = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"), Locale.UK);

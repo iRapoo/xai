@@ -71,6 +71,25 @@ public class LIST {
         return list[value];
     }
 
+    public static int times_line(int value){
+        int list[] = {
+                R.id.time_marker1, R.id.time_marker2, R.id.time_marker3, R.id.time_marker4
+        };
+
+        return list[value];
+    }
+
+    public static int[] times_text(int value){
+        int less1[] = { R.id.timeText1_1, R.id.timeText1_2, R.id.timeText1_3, R.id.timeText1_4 };
+        int less2[] = { R.id.timeText2_1, R.id.timeText2_2, R.id.timeText2_3, R.id.timeText2_4 };
+        int less3[] = { R.id.timeText3_1, R.id.timeText3_2, R.id.timeText3_3, R.id.timeText3_4 };
+        int less4[] = { R.id.timeText4_1, R.id.timeText4_2, R.id.timeText4_3, R.id.timeText4_4 };
+
+        int[][] _less = { less1, less2, less3, less4 };
+
+        return _less[value];
+    }
+
     /*public static int LESSON(int value){
         int list[] = {
                 R.id.lesson1,R.id.lesson2,R.id.lesson3,R.id.lesson4

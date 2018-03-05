@@ -26,6 +26,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.flipboard.bottomsheet.BottomSheetLayout;
+import com.github.vipulasri.timelineview.TimelineView;
 
 import org.dualcom.xai.MainActivity;
 import org.dualcom.xai.MyClass.DATE;
@@ -36,6 +37,7 @@ import org.dualcom.xai.MyClass.isInternet;
 import org.dualcom.xai.R;
 import org.dualcom.xai.SlidingTabLayout;
 import org.dualcom.xai.ViewPagerAdapter;
+import org.w3c.dom.Text;
 
 import java.util.Calendar;
 
@@ -86,10 +88,57 @@ public class ScheduleFragment extends Fragment {
         }
 
             //TIME LINE******************************
-            if (DATE.getNowTime() > -1) {
+            /*if (DATE.getNowTime() > -1) {
                 final ImageView this_time = rootView.findViewById(LIST.times(DATE.getNowTime()));
                 this_time.setBackgroundResource(LIST.times_draw(DATE.getNowTime()));
+            }*/
+
+
+        //asd.setText("asd");
+
+            if (DATE.getNowTimeLite() > -1) {
+
+                for(int i = 0; i < 4; i++) {
+                    TextView timeText = rootView.findViewById(LIST.times_text(DATE.getNowTimeLite())[i]);
+                    timeText.setTextColor(getResources().getColor(R.color.main_red));
+                }
+
+                TimelineView timelineView = rootView.findViewById(LIST.times_line(DATE.getNowTimeLite()));
+                timelineView.setMarker(getResources().getDrawable(R.drawable.ic_marker_active), getResources().getColor(R.color.main_red));
+                timelineView.setStartLine(getResources().getColor(R.color.main_red), 0);
+                timelineView.setEndLine(getResources().getColor(R.color.main_red), 0);
+                timelineView.setMarkerSize((int) getResources().getDimension(R.dimen.size_circle));
+
+                for(int i = DATE.getNowTimeLite()+1; i < 4; i++){
+
+                    for(int j = 0; j < 4; j++) {
+                        TextView timeText = rootView.findViewById(LIST.times_text(i)[j]);
+                        timeText.setTextColor(getResources().getColor(R.color.main_color));
+                    }
+
+                    TimelineView timelineView_ = rootView.findViewById(LIST.times_line(i));
+                    timelineView_.setMarker(getResources().getDrawable(R.drawable.ic_marker), getResources().getColor(R.color.main_color));
+                    timelineView_.setStartLine(getResources().getColor(R.color.main_color), 0);
+                    timelineView_.setEndLine(getResources().getColor(R.color.main_color), 0);
+                }
+
+            }else {
+
+                for(int i = 0; i < 4; i++){
+
+                    for(int j = 0; j < 4; j++) {
+                        TextView timeText = rootView.findViewById(LIST.times_text(i)[j]);
+                        timeText.setTextColor(getResources().getColor(R.color.main_color));
+                    }
+
+                    TimelineView timelineView_ = rootView.findViewById(LIST.times_line(i));
+                    timelineView_.setMarker(getResources().getDrawable(R.drawable.ic_marker), getResources().getColor(R.color.main_color));
+                    timelineView_.setStartLine(getResources().getColor(R.color.main_color), 0);
+                    timelineView_.setEndLine(getResources().getColor(R.color.main_color), 0);
+                }
+
             }
+
             //***************************************
 
             String[] DAY = getResources().getStringArray(R.array.DAYS_FULL);
