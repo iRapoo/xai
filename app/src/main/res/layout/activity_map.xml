@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:weightSum="1"
     android:gravity="center"
-    tools:context="org.dualcom.xai.about_app">
+    tools:context="org.dualcom.xai.MapActivity">
 
     <LinearLayout
         android:orientation="vertical"

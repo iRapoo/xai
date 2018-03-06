@@ -8,7 +8,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.graphics.Color;
 import android.view.View;
 import android.widget.RemoteViews;
 
@@ -25,13 +24,6 @@ public class WidgetToday extends AppWidgetProvider {
     public static String group = null;
     public static SharedPreferences sp;
     private PendingIntent service = null;
-    //Timer myTimer = new Timer();
-
-    //Применение ситля приложения
-    public static int colors[] = {
-            Color.argb(200, 55, 71, 79),Color.argb(200, 150, 45, 34),Color.argb(200, 16, 115, 96),Color.argb(200, 160, 64, 0),
-            Color.argb(200, 102, 114, 115),Color.argb(200, 112, 54, 136),Color.argb(200, 200, 127, 10),Color.argb(200, 34, 48, 61)
-    };
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -72,7 +64,7 @@ public class WidgetToday extends AppWidgetProvider {
         for (int widgetID : appWidgetIds) {
             editor.remove(ConfigActivity.WIDGET_GROUP + widgetID);
         }
-        editor.commit();
+        editor.apply();
     }
 
     @Override
@@ -84,20 +76,10 @@ public class WidgetToday extends AppWidgetProvider {
         //обновляем все экземпляры
         for (int id : appWidgetIds) {
             updateWidget(context, appWidgetManager, sp, id, remoteViews);
-            //TimeLine(context, appWidgetManager, sp, id, remoteViews);
         }
         //******************
 
     }
-
-    /*static void TimeLine(Context context, AppWidgetManager appWidgetManager, SharedPreferences sp, int widgetID, RemoteViews remoteViews){
-
-        for(int i = 0; i < 8; i++)
-            remoteViews.setInt(LIST.times(i), "setBackgroundResource", LIST.times_draw_def(i));
-        if(DATE.getNowTime()>-1) {
-            remoteViews.setInt(LIST.times(DATE.getNowTime()), "setBackgroundResource", LIST.times_draw(DATE.getNowTime()));
-        }
-    }*/
 
     static void updateWidget(Context context, AppWidgetManager appWidgetManager, SharedPreferences sp, int widgetID, RemoteViews remoteViews) {
 
@@ -111,7 +93,7 @@ public class WidgetToday extends AppWidgetProvider {
         remoteViews.setViewVisibility(R.id.loadWidget, View.GONE);
 
         Intent intent = new Intent(context, ScheduleActivity.class);
-        intent.setAction(group.toString());
+        intent.setAction(group);
         PendingIntent pending = PendingIntent.getActivity(context, 0, intent, 0);
         remoteViews.setOnClickPendingIntent(R.id.widget_button, pending);
 
@@ -151,12 +133,8 @@ public class WidgetToday extends AppWidgetProvider {
 
                 if(DATE.getWeekType() == 1)
                     remoteViews.setTextColor(LIST.TOPt(i - 1), context.getResources().getColor(R.color.silver));
-                    //remoteViews.setInt(LIST.TOP(i - 1),"setBackgroundResource",R.drawable.less_now);
-                    //((LinearLayout) view.findViewById(LIST.TOP(i - 1))).setBackgroundResource(R.drawable.less_now);
                 else
                     remoteViews.setTextColor(LIST.BOTt(i - 1), context.getResources().getColor(R.color.silver));
-                    //remoteViews.setInt(LIST.BOT(i - 1), "setBackgroundResource", R.drawable.less_now);
-                    //((LinearLayout) view.findViewById(LIST.BOT(i - 1))).setBackgroundResource(R.drawable.less_now);
             }
 
         }
@@ -194,7 +172,6 @@ public class WidgetToday extends AppWidgetProvider {
         remoteViews.setTextViewText(R.id.LabelType, TYPE_WEEK);
         remoteViews.setTextViewText(R.id.LabelDate, monthes[month]+" "+day_of_month+", "+DAY[DATE.getWeek()]);
         remoteViews.setTextViewText(R.id.LabelWeek, DATE.getStudWeek() + context.getResources().getString(R.string.stud_week));
-        //remoteViews.setTextViewText(R.id.LabelWidget, tmp_ml + ": " + group + " | " + TYPE_WEEK + " | " + DAY[DATE.getWeek()]);
         appWidgetManager.updateAppWidget(widgetID, remoteViews);
     }
 
