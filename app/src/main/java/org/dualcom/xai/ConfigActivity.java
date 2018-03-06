@@ -129,7 +129,7 @@ public class ConfigActivity extends Activity {
         group = (isNetworkAvailable() && type.equals("0")) ? tmp_gr : Storage.loadData(context,"S_GROUP");
         data = group.substring(2,group.length()).split(":,");
 
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.list_item2, data);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.list_item, data);
 
         listGroup.setAdapter(adapter);
 
@@ -188,8 +188,8 @@ public class ConfigActivity extends Activity {
                     editor.commit();
 
                     AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
-                    RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget);
-                    MyWidget.updateWidget(context, appWidgetManager, sp, widgetID, remoteViews);
+                    RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_today);
+                    WidgetToday.updateWidget(context, appWidgetManager, sp, widgetID, remoteViews);
 
                     //Storage.saveData(context, "id" + widgetID, adapter.getItem(position) + "");
 

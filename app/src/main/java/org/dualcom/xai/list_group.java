@@ -90,7 +90,7 @@ public class list_group extends Fragment {
             _long_press.setVisibility(View.VISIBLE);
         }
 
-        adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item2, data);
+        adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item, data);
 
         listGroup.setAdapter(adapter);
 
@@ -179,7 +179,7 @@ public class list_group extends Fragment {
                         Snackbar.make(getActivity().findViewById(R.id.navigation), getResources().getString(R.string.notiseDelOK), Snackbar.LENGTH_SHORT).show();
 
                         data = Storage.loadData(context,"S_GROUP").substring(2,Storage.loadData(context,"S_GROUP").length()).split(":,");
-                        adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item2, data);
+                        adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item, data);
                         listGroup.setAdapter(adapter);
                     }
 

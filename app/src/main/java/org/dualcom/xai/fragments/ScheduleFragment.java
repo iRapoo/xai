@@ -5,41 +5,28 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.flipboard.bottomsheet.BottomSheetLayout;
 import com.github.vipulasri.timelineview.TimelineView;
 
-import org.dualcom.xai.MainActivity;
 import org.dualcom.xai.MyClass.DATE;
 import org.dualcom.xai.MyClass.LIST;
 import org.dualcom.xai.MyClass.Storage;
-import org.dualcom.xai.MyClass.Windows;
+
 import org.dualcom.xai.MyClass.isInternet;
 import org.dualcom.xai.R;
 import org.dualcom.xai.SlidingTabLayout;
 import org.dualcom.xai.ViewPagerAdapter;
-import org.w3c.dom.Text;
-
-import java.util.Calendar;
 
 public class ScheduleFragment extends Fragment {
 

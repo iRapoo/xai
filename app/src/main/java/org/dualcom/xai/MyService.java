@@ -34,8 +34,6 @@ public class MyService extends Service {
 
     }
 
-
-
     @Override
     @SuppressLint("NewApi")
     @SuppressWarnings("deprecation")

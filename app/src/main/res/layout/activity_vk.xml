@@ -86,13 +86,6 @@
                     android:layout_height="fill_parent"
                     android:background="@drawable/btn_panel" />
 
-                <ImageView
-                    android:id="@+id/imageView23"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/vk" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -107,13 +100,6 @@
                     android:layout_height="fill_parent"
                     android:background="@drawable/btn_panel" />
 
-                <ImageView
-                    android:id="@+id/imageView24"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/incorrect" />
             </RelativeLayout>
 
             <LinearLayout

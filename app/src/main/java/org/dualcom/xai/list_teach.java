@@ -75,7 +75,7 @@ public class list_teach extends Fragment {
 
         data = group.substring(2,group.length()).split(":,");
 
-        adapter = new ArrayAdapter<>(getActivity(), R.layout.list_item2, data);
+        adapter = new ArrayAdapter<>(getActivity(), R.layout.list_item, data);
 
         listGroup.setAdapter(adapter);
 

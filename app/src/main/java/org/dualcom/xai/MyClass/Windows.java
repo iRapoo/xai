@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 
-import org.dualcom.xai.windows;
-
 public class Windows  {
 
 	public static void alert(Context context, String Title, String Text) {
@@ -22,15 +20,6 @@ public class Windows  {
 						});
 		AlertDialog alert = builder.create();
 		alert.show();
-
-	}
-
-	public static void Open(Context context, String Title, String Text) {
-
-		Intent intent = new Intent(context, windows.class);
-			intent.putExtra("title", Title);
-			intent.putExtra("text", Text);
-		context.startActivity(intent);
 
 	}
 

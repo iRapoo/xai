@@ -2,7 +2,6 @@ package org.dualcom.xai.fragments;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.support.annotation.Nullable;
@@ -11,44 +10,22 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.TextView;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.flipboard.bottomsheet.commons.BottomSheetFragment;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.EntityUtils;
-import org.dualcom.xai.GetList;
 import org.dualcom.xai.MyClass.Storage;
-import org.dualcom.xai.MyClass.Windows;
 import org.dualcom.xai.MyClass.WrapContentViewPager;
-import org.dualcom.xai.MyClass.isInternet;
 import org.dualcom.xai.R;
-import org.dualcom.xai.StartActivity;
 import org.dualcom.xai.TabsAdapter;
 import org.dualcom.xai.list_group;
 import org.dualcom.xai.list_teach;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
 

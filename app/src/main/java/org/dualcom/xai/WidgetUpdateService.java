@@ -28,11 +28,11 @@ public class WidgetUpdateService extends Service {
     private void updateInfoWidget()
     {//Обновление виджета
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this);
-        int ids[] = appWidgetManager.getAppWidgetIds(new ComponentName(this.getApplicationContext().getPackageName(), MyWidget.class.getName()));
+        int ids[] = appWidgetManager.getAppWidgetIds(new ComponentName(this.getApplicationContext().getPackageName(), WidgetToday.class.getName()));
         //int ids2[] = appWidgetManager.getAppWidgetIds(new ComponentName(this.getApplicationContext().getPackageName(), MyWidget2.class.getName()));
-        RemoteViews remoteViews = new RemoteViews(this.getApplicationContext().getPackageName(), R.layout.widget);
+        RemoteViews remoteViews = new RemoteViews(this.getApplicationContext().getPackageName(), R.layout.widget_today);
         for (int id : ids) {
-            MyWidget.updateWidget(this.getApplicationContext(),appWidgetManager, sp, id, remoteViews);
+            WidgetToday.updateWidget(this.getApplicationContext(),appWidgetManager, sp, id, remoteViews);
         }
         //MyWidget2.updateWidget(this.getApplicationContext(),appWidgetManager, sp, ids2, remoteViews);
 

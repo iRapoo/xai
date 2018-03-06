@@ -38,17 +38,6 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".NewsActivity"
-            android:theme="@style/AppThemeNews" />
-        <activity android:name=".StartActivity" />
-        <activity
-            android:name=".guide"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".GetGroups"
-            android:theme="@style/Theme.Panel"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
             android:name=".ConfigActivity"
             android:theme="@style/Theme.Panel"
             android:windowSoftInputMode="stateHidden">
@@ -56,16 +45,13 @@
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".GetUpdate"
-            android:theme="@style/Theme.Panel" />
 
         <service
             android:name=".MyService"
             android:process=":myservice" />
 
         <receiver
-            android:name=".MyWidget"
+            android:name=".WidgetToday"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/widget_name">
             <intent-filter>
@@ -75,7 +61,7 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/widget_metadata" />
+                android:resource="@xml/widget_today_metadata" />
         </receiver>
 
         <activity android:name=".vk" />
@@ -100,31 +86,12 @@
         <activity
             android:name=".incorrect"
             android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name=".CalendarActivity"
-            android:theme="@style/Theme.Panel" />
-        <activity
-            android:name=".about_app"
-            android:theme="@style/Theme.Panel" />
-        <activity
-            android:name=".windows"
-            android:theme="@style/Theme.Panel" />
-        <activity
-            android:name=".profile"
-            android:theme="@style/Theme.Panel" />
-        <activity android:name=".WelcomeActivity" />
 
         <service
             android:name=".WidgetUpdateService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity
-            android:name=".TeacherActivity"
-            android:theme="@style/Theme.Panel" />
-        <activity
-            android:name=".GetList"
-            android:theme="@style/Theme.Panel" />
         <activity
             android:name=".MapActivity"
             android:theme="@style/Theme.Panel" />
@@ -156,8 +123,6 @@
         </receiver>
 
         <!-- End of StartApp activities integration -->
-
-        <activity android:name=".ExamActivity" />
 
     </application>
 

@@ -93,7 +93,7 @@ public class GoAlarmActivity extends Activity {
 
     @SuppressWarnings("deprecation")
     public void onExitAlarm(Context context) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, ScheduleActivity.class);
         intent.putExtra("OnAlarm", "true");
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

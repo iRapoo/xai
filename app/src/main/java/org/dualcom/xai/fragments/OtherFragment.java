@@ -32,7 +32,6 @@ import com.mikepenz.fontawesome_typeface_library.FontAwesome;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.interfaces.OnCheckedChangeListener;
-import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SectionDrawerItem;
@@ -41,26 +40,18 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
 import org.dualcom.xai.AlarmActivity;
-import org.dualcom.xai.GetGroups;
-import org.dualcom.xai.GetList;
-import org.dualcom.xai.MainActivity;
 import org.dualcom.xai.MapActivity;
 import org.dualcom.xai.MyClass.DATE;
 import org.dualcom.xai.MyClass.Storage;
-import org.dualcom.xai.MyClass.Windows;
 import org.dualcom.xai.MyClass.isInternet;
 import org.dualcom.xai.R;
 import org.dualcom.xai.ScheduleActivity;
-import org.dualcom.xai.StartActivity;
-import org.dualcom.xai.about_app;
 import org.dualcom.xai.incorrect;
 import org.dualcom.xai.vk;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import tourguide.tourguide.Overlay;
-import tourguide.tourguide.Pointer;
 import tourguide.tourguide.TourGuide;
 
 public class OtherFragment extends Fragment {
@@ -104,7 +95,7 @@ public class OtherFragment extends Fragment {
                 .withHeader(R.layout.drawer_header)
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[1]).withIcon(FontAwesome.Icon.faw_download).withSelectable(false).withTag("download"),
-                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[2]).withIcon(FontAwesome.Icon.faw_clock_o).withSelectable(false).withEnabled(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN),
+                        new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[2]).withIcon(FontAwesome.Icon.faw_clock_o).withSelectable(false).withEnabled(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN).withEnabled(false).withBadge("на доработке"),
                         new SwitchDrawerItem().withName(res.getStringArray(R.array.drawers)[6]).withIcon(FontAwesome.Icon.faw_language).withSelectable(false).withChecked(translate).withOnCheckedChangeListener(onCheckedChangeListener).withEnabled(trans_active),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[7]).withIcon(FontAwesome.Icon.faw_map).withSelectable(false),
                         new SectionDrawerItem().withName(R.string.support),

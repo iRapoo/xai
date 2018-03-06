@@ -1,8 +1,5 @@
 package org.dualcom.xai;
 
-/**
- * Created by Rapoo on 12.04.2016.
- */
 public class itemDrawer {
     String name;
     int price;

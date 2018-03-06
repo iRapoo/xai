@@ -90,14 +90,6 @@ public class LIST {
         return _less[value];
     }
 
-    /*public static int LESSON(int value){
-        int list[] = {
-                R.id.lesson1,R.id.lesson2,R.id.lesson3,R.id.lesson4
-        };
-
-        return list[value];
-    }*/
-
     public static String getHousingStr(String line){
         String value = ""; //Манеж default
 
