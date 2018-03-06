@@ -8,6 +8,8 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -159,6 +161,25 @@ public class incorrect extends AppCompatActivity {
             }
         });
 
+        if(!Storage.emptyData(context, "IncorrectText"))
+            message.setText(Storage.loadData(context, "IncorrectText"));
+
+        message.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
+                // When user changed the Text
+                Storage.saveData(context, "IncorrectText", cs.toString());
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable arg0) {}
+        });
+
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -222,6 +243,8 @@ public class incorrect extends AppCompatActivity {
             if(res.equals("true"))
                 new GetIncorrect().execute("get_incorrect",
                         "uid=" + UID);
+
+            message.setText("");
 
         }
 
@@ -300,7 +323,6 @@ public class incorrect extends AppCompatActivity {
                 list_incorrect.setAdapter(null);
                 list_incorrect.setAdapter(boxAdapter);
 
-                message.setText("");
                 incorrect_not_found.setVisibility(View.GONE);
                 message.setEnabled(true);
                 btn_send.setEnabled(true);
