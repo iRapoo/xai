@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -23,9 +23,9 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ScheduleActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
-            android:windowSoftInputMode="stateHidden"
-            android:configChanges="orientation|keyboardHidden|screenSize">
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,6 +39,14 @@
 
         <activity
             android:name=".ConfigActivity"
+            android:theme="@style/Theme.Panel"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ConfigClockActivity"
             android:theme="@style/Theme.Panel"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
@@ -91,6 +99,10 @@
             android:name=".WidgetUpdateService"
             android:enabled="true"
             android:exported="true" />
+        <service
+            android:name=".WidgetUpdateServiceClock"
+            android:enabled="true"
+            android:exported="true" />
 
         <activity
             android:name=".MapActivity"
@@ -98,6 +110,8 @@
 
         <!-- StartApp activities integration -->
 
+
+        <!--
         <activity
             android:name="com.startapp.android.publish.ads.list3d.List3DActivity"
             android:theme="@android:style/Theme" />
@@ -121,8 +135,23 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+        -->
+
 
         <!-- End of StartApp activities integration -->
+
+
+        <!--
+        Виджет часы <receiver android:name=".WidgetClock">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_clock_info" />
+        </receiver>
+        -->
 
     </application>
 

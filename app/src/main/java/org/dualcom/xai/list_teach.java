@@ -72,8 +72,9 @@ public class list_teach extends Fragment {
         String labeltext = (type.equals("0")) ? getResources().getString(R.string.SELECT_GROUP) : getResources().getString(R.string.LastSel);
 
         group = (isInternet.active(context) && type.equals("0")) ? Storage.loadData(context,"TEACH_LIST") : Storage.loadData(context,"S_GROUP");
+        int subInt = (isInternet.active(context) && type.equals("0")) ? 3 : 2;
 
-        data = group.substring(2,group.length()).split(":,");
+        data = group.substring(subInt,group.length()).split(":,");
 
         adapter = new ArrayAdapter<>(getActivity(), R.layout.list_item, data);
 

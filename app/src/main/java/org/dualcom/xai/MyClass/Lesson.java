@@ -34,4 +34,10 @@ public class Lesson {
         return less_shedul[time];
     }
 
+    public static String times(int value){
+        String[] less_shedul = {"08-00", "09-50", "11-55", "13-45"};
+
+        return less_shedul[value];
+    }
+
 }

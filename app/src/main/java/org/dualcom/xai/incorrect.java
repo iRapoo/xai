@@ -209,11 +209,9 @@ public class incorrect extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/api?module=";
-
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
-                HttpPost postMethod = new HttpPost(HOST+params[0]);
+                HttpPost postMethod = new HttpPost(isInternet.API + params[0]);
                 List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
 
                 int count = params.length;
@@ -240,7 +238,7 @@ public class incorrect extends AppCompatActivity {
         protected void onPostExecute(String res) {
             super.onPostExecute(res);
 
-            if(res.equals("true"))
+            if(res.equals("{true"))
                 new GetIncorrect().execute("get_incorrect",
                         "uid=" + UID);
 
@@ -255,11 +253,9 @@ public class incorrect extends AppCompatActivity {
         @SuppressWarnings("WrongThread")
         @Override
         protected String doInBackground(String... params) {
-            String HOST = "http://rapoo.mysit.ru/api?module=";
-
             try{
                 DefaultHttpClient hc = new DefaultHttpClient();
-                HttpPost postMethod = new HttpPost(HOST+params[0]);
+                HttpPost postMethod = new HttpPost(isInternet.API + params[0]);
                 List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
 
                 int count = params.length;
@@ -286,7 +282,7 @@ public class incorrect extends AppCompatActivity {
         protected void onPostExecute(String res) {
             super.onPostExecute(res);
 
-            if(!res.equals("false")) {
+            if(!res.equals("{false")) {
 
                 JSONParser parser = new JSONParser();
 

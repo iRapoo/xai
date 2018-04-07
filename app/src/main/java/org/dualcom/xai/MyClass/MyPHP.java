@@ -35,12 +35,11 @@ public class MyPHP extends AsyncTask<String, Integer, String> {
         progressBar.setVisibility(View.VISIBLE);
     }*/
 
-    public static String HOST = "http://rapoo.mysit.ru/api?module=";
     @Override
     protected String doInBackground(String... params) {
         try{
             DefaultHttpClient hc = new DefaultHttpClient();
-            HttpPost postMethod = new HttpPost(HOST+params[0]);
+            HttpPost postMethod = new HttpPost(isInternet.API + params[0]);
             List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
 
             int count = params.length;

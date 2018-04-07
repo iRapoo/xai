@@ -15,7 +15,7 @@ public class DATE {
         Calendar c = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"), Locale.UK);
         //c.set(year, month, day);
         int dow = (c.get(Calendar.DAY_OF_WEEK)-1);
-        dow = (dow == 6 || dow == 0 || (c.get(Calendar.HOUR_OF_DAY) >= 17) && dow == 5) ? 0 : (c.get(Calendar.HOUR_OF_DAY) >= 17) ? dow :(dow-1); //Выходные
+        dow = (dow == 6 || dow == 0 || (c.get(Calendar.HOUR_OF_DAY) >= 15 && c.get(Calendar.MINUTE) > 20) && dow == 5) ? 0 : (c.get(Calendar.HOUR_OF_DAY) >= 15 && c.get(Calendar.MINUTE) > 20) ? dow :(dow-1); //Выходные
         return dow;
     }
 
@@ -30,7 +30,7 @@ public class DATE {
 
         int dow = (c.get(Calendar.WEEK_OF_YEAR)%2);
         int tmp = (c.get(Calendar.DAY_OF_WEEK)-1);
-        dow = (tmp == 6 || tmp == 0 || (c.get(Calendar.HOUR_OF_DAY) > 17) && tmp == 5) ? ((dow == sw) ? 1 : 0 ) : ((dow == tw) ? 1 : 0);
+        dow = (tmp == 6 || tmp == 0 || (c.get(Calendar.HOUR_OF_DAY) > 15 && c.get(Calendar.MINUTE) > 20) && tmp == 5) ? ((dow == sw) ? 1 : 0 ) : ((dow == tw) ? 1 : 0);
         return dow;
     }
 
@@ -137,7 +137,7 @@ public class DATE {
             stud_week = (week2-week)+1;
         }
 
-        stud_week = (tmp == 6 || tmp == 0 || (c.get(Calendar.HOUR_OF_DAY) > 17) && tmp == 5) ? (stud_week + 1) : stud_week;
+        stud_week = (tmp == 6 || tmp == 0 || (c.get(Calendar.HOUR_OF_DAY) > 15 && c.get(Calendar.MINUTE) > 20) && tmp == 5) ? (stud_week + 1) : stud_week;
         return stud_week;
     }
 

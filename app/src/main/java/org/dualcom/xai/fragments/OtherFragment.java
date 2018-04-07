@@ -88,6 +88,8 @@ public class OtherFragment extends Fragment {
         translate = Storage.loadData(context, "translate").equals("true");
         Boolean trans_active = getResources().getConfiguration().locale.getLanguage().equals("ru");
 
+        //getMoney();
+
         Resources res = getResources();
         drawer = new DrawerBuilder()
                 .withActivity(getActivity())
@@ -96,7 +98,7 @@ public class OtherFragment extends Fragment {
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[1]).withIcon(FontAwesome.Icon.faw_download).withSelectable(false).withTag("download"),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[2]).withIcon(FontAwesome.Icon.faw_clock_o).withSelectable(false).withEnabled(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN).withEnabled(false).withBadge("на доработке"),
-                        new SwitchDrawerItem().withName(res.getStringArray(R.array.drawers)[6]).withIcon(FontAwesome.Icon.faw_language).withSelectable(false).withChecked(translate).withOnCheckedChangeListener(onCheckedChangeListener).withEnabled(trans_active),
+                        new SwitchDrawerItem().withName(res.getStringArray(R.array.drawers)[6]).withIcon(FontAwesome.Icon.faw_language).withSelectable(false).withChecked(translate).withOnCheckedChangeListener(onCheckedChangeListener).withEnabled(false),//withEnabled(trans_active),
                         new PrimaryDrawerItem().withName(res.getStringArray(R.array.drawers)[7]).withIcon(FontAwesome.Icon.faw_map).withSelectable(false),
                         new SectionDrawerItem().withName(R.string.support),
                         new SecondaryDrawerItem().withName(res.getStringArray(R.array.drawers)[3]).withIcon(FontAwesome.Icon.faw_vk).withSelectable(false),
@@ -175,6 +177,33 @@ public class OtherFragment extends Fragment {
 
 
         return rootView;
+    }
+
+    private void getMoney() {
+
+        if(Storage.emptyData(context, "MONEY_BALANCE"))
+            Storage.saveData(context,"MONEY_BALANCE", "0.00 UAH");
+
+        RequestQueue queue = Volley.newRequestQueue(context);
+        String url = isInternet.API + "money";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Storage.saveData(context,"MONEY_BALANCE", response);
+
+                        if(Storage.emptyData(context, "NOW_GROUP"))
+                            progressDoalog.dismiss();
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }
+        });
+
+        queue.add(stringRequest);
+
     }
 
     private OnCheckedChangeListener onCheckedChangeListener = new OnCheckedChangeListener() {

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configure="org.dualcom.xai.ConfigClockActivity"
+    android:initialLayout="@layout/widget_clock"
+    android:minHeight="110dp"
+    android:minWidth="250dp"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="1800000" />

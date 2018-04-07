@@ -45,7 +45,7 @@ public class ScheduleActivity extends AppCompatActivity {
     @SuppressLint("StaticFieldLeak")
     public static MoreFragment moreFragment = new MoreFragment();
 
-    private StartAppAd startAppAd = new StartAppAd(this);
+    //private StartAppAd startAppAd = new StartAppAd(this);
 
     public Context context = this;
     public long back_pressed = 0;
@@ -114,8 +114,8 @@ public class ScheduleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StartAppSDK.init(this, "210748147", true);
-        StartAppAd.disableSplash();
+        /*StartAppSDK.init(this, "210748147", true);
+        StartAppAd.disableSplash();*/
         setContentView(R.layout.activity_schedule);
 
         SERIAL = Build.SERIAL;
@@ -123,6 +123,21 @@ public class ScheduleActivity extends AppCompatActivity {
         MANUFACTURER = Build.MANUFACTURER;
         PRODUCT = Build.PRODUCT;
         UID = SERIAL+BRAND+MANUFACTURER+PRODUCT;
+
+        /*
+         * Временная стиралка памяти
+         */
+        if(Storage.emptyData(context, "TMP_RESET")){
+            if(Storage.clearData(context)){
+                Intent intent = new Intent(ScheduleActivity.this, ScheduleActivity.class);
+                Storage.saveData(context, "TMP_RESET", "OK");
+                startActivity(intent);
+                ScheduleActivity.this.finish();
+            }
+        }
+        /*
+         * -------------------------
+         */
 
         try {
             VERSION = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
@@ -182,6 +197,8 @@ public class ScheduleActivity extends AppCompatActivity {
         }else{
             navigation.getMenu().findItem(R.id.navigation_save).setEnabled(false);
         }
+
+        getMoney();
 
         BottomNavigationViewHelper.disableShiftMode(navigation); //Отключение сдвига
     }
@@ -278,7 +295,7 @@ public class ScheduleActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
 
-                        if(response.equals("false")) return;
+                        if(response.equals("{false")) return;
 
                         int _count = 0;
                         String from = "";
@@ -378,10 +395,37 @@ public class ScheduleActivity extends AppCompatActivity {
 
     }
 
+    private void getMoney() {
+
+        if(Storage.emptyData(context, "MONEY_BALANCE"))
+            Storage.saveData(context,"MONEY_BALANCE", "0.00 UAH");
+
+        RequestQueue queue = Volley.newRequestQueue(context);
+        String url = isInternet.API + "money";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Storage.saveData(context,"MONEY_BALANCE", response);
+
+                        if(Storage.emptyData(context, "NOW_GROUP"))
+                            progressDoalog.dismiss();
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }
+        });
+
+        queue.add(stringRequest);
+
+    }
+
     @Override
     public void onBackPressed() {
         if(back_pressed + 2000 > System.currentTimeMillis()) {
-            startAppAd.onBackPressed();
+            //startAppAd.onBackPressed();
             super.onBackPressed();
         } else {
             Snackbar.make(findViewById(R.id.navigation), R.string.double_press, Snackbar.LENGTH_SHORT).show();
