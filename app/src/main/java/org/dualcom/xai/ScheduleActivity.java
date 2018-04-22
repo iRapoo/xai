@@ -126,7 +126,7 @@ public class ScheduleActivity extends AppCompatActivity {
 
         /*
          * Временная стиралка памяти
-         */
+         *
         if(Storage.emptyData(context, "TMP_RESET")){
             if(Storage.clearData(context)){
                 Intent intent = new Intent(ScheduleActivity.this, ScheduleActivity.class);

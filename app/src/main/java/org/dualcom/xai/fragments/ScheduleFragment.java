@@ -28,6 +28,8 @@ import org.dualcom.xai.R;
 import org.dualcom.xai.SlidingTabLayout;
 import org.dualcom.xai.ViewPagerAdapter;
 
+import java.util.Objects;
+
 public class ScheduleFragment extends Fragment {
 
     private View rootView;
@@ -130,7 +132,7 @@ public class ScheduleFragment extends Fragment {
 
             String[] DAY = getResources().getStringArray(R.array.DAYS_FULL);
 
-            adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager(), DAY, DAY.length);
+            adapter = new ViewPagerAdapter(Objects.requireNonNull(getActivity()).getSupportFragmentManager(), DAY, DAY.length);
 
             // Assigning ViewPager View and setting the adapter
             pager = rootView.findViewById(R.id.pager);
@@ -140,13 +142,12 @@ public class ScheduleFragment extends Fragment {
             Display display = getActivity().getWindowManager().getDefaultDisplay();
             int width = display.getWidth();  // deprecated
             int height = display.getHeight();  // deprecated
-            Boolean tab_long = (width < 500) ? false : true;
-            tab_long = true;
+            Boolean tab_long = width >= 500;
 
 
             // Assiging the Sliding Tab Layout View
             tabs = (SlidingTabLayout) rootView.findViewById(R.id.tabs);
-            tabs.setDistributeEvenly(tab_long); // To make the Tabs Fixed set this true, This makes the tabs Space Evenly in Available width
+            tabs.setDistributeEvenly(true); // To make the Tabs Fixed set this true, This makes the tabs Space Evenly in Available width
 
             // Setting Custom Color for the Scroll bar indicator of the Tab View
             tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {

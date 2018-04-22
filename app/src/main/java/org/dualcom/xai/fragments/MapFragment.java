@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -29,6 +30,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import org.dualcom.xai.MyClass.LIST;
 import org.dualcom.xai.MyClass.Storage;
 import org.dualcom.xai.R;
+
+import java.util.Objects;
 
 public class MapFragment extends SupportMapFragment
         implements OnMapReadyCallback,
@@ -71,7 +74,7 @@ public class MapFragment extends SupportMapFragment
     @Override
     public void onMapReady(GoogleMap googleMap)
     {
-        context = getActivity().getApplicationContext();
+        context = Objects.requireNonNull(getActivity()).getApplicationContext();
 
         mGoogleMap = googleMap;
         mGoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
@@ -100,7 +103,7 @@ public class MapFragment extends SupportMapFragment
     }
 
     protected synchronized void buildGoogleApiClient() {
-        mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
+        mGoogleApiClient = new GoogleApiClient.Builder(Objects.requireNonNull(getActivity()))
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .addApi(LocationServices.API)
@@ -114,7 +117,7 @@ public class MapFragment extends SupportMapFragment
         mLocationRequest.setInterval(1000);
         mLocationRequest.setFastestInterval(1000);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
-        if (ContextCompat.checkSelfPermission(getActivity(),
+        if (ContextCompat.checkSelfPermission(Objects.requireNonNull(getActivity()),
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             //LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this); //велючить для автофокуса
@@ -125,7 +128,7 @@ public class MapFragment extends SupportMapFragment
     public void onConnectionSuspended(int i) {}
 
     @Override
-    public void onConnectionFailed(ConnectionResult connectionResult) {}
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {}
 
     @Override
     public void onLocationChanged(Location location)
@@ -169,7 +172,7 @@ public class MapFragment extends SupportMapFragment
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     private void checkLocationPermission() {
-        if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION)
+        if (ContextCompat.checkSelfPermission(Objects.requireNonNull(getActivity()), Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
 
             // Should we show an explanation?
@@ -206,7 +209,7 @@ public class MapFragment extends SupportMapFragment
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
+                                           @NonNull String permissions[], @NonNull int[] grantResults) {
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_LOCATION: {
                 // If request is cancelled, the result arrays are empty.
@@ -215,7 +218,7 @@ public class MapFragment extends SupportMapFragment
 
                     // permission was granted, yay! Do the
                     // location-related task you need to do.
-                    if (ContextCompat.checkSelfPermission(getActivity(),
+                    if (ContextCompat.checkSelfPermission(Objects.requireNonNull(getActivity()),
                             Manifest.permission.ACCESS_FINE_LOCATION)
                             == PackageManager.PERMISSION_GRANTED) {
 
@@ -232,7 +235,6 @@ public class MapFragment extends SupportMapFragment
                     // functionality that depends on this permission.
                     Toast.makeText(getActivity(), "permission denied", Toast.LENGTH_LONG).show();
                 }
-                return;
             }
 
             // other 'case' lines to check for other

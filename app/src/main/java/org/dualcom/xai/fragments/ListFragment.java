@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.view.Gravity;
@@ -26,6 +27,7 @@ import org.dualcom.xai.list_group;
 import org.dualcom.xai.list_teach;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -46,7 +48,7 @@ public class ListFragment extends BottomSheetFragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_list, container, false);
         context = rootView.getContext();
 
@@ -66,7 +68,7 @@ public class ListFragment extends BottomSheetFragment {
 
         mViewPager = rootView.findViewById(R.id.pager);
 
-        mTabsAdapter = new TabsAdapter(getActivity(), mTabHost, mViewPager);
+        mTabsAdapter = new TabsAdapter(Objects.requireNonNull(getActivity()), mTabHost, mViewPager);
 
         GetList = getResources().getStringArray(R.array.GetList);
 
@@ -151,7 +153,7 @@ public class ListFragment extends BottomSheetFragment {
             }
 
             if(flag==0){
-                Snackbar.make(getActivity().findViewById(R.id.navigation), getResources().getString(R.string.say_not_found), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(Objects.requireNonNull(getActivity()).findViewById(R.id.navigation), getResources().getString(R.string.say_not_found), Snackbar.LENGTH_LONG).show();
             }
 
         }

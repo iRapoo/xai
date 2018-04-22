@@ -20,6 +20,8 @@ import org.dualcom.xai.MyClass.Storage;
 import org.dualcom.xai.MyClass.Windows;
 import org.dualcom.xai.R;
 
+import java.util.Objects;
+
 public class MoreFragment extends BottomSheetFragment {
 
     public View rootView;
@@ -61,7 +63,7 @@ public class MoreFragment extends BottomSheetFragment {
 
         mapFragment = new MapFragment();
 
-        transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction = Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.mapView, mapFragment);
         transaction.addToBackStack(null);
         transaction.commit();
@@ -70,7 +72,7 @@ public class MoreFragment extends BottomSheetFragment {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
         if (requestCode == MapFragment.MY_PERMISSIONS_REQUEST_LOCATION){
             mapFragment.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
