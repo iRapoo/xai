@@ -151,7 +151,7 @@ public class MapFragment extends SupportMapFragment
 
         //move map camera
         //mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,16));
-        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,18));
+        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,17));
 
     }
 
@@ -167,7 +167,7 @@ public class MapFragment extends SupportMapFragment
 
         //move map camera
         //mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,18));
-        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,18));
+        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,17));
     }
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
