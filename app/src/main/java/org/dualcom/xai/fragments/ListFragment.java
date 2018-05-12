@@ -97,7 +97,7 @@ public class ListFragment extends BottomSheetFragment {
         for(int i=0;i<mTabHost.getTabWidget().getChildCount();i++)
         {
             TextView tv = (TextView) mTabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
-            tv.setTextColor(getResources().getColor(R.color.white));
+            tv.setTextColor(getResources().getColor(R.color.dark_grey));
         }
 
         mTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {

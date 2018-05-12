@@ -116,8 +116,9 @@ public class OtherFragment extends Fragment {
                                 startActivity(intent_alarm);
                                 break;
                             case 4:
-                                Intent intent_map = new Intent(getActivity(), MapActivity.class);
-                                startActivity(intent_map);
+                                /*Intent intent_map = new Intent(getActivity(), MapActivity.class);
+                                startActivity(intent_map);*/
+                                new MapActivity().show(getActivity().getSupportFragmentManager(), R.id.bottomsheet);
                                 break;
                             case 6:
                                 Intent intent_social = new Intent(getActivity(), vk.class);

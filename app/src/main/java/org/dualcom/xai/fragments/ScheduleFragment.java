@@ -89,26 +89,26 @@ public class ScheduleFragment extends Fragment {
 
                 for(int i = 0; i < 4; i++) {
                     TextView timeText = rootView.findViewById(LIST.times_text(DATE.getNowTimeLite())[i]);
-                    timeText.setTextColor(getResources().getColor(R.color.main_red));
+                    timeText.setTextColor(getResources().getColor(R.color.time_color_now));
                 }
 
                 TimelineView timelineView = rootView.findViewById(LIST.times_line(DATE.getNowTimeLite()));
-                timelineView.setMarker(getResources().getDrawable(R.drawable.ic_marker_active), getResources().getColor(R.color.main_red));
-                timelineView.setStartLine(getResources().getColor(R.color.main_red), 0);
-                timelineView.setEndLine(getResources().getColor(R.color.main_red), 0);
+                timelineView.setMarker(getResources().getDrawable(R.drawable.ic_marker_active), getResources().getColor(R.color.time_color_now));
+                timelineView.setStartLine(getResources().getColor(R.color.time_color_now), 0);
+                timelineView.setEndLine(getResources().getColor(R.color.time_color_now), 0);
                 timelineView.setMarkerSize((int) getResources().getDimension(R.dimen.size_circle));
 
                 for(int i = DATE.getNowTimeLite()+1; i < 4; i++){
 
                     for(int j = 0; j < 4; j++) {
                         TextView timeText = rootView.findViewById(LIST.times_text(i)[j]);
-                        timeText.setTextColor(getResources().getColor(R.color.main_color));
+                        timeText.setTextColor(getResources().getColor(R.color.time_color_coming));
                     }
 
                     TimelineView timelineView_ = rootView.findViewById(LIST.times_line(i));
-                    timelineView_.setMarker(getResources().getDrawable(R.drawable.ic_marker), getResources().getColor(R.color.main_color));
-                    timelineView_.setStartLine(getResources().getColor(R.color.main_color), 0);
-                    timelineView_.setEndLine(getResources().getColor(R.color.main_color), 0);
+                    timelineView_.setMarker(getResources().getDrawable(R.drawable.ic_marker), getResources().getColor(R.color.time_color_coming));
+                    timelineView_.setStartLine(getResources().getColor(R.color.time_color_coming), 0);
+                    timelineView_.setEndLine(getResources().getColor(R.color.time_color_coming), 0);
                 }
 
             }else {
@@ -117,13 +117,13 @@ public class ScheduleFragment extends Fragment {
 
                     for(int j = 0; j < 4; j++) {
                         TextView timeText = rootView.findViewById(LIST.times_text(i)[j]);
-                        timeText.setTextColor(getResources().getColor(R.color.main_color));
+                        timeText.setTextColor(getResources().getColor(R.color.dark_grey));
                     }
 
                     TimelineView timelineView_ = rootView.findViewById(LIST.times_line(i));
-                    timelineView_.setMarker(getResources().getDrawable(R.drawable.ic_marker), getResources().getColor(R.color.main_color));
-                    timelineView_.setStartLine(getResources().getColor(R.color.main_color), 0);
-                    timelineView_.setEndLine(getResources().getColor(R.color.main_color), 0);
+                    timelineView_.setMarker(getResources().getDrawable(R.drawable.ic_marker), getResources().getColor(R.color.dark_grey));
+                    timelineView_.setStartLine(getResources().getColor(R.color.dark_grey), 0);
+                    timelineView_.setEndLine(getResources().getColor(R.color.dark_grey), 0);
                 }
 
             }
@@ -153,7 +153,7 @@ public class ScheduleFragment extends Fragment {
             tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
                 @Override
                 public int getIndicatorColor(int position) {
-                    return getResources().getColor(R.color.white);
+                    return getResources().getColor(R.color.dark_grey);
                 }
 
                 @Override

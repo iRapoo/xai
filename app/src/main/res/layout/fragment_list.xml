@@ -1,9 +1,9 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/silver"
+    android:background="@color/white"
     tools:context="org.dualcom.xai.fragments.ListFragment">
 
     <TabHost
@@ -24,7 +24,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:background="@color/extra_color"
+                android:background="@color/white"
                 android:orientation="horizontal">
 
                 <TextView
@@ -34,7 +34,9 @@
                     android:layout_margin="10dp"
                     android:layout_weight="0"
                     android:text="@string/LastSel"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/dark_grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TabWidget
                     android:id="@android:id/tabs"
@@ -50,7 +52,6 @@
             </LinearLayout>
 
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -64,7 +65,6 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/myrect"
                     android:elevation="2dp"
                     android:orientation="vertical">
 
@@ -114,7 +114,6 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/myrect"
                     android:elevation="2dp"
                     android:orientation="vertical">
 

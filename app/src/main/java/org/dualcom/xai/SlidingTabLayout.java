@@ -251,7 +251,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
 
             mViewPager.setCurrentItem(DATE.getWeek());
 
-            tabTitleView.setTextColor(getResources().getColor(R.color.white));
+            tabTitleView.setTextColor(getResources().getColor(R.color.dark_grey));
             tabTitleView.setTextSize(14);
 
             mTabStrip.addView(tabView);
