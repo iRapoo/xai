@@ -14,7 +14,7 @@
         android:id="@+id/loadWidget"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/main_color"
+        android:background="@color/white"
         android:orientation="vertical"
         android:visibility="visible">
 
@@ -28,9 +28,9 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:background="@mipmap/ic_launcher_round" />
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:background="@drawable/logo_xai" />
         </LinearLayout>
 
         <LinearLayout
@@ -46,15 +46,16 @@
                 android:layout_height="wrap_content"
                 android:text="@string/loadWidget"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/white" />
+                android:textColor="@color/dark_grey" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="55dp"
-        android:background="@color/main_color"
+        android:background="@color/white"
         android:gravity="center"
+        android:elevation="2dp"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -71,8 +72,9 @@
                 android:layout_height="wrap_content"
                 android:maxLength="15"
                 android:text="@string/label_less"
-                android:textColor="#FFF"
-                android:textSize="18sp" />
+                android:textColor="@color/dark_grey"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/LabelType"
@@ -80,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:text="Тип недели"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#FFF"
+                android:textColor="@color/dark_grey"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -97,15 +99,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="День недели"
-                android:textColor="#FFF"
-                android:textSize="20sp" />
+                android:textColor="@color/dark_grey"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/LabelWeek"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1я учебная неделя"
-                android:textColor="#FFF"
+                android:textColor="@color/dark_grey"
                 android:textSize="14sp" />
 
         </LinearLayout>
@@ -163,7 +166,8 @@
                                     android:gravity="center"
                                     android:text="@string/no_less"
                                     android:textColor="@color/dark_grey"
-                                    android:textSize="15dp" />
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
 
                             </LinearLayout>
 
@@ -182,7 +186,8 @@
                                     android:gravity="center"
                                     android:text="@string/no_less"
                                     android:textColor="@color/dark_grey"
-                                    android:textSize="15dp" />
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -216,7 +221,8 @@
                                     android:gravity="center"
                                     android:text="@string/no_less"
                                     android:textColor="@color/dark_grey"
-                                    android:textSize="15dp" />
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -234,7 +240,8 @@
                                     android:gravity="center"
                                     android:text="@string/no_less"
                                     android:textColor="@color/dark_grey"
-                                    android:textSize="15dp" />
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -269,7 +276,8 @@
                                     android:gravity="center"
                                     android:text="@string/no_less"
                                     android:textColor="@color/dark_grey"
-                                    android:textSize="15dp" />
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -287,7 +295,8 @@
                                     android:gravity="center"
                                     android:text="@string/no_less"
                                     android:textColor="@color/dark_grey"
-                                    android:textSize="15dp" />
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -321,7 +330,8 @@
                                     android:gravity="center"
                                     android:text="@string/no_less"
                                     android:textColor="@color/dark_grey"
-                                    android:textSize="15dp" />
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -339,7 +349,8 @@
                                     android:gravity="center"
                                     android:text="@string/no_less"
                                     android:textColor="@color/dark_grey"
-                                    android:textSize="15dp" />
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
