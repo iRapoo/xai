@@ -126,7 +126,7 @@ public class WidgetClock extends AppWidgetProvider {
 
             }
 
-            if(lesson!=null) break;
+            /*if(lesson!=null)*/ break;
         }
         //**************
 
@@ -144,9 +144,14 @@ public class WidgetClock extends AppWidgetProvider {
         String TIME = String.format("%02d:%02d", hour, minute);*/
 
         remoteViews.setTextViewText(R.id.textGroup, group);
-        remoteViews.setTextViewText(R.id.textLesson, lesson.split("//")[0]);
-        remoteViews.setTextViewText(R.id.textTeacher, lesson.split("//")[1]);
-        remoteViews.setTextViewText(R.id.textAfter, "Начнется через " + DATE.getWeek() + DATE.getNowTimeLite() + " / " + Lesson.times(num-1));
+        if(lesson!=null) {
+            remoteViews.setTextViewText(R.id.textLesson, lesson.split("//")[0]);
+            remoteViews.setTextViewText(R.id.textTeacher, lesson.split("//")[1]);
+        }else {
+            remoteViews.setTextViewText(R.id.textLesson, "Пар нет. Отдыхаем!");
+            remoteViews.setTextViewText(R.id.textTeacher, "");
+        }
+        //remoteViews.setTextViewText(R.id.textAfter, "Начнется через " + DATE.getWeek() + DATE.getNowTimeLite() + " / " + Lesson.times(num-1));
         appWidgetManager.updateAppWidget(widgetID, remoteViews);
     }
 

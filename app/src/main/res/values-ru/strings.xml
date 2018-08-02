@@ -61,6 +61,8 @@
     <string name="full_info">Подробная информация</string>
 
     <string name="Today">Сегодня</string>
+    <string name="Tomorrow">Завтра</string>
+    <string name="NextWeek">След. неделя</string>
     <string name="loadWidget">Загрузка виджета...</string>
 
     <string name="label_GN">Группа не найдена</string>

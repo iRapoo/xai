@@ -16,7 +16,7 @@
         android:layout_height="fill_parent"
         android:background="@color/white"
         android:orientation="vertical"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -95,12 +95,20 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/labelCurrent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Today"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp" />
+
+            <TextView
                 android:id="@+id/LabelDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="День недели"
                 android:textColor="@color/dark_grey"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <TextView

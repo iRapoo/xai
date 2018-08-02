@@ -45,6 +45,7 @@
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ConfigClockActivity"
             android:theme="@style/Theme.Panel"
@@ -73,12 +74,14 @@
         </receiver>
 
         <activity android:name=".vk" />
+
         <activity
             android:name=".AlarmActivity"
             android:theme="@style/Theme.Panel"
             android:windowSoftInputMode="stateHidden" />
 
         <receiver android:name=".AlarmManagerBroadcastReceiver" />
+
         <receiver android:name=".BootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -141,8 +144,9 @@
         <!-- End of StartApp activities integration -->
 
 
-        <!--
-        Виджет часы <receiver android:name=".WidgetClock">
+        <!-- <receiver
+            android:name=".WidgetClock"
+            >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -150,8 +154,7 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_clock_info" />
-        </receiver>
-        -->
+        </receiver> -->
 
     </application>
 

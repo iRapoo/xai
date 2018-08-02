@@ -61,6 +61,8 @@
     <string name="full_info">Detailed information</string>
 
     <string name="Today">Today</string>
+    <string name="Tomorrow">Tomorrow</string>
+    <string name="NextWeek">Next week</string>
     <string name="loadWidget">Loading widget...</string>
 
     <string name="label_GN">Group not found</string>

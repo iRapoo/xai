@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.view.View;
 import android.widget.RemoteViews;
+import android.widget.TextView;
 
 import org.dualcom.xai.MyClass.DATE;
 import org.dualcom.xai.MyClass.JSON;
@@ -144,23 +145,29 @@ public class WidgetToday extends AppWidgetProvider {
         String[] TMP_WEEK = context.getResources().getStringArray(R.array.TYPE_WEEK);
         String TYPE_WEEK = (DATE.getWeekType() == 0) ? TMP_WEEK[0] : TMP_WEEK[1];
 
-        //Тикущее число
+        //Текущее число
         int month = c.get(Calendar.MONTH);
         switch (dow){
 
             case 5: //Пятница +3 дня
-                if(c.get(Calendar.HOUR_OF_DAY) > 16)
-                    c.add(Calendar.DAY_OF_MONTH,3);
+                if(c.get(Calendar.HOUR_OF_DAY) > 16) {
+                    c.add(Calendar.DAY_OF_MONTH, 3);
+                    remoteViews.setTextViewText(R.id.labelCurrent, context.getResources().getString(R.string.NextWeek));
+                }
                 break;
             case 6: //Суббота +2 дня
                 c.add(Calendar.DAY_OF_MONTH,2);
+                remoteViews.setTextViewText(R.id.labelCurrent, context.getResources().getString(R.string.NextWeek));
                 break;
             case 0: //Воскресенье +1 день
                 c.add(Calendar.DAY_OF_MONTH,1);
+                remoteViews.setTextViewText(R.id.labelCurrent, context.getResources().getString(R.string.NextWeek));
                 break;
             default: //Остальные дни
-                if(c.get(Calendar.HOUR_OF_DAY) > 16)
-                    c.add(Calendar.DAY_OF_MONTH,1);
+                if(c.get(Calendar.HOUR_OF_DAY) > 16) {
+                    c.add(Calendar.DAY_OF_MONTH, 1);
+                    remoteViews.setTextViewText(R.id.labelCurrent, context.getResources().getString(R.string.Tomorrow));
+                }
                 break;
 
         }
