@@ -119,7 +119,7 @@ public class DATE {
         Calendar c2 = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"), Locale.UK);
         int tmp = (c.get(Calendar.DAY_OF_WEEK)-1);
 
-        c.set(Calendar.DAY_OF_MONTH, 1);
+        c.set(Calendar.DAY_OF_MONTH, 3); //начало семестра с 3 сентября
         c.set(Calendar.MONTH, Calendar.SEPTEMBER);
 
         int week = c.get(Calendar.WEEK_OF_YEAR);
@@ -128,8 +128,8 @@ public class DATE {
         int stud_week = (week2-week)+1;
 
         if(stud_week<0){
+            c.set(Calendar.DAY_OF_MONTH, 15); //начало семестра с 15 января
             c.set(Calendar.MONTH, Calendar.JANUARY);
-            c.set(Calendar.DAY_OF_MONTH, 15);
 
             week = c.get(Calendar.WEEK_OF_YEAR);
             week2 = c2.get(Calendar.WEEK_OF_YEAR);
