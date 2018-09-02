@@ -24,8 +24,8 @@ public class DATE {
         Calendar c = Calendar.getInstance(TimeZone.getTimeZone("Europe/Moscow"), Locale.UK);
 
         //////////////  параметры типа недели               //
-        int tw = 0; //  0 - по умолчанию                    //
-        int sw = 1; //  1 - по умолчанию                    //
+        int tw = 1; //  0 - по умолчанию                    //
+        int sw = 0; //  1 - по умолчанию                    //
         //////////////  поменять местами для смены позиции  //
 
         int dow = (c.get(Calendar.WEEK_OF_YEAR)%2);
