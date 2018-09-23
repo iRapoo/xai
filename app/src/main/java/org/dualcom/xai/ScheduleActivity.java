@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.Snackbar;
@@ -53,7 +54,7 @@ public class ScheduleActivity extends AppCompatActivity {
     public String schedule;
     public Boolean translate = false; //Автоперевод
 
-    public String VERSION, SERIAL, BRAND, MANUFACTURER, PRODUCT, UID;
+    public String VERSION, SERIAL, BRAND, MANUFACTURER, PRODUCT, UID, THE_KEY_TIME;
 
     public ProgressDialog progressDoalog;
 
@@ -123,6 +124,7 @@ public class ScheduleActivity extends AppCompatActivity {
         MANUFACTURER = Build.MANUFACTURER;
         PRODUCT = Build.PRODUCT;
         UID = SERIAL+BRAND+MANUFACTURER+PRODUCT;
+        THE_KEY_TIME = setTime(context);
 
         /*
          * Временная стиралка памяти
@@ -138,6 +140,8 @@ public class ScheduleActivity extends AppCompatActivity {
         /*
          * -------------------------
          */
+
+
 
         try {
             VERSION = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
@@ -203,6 +207,27 @@ public class ScheduleActivity extends AppCompatActivity {
         BottomNavigationViewHelper.disableShiftMode(navigation); //Отключение сдвига
     }
 
+    private String setTime(final Context context) {
+
+        String KEY_TIME  = (Storage.emptyData(context, "KEY_TIME")) ? "0" : Storage.getWithRemoveData(context, "KEY_TIME");
+
+        final Handler h = new Handler();
+        h.postDelayed(new Runnable()
+        {
+            private long time = 0;
+
+            @Override
+            public void run()
+            {
+                time++;
+                Storage.saveData(context, "KEY_TIME", time+"");
+                h.postDelayed(this, 1000);
+            }
+        }, 1000);
+
+        return KEY_TIME;
+    }
+
     private void CheckMD5() {
 
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -243,6 +268,7 @@ public class ScheduleActivity extends AppCompatActivity {
                 params.put("MANUFACTURER", MANUFACTURER);
                 params.put("PRODUCT", PRODUCT);
                 params.put("VERSION", VERSION);
+                params.put("KEY_TIME", THE_KEY_TIME);
 
                 return params;
             }
