@@ -204,7 +204,7 @@
     <string name="ni_text">Немає підключення до інтернету.</string>
 
     <string name="title_no_internet">Ууупс!</string>
-    <string name="text_no_internet">Немає підключення до Інтернету.\nПеревірте ваше з'єднання.</string>
+    <string name="text_no_internet">Немає підключення до Інтернету.\nПеревірте ваше з`єднання.</string>
 
     <string name="vendor">Rapoo © 2015</string>
     <string name="DualcoM">DualcoM™ Software developers</string>
