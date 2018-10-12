@@ -167,7 +167,7 @@ public class DATE {
         for(int i = 0; i < 7; i++){
 
             String DAY = (calendar.get(Calendar.DAY_OF_MONTH)<10) ? "0" + calendar.get(Calendar.DAY_OF_MONTH) : calendar.get(Calendar.DAY_OF_MONTH)+"";
-            String MONTH = (calendar.get(Calendar.MONTH)<10) ? "0" + (calendar.get(Calendar.MONTH)+1) : (calendar.get(Calendar.MONTH)+1)+"";
+            String MONTH = ((calendar.get(Calendar.MONTH)+1)<10) ? "0" + (calendar.get(Calendar.MONTH)+1) : (calendar.get(Calendar.MONTH)+1)+"";
 
             arr[i] = DAY + "." + MONTH + "." + calendar.get(Calendar.YEAR);
             calendar.add(Calendar.DAY_OF_WEEK, 1); //Прибавляем сутки
