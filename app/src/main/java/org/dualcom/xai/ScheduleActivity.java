@@ -22,8 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.startapp.android.publish.adsCommon.StartAppAd;
-import com.startapp.android.publish.adsCommon.StartAppSDK;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import org.dualcom.xai.MyClass.*;
 import org.dualcom.xai.fragments.*;
@@ -38,7 +37,6 @@ import q.rorbin.badgeview.Badge;
 import q.rorbin.badgeview.QBadgeView;
 import tourguide.tourguide.Overlay;
 import tourguide.tourguide.Pointer;
-import tourguide.tourguide.ToolTip;
 import tourguide.tourguide.TourGuide;
 
 public class ScheduleActivity extends AppCompatActivity {
@@ -125,6 +123,10 @@ public class ScheduleActivity extends AppCompatActivity {
         PRODUCT = Build.PRODUCT;
         UID = SERIAL+BRAND+MANUFACTURER+PRODUCT;
         THE_KEY_TIME = setTime(context);
+
+        //noinspection deprecation
+        String token = FirebaseInstanceId.getInstance().getToken();
+        Windows.alert(context, "", token);
 
         /*
          * Временная стиралка памяти

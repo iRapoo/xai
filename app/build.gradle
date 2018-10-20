@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion '28.0.2'
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "org.dualcom.xai"
         minSdkVersion 20
         targetSdkVersion 28
-        versionCode 215
-        versionName "1.4.1.f1"
+        versionCode 216
+        versionName "1.4.2.f0"
         multiDexEnabled true
 
         vectorDrawables.useSupportLibrary = true
@@ -59,7 +59,6 @@ dependencies {
 
     //Google Firebase
     implementation "com.google.firebase:firebase-core:16.0.4"
-    //implementation "com.google.firebase:firebase-ads:${playServicesVersion}"
 
     //Google Supports
     implementation "com.android.support:appcompat-v7:${ApiBuildVersion}"
