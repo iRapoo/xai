@@ -52,7 +52,7 @@ public class ScheduleActivity extends AppCompatActivity {
     public String schedule;
     public Boolean translate = false; //Автоперевод
 
-    public String VERSION, SERIAL, BRAND, MANUFACTURER, PRODUCT, UID, THE_KEY_TIME;
+    public String VERSION, SERIAL, BRAND, MANUFACTURER, PRODUCT, UID, THE_KEY_TIME, FIREBASE_TOKEN;
 
     public ProgressDialog progressDoalog;
 
@@ -110,6 +110,7 @@ public class ScheduleActivity extends AppCompatActivity {
                 .commit();
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -123,10 +124,7 @@ public class ScheduleActivity extends AppCompatActivity {
         PRODUCT = Build.PRODUCT;
         UID = SERIAL+BRAND+MANUFACTURER+PRODUCT;
         THE_KEY_TIME = setTime(context);
-
-        //noinspection deprecation
-        String token = FirebaseInstanceId.getInstance().getToken();
-        Windows.alert(context, "", token);
+        FIREBASE_TOKEN = FirebaseInstanceId.getInstance().getToken();
 
         /*
          * Временная стиралка памяти
@@ -271,6 +269,7 @@ public class ScheduleActivity extends AppCompatActivity {
                 params.put("PRODUCT", PRODUCT);
                 params.put("VERSION", VERSION);
                 params.put("KEY_TIME", THE_KEY_TIME);
+                params.put("FIREBASE_TOKEN", FIREBASE_TOKEN);
 
                 return params;
             }
